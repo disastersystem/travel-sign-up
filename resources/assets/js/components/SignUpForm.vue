@@ -54,13 +54,13 @@
                                     ></el-input-number>
                                 </div>
                             </el-form-item>
-                        </el-col>
 
-                        <div v-for="(room, index) in form.rooms.twin">
-                            <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
-                                <el-input></el-input>
-                            </el-form-item>
-                        </div>
+                            <div v-for="(room, index) in form.rooms.twin">
+                                <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
+                                    <el-input></el-input>
+                                </el-form-item>
+                            </div>
+                        </el-col>
                     </el-row>
 
                 </el-form>
@@ -116,32 +116,39 @@
 
         methods: {
             onSingleChange(numRooms) {
-                let amountAdded = (numRooms - this.form.rooms.single.length)
+                /* get the difference between the current number of rooms and the newly selected amount */
+                let amountAdded = (numRooms - this.form.amountSingle)
 
-                /* if the number is positive: rooms added */
+                /* if the number is positive: rooms have been added */
                 if (amountAdded > 0) {
-                    for (let i = 0; i < amountAdded; i++) {
-                        this.form.rooms.single.push({num: this.form.rooms.single.length + 1, name: '', dob: ''})
+                    for (let i = 1; i <= amountAdded; i++) {
+                        this.form.rooms.single.push(
+                            {num: this.form.amountSingle + i, name: '', dob: ''}
+                        )
                     }
                 }
 
-                /* if the number is negative: rooms removed */
+                /* if the number is negative: rooms have beeen removed */
                 if (amountAdded < 0) {
                     for (let i = 0; i < Math.abs(amountAdded); i++) {
                         this.form.rooms.single.splice(-1, 1)
                     }
                 }
+
+                /*  */
+                this.form.amountSingle = numRooms
             },
 
-            onDoubleChange(value) {
-                let amountAdded = (value - this.form.rooms.double.length)
+            onDoubleChange(numRooms) {
+                /* get the difference between the current number of rooms and the newly selected amount */
+                let amountAdded = (numRooms - this.form.amountDouble)
 
                 /* if the number is positive */
                 if (amountAdded > 0) {
-                    for (let i = 0; i < amountAdded; i++) {
+                    for (let i = 1; i <= amountAdded; i++) {
                         this.form.rooms.double.push(
-                            {num: this.form.rooms.double.length + 1, name: '', dob: ''},
-                            {num: this.form.rooms.double.length + 1, name: '', dob: ''}
+                            {num: this.form.amountDouble + i, name: '', dob: ''},
+                            {num: this.form.amountDouble + i, name: '', dob: ''}
                         )
                     }
                 }
@@ -152,10 +159,34 @@
                         this.form.rooms.double.splice(-2, 2)
                     }
                 }
+
+                /*  */
+                this.form.amountDouble = numRooms
             },
 
-            onTwinChange() {
+            onTwinChange(numRooms) {
+                /* get the difference between the current number of rooms and the newly selected amount */
+                let amountAdded = (numRooms - this.form.amountTwin)
+                
+                /* if the number is positive */
+                if (amountAdded > 0) {
+                    for (let i = 1; i <= amountAdded; i++) {
+                        this.form.rooms.twin.push(
+                            {num: this.form.amountTwin + i, name: '', dob: ''},
+                            {num: this.form.amountTwin + i, name: '', dob: ''}
+                        )
+                    }
+                }
 
+                /* if the number is negative */
+                if (amountAdded < 0) {
+                    for (let i = 0; i < Math.abs(amountAdded); i++) {
+                        this.form.rooms.twin.splice(-2, 2)
+                    }
+                }
+
+                /*  */
+                this.form.amountTwin = numRooms
             }
         }
     }
