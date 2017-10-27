@@ -101,6 +101,7 @@
 	.b-modal-card {
 		margin: 0;
 		max-height: calc(100vh - 160px);
+		height: 100%;
 		overflow: auto;
 		position: relative;
 		width: 100%;
@@ -210,7 +211,7 @@
 		color: #363636;
 		flex-grow: 1;
 		flex-shrink: 0;
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		line-height: 1;
 	}
 
