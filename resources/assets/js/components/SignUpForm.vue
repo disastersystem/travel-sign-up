@@ -1,89 +1,97 @@
 <template>
-    <div>  
-        <modal :show="showModal" @close="showModal = false" title="Påmelding">
+    <div>
+        <modal :show="showModal" @close="showModal = false" :title="'Påmelding ' + title">
             <div style="padding: 40px;">
                 <el-form label-position="top" :model="form">
 
                     <section class="step rooms">
                         <el-row>
-                            <el-col :span="8">
-                                <el-form-item label="enkeltrom" style="text-align: center;">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountSingle"
-                                            @change="onSingleChange"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
-                                    </div>
-                                </el-form-item>
-
-                                <div v-for="room in form.rooms.single">
-                                    <el-card class="box-card" style="box-shadow: 0;">
-                                        <div slot="header" style="display: flex; align-items: stretch;">
-                                            <div style="flex: 1;" v-text="'rom ' + room.num"></div>
-
-                                            <el-button type="default">
-                                                <!-- [+] legg til barneseng -->
-                                                +barneseng
-                                            </el-button>
-                                        </div>
-                                        <div class="text item">
-                                            <el-row>
-                                                <el-col :span="12">
-                                                    <el-form-item label="navn">
-                                                        <el-input></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-
-                                                <el-col :span="12">
-                                                    <el-form-item label="fødselsdato">
-                                                        <el-input></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                        </div>
-                                    </el-card>
+                            <el-form-item label="enkeltrom" style="text-align: center;">
+                                {{ prices.single }},- per person
+                                <div class="flex-center">
+                                    <el-input-number
+                                        v-model="form.amountSingle"
+                                        @change="onSingleChange"
+                                        :min="0"
+                                        :max="10"
+                                    ></el-input-number>
                                 </div>
-                            </el-col>
+                            </el-form-item>
 
-                            <el-col :span="8" style="text-align: center;">
-                                <el-form-item label="dobbeltrom">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountDouble"
-                                            @change="onDoubleChange"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
+                            <div v-for="room in form.rooms.single">
+                                <el-card class="box-card" style="box-shadow: 0;">
+                                    <div slot="header" style="display: flex; align-items: stretch;">
+                                        <div style="flex: 1;" v-text="'rom ' + room.num"></div>
+
+                                        <!-- <el-button type="default" @click.stop="">
+                                            [+] legg til barneseng
+                                            +barneseng
+                                        </el-button> -->
+                                        <el-form-item>
+                                            <el-select v-model="child" placeholder="+barneseng">
+                                                <el-option :key="0" :label="0" :value="0"></el-option>
+                                                <el-option :key="1" :label="1" :value="1"></el-option>
+                                                <el-option :key="2" :label="2" :value="2"></el-option>
+                                            </el-select>
+                                        </el-form-item>
                                     </div>
-                                </el-form-item>
+                                    <div class="text item">
+                                        <el-row>
+                                            <el-col :span="12">
+                                                <el-form-item label="navn">
+                                                    <el-input></el-input>
+                                                </el-form-item>
+                                            </el-col>
 
-                                <div v-for="(room, index) in form.rooms.double">
-                                    <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
-                                        <el-input></el-input>
-                                    </el-form-item>
-                                </div>
-                            </el-col>
-
-                            <el-col :span="8" style="text-align: center;">
-                                <el-form-item label="twintrom">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountTwin"
-                                            @change="onTwinChange"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
+                                            <el-col :span="12">
+                                                <el-form-item label="fødselsdato">
+                                                    <el-input></el-input>
+                                                </el-form-item>
+                                            </el-col>
+                                        </el-row>
                                     </div>
-                                </el-form-item>
+                                </el-card>
+                            </div>
+                        </el-row>
 
-                                <div v-for="(room, index) in form.rooms.twin">
-                                    <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
-                                        <el-input></el-input>
-                                    </el-form-item>
+                        <el-row style="text-align: center;">
+                            <el-form-item label="dobbeltrom">
+                                {{ prices.double }},- per person
+                                <div class="flex-center">
+                                    <el-input-number
+                                        v-model="form.amountDouble"
+                                        @change="onDoubleChange"
+                                        :min="0"
+                                        :max="10"
+                                    ></el-input-number>
                                 </div>
-                            </el-col>
+                            </el-form-item>
+
+                            <div v-for="(room, index) in form.rooms.double">
+                                <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
+                                    <el-input></el-input>
+                                </el-form-item>
+                            </div>
+                        </el-row>
+
+                        <el-row style="text-align: center;">
+                            <el-form-item label="twintrom">
+                                {{ prices.twin }},- per person
+                                <div class="flex-center">
+                                    <el-input-number
+                                        v-model="form.amountTwin"
+                                        @change="onTwinChange"
+                                        :min="0"
+                                        :max="10"
+                                    ></el-input-number>
+                                </div>
+                            </el-form-item>
+
+                            <div v-for="(room, index) in form.rooms.twin">
+                                <el-form-item :label="index % 2 === 0 ? 'rom ' + room.num : ''">
+                                    <el-input></el-input>
+                                </el-form-item>
+                            </div>
                         </el-row>
                     </section>
 
@@ -112,20 +120,34 @@
                             <el-form-item label="Poststed">
                                 <el-input v-model="form.city"></el-input>
                             </el-form-item>
+
+                            <el-form-item label="Tilleggsinfomasjon">
+                                <p style="margin: 0; padding: 2px; font-size: 12px; color: #aaa;">Noe du ønsker å tilføye?</p>
+                                <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
+                            </el-form-item>
+
+                            <el-form-item label="Ønsket avreisested">
+                                <el-radio-group v-model="form.departure">
+                                    <el-radio-button label="Gjøvik"></el-radio-button>
+                                    <el-radio-button label="Hunndalen"></el-radio-button>
+                                    <el-radio-button label="Raufoss"></el-radio-button>
+                                    <el-radio-button label="Reinsvoll"></el-radio-button>
+                                    <el-radio-button label="Eina"></el-radio-button>
+                                    <el-radio-button label="Gran"></el-radio-button>
+                                </el-radio-group>
+                            </el-form-item>
                         </el-row>
                     </section>
 
                     <section class="step activities">
                         <div v-show="form.activities.length">
-                            <h3>Alternative Aktiviteter</h3>
+                            <h3>Ekstra Aktiviteter</h3>
                         </div>
 
                         <div v-for="(activity, index) in form.activities">
-                            <div>
-                                <h4>
-                                    {{ activity.title }}
-                                </h4>
-                            </div>
+                            <el-row>
+                                <h4>{{ activity.title }}</h4>
+                            </el-row>
                             
                             <el-row>
                                 <el-col :span="8">
@@ -139,9 +161,13 @@
                                     </label>
                                 </el-col>
                                 <el-col :span="8" style="display: flex;">
-                                    <div @click="increment('adults', 'decrease', index)">minus</div>
+                                    <div @click="increment('adults', 'decrease', index)">
+                                        <i class="el-icon-minus"></i>
+                                    </div>
                                     <input v-model.number="activity.amountAdults" type="text">
-                                    <div @click="increment('adults', 'increase', index)">pluss</div>
+                                    <div @click="increment('adults', 'increase', index)">
+                                        <i class="el-icon-plus"></i>
+                                    </div>
                                 </el-col>
                             </el-row>
 
@@ -157,9 +183,13 @@
                                     </label>
                                 </el-col>
                                 <el-col :span="8" style="display: flex;">
-                                    <div @click="increment('children', 'decrease', index)">minus</div>
+                                    <div @click="increment('children', 'decrease', index)">
+                                        <i class="el-icon-minus"></i>
+                                    </div>
                                     <input v-model.number="activity.amountChildren" type="text">
-                                    <div @click="increment('children', 'increase', index)">pluss</div>
+                                    <div @click="increment('children', 'increase', index)">
+                                        <i class="el-icon-plus"></i>
+                                    </div>
                                 </el-col>
                             </el-row>
                         </div>
@@ -195,6 +225,9 @@
                 showModal: false,
                 finished: false,
 
+                title: trip.title,
+                child: 0,
+
                 form: {
                     amountSingle: 0,
                     amountDouble: 0,
@@ -212,6 +245,8 @@
                     address: '',
                     postalcode: '',
                     city: '',
+                    extra: '',
+                    departure: 'Gjøvik',
 
                     activities: []
                 },
@@ -231,29 +266,30 @@
 
         computed: {
             /**
-             * Computed property for the total price for the trip.
+             * Total price for the trip.
              */
             totalPrice() {
                 return this.roomsPrice + this.activitiesPrice
             },
             
             /**
-             * Computed property for the total price of all rooms.
+             * Total price of all rooms.
              */
             roomsPrice() {
                 return (this.prices.single * this.form.amountSingle) +
                        (this.prices.double * this.form.amountDouble) +
-                       (this.prices.twin * this.form.amountTwin)
+                       (this.prices.twin   * this.form.amountTwin)
             },
 
             /**
-             * Computed property for the total price of all selected activties.
+             * Total price of all selected activties.
              */
             activitiesPrice() {
                 if (!this.form.activities) {
                     return 0
                 }
 
+                /*  */
                 return this.form.activities.reduce(function(total, value) {
                     return total + Number(
                         (value.price * value.amountAdults) + (value.priceAfterDiscount * value.amountChildren)
@@ -341,21 +377,27 @@
              * 
              */
              increment(age, action, index) {
-                if (action == 'decrease' && parseInt(this.form.activities[index].amountChildren) <= 0) {
-                    
-                } else {
-                    if (age == 'children') {
-                        action == 'increase' ? 
-                            parseInt(this.form.activities[index].amountChildren++) : parseInt(this.form.activities[index].amountChildren--);
+                if (age == 'children') {
+                    if (action == 'increase') {
+                        parseInt(this.form.activities[index].amountChildren++)
+                    }
+
+                    if (action == 'decrease') {
+                        if (parseInt(this.form.activities[index].amountChildren) != 0) {
+                            parseInt(this.form.activities[index].amountChildren--)
+                        }
                     }
                 }
-                
-                if (action == 'decrease' && parseInt(this.form.activities[index].amountAdults) <= 0) {
-                    
-                } else {
-                    if (age == 'adults') {
-                        action == 'increase' ? 
-                            parseInt(this.form.activities[index].amountAdults++) : parseInt(this.form.activities[index].amountAdults--);
+            
+                if (age == 'adults') {
+                    if (action == 'increase') {
+                        parseInt(this.form.activities[index].amountAdults++)
+                    }
+
+                    if (action == 'decrease') {
+                        if (parseInt(this.form.activities[index].amountAdults) != 0) {
+                            parseInt(this.form.activities[index].amountAdults--)
+                        }
                     }
                 }
             }
@@ -368,7 +410,7 @@
 
             this.form.activities = trip.activities
 
-            /* set initial prices now that activites has been loaded from the server */
+            /* calculate and set initial prices now that activites has been loaded from the server */
             this.form.activities.forEach(function(activity) {
                 Vue.set(activity, 'priceAfterDiscount', activity.price - (activity.discountChildren * activity.price / 100))
                 Vue.set(activity, 'amountAdults', 0)
