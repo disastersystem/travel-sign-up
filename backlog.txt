@@ -1,0 +1,4 @@
+
+
+
+do some validation on the backend for when people write -2 and money gets subtracted

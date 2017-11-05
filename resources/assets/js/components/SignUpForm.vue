@@ -41,9 +41,7 @@
                                                 <el-form-item label="navn">
                                                     <el-input></el-input>
                                                 </el-form-item>
-                                            </el-col>
 
-                                            <el-col :span="12">
                                                 <el-form-item label="fødselsdato">
                                                     <el-input></el-input>
                                                 </el-form-item>
@@ -199,11 +197,13 @@
             </div>
 
             <div slot="footer">
-                <div style="display: flex; align-items: center;">
-                    <h3 style="margin-right: 15px;">{{ totalPrice }},-</h3>
+                <div class="space-between">
+                    <span class="total-price">
+                        {{ totalPrice }},-
+                    </span>
 
                     <el-button type="success" :disabled="form.name == ''">
-                        Send
+                        Send <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
                     </el-button>
                 </div>
             </div>
@@ -285,11 +285,12 @@
              * Total price of all selected activties.
              */
             activitiesPrice() {
+                //return 0 if the trip does not have any extra activities
                 if (!this.form.activities) {
                     return 0
                 }
 
-                /*  */
+                //calculate the total price
                 return this.form.activities.reduce(function(total, value) {
                     return total + Number(
                         (value.price * value.amountAdults) + (value.priceAfterDiscount * value.amountChildren)
@@ -379,30 +380,36 @@
              increment(age, action, index) {
                 if (age == 'children') {
                     if (action == 'increase') {
-                        parseInt(this.form.activities[index].amountChildren++)
+                        this.form.activities[index].amountChildren++
                     }
 
                     if (action == 'decrease') {
-                        if (parseInt(this.form.activities[index].amountChildren) != 0) {
-                            parseInt(this.form.activities[index].amountChildren--)
+                        if (this.form.activities[index].amountChildren > 0) {
+                            this.form.activities[index].amountChildren--
                         }
                     }
                 }
-            
+
                 if (age == 'adults') {
                     if (action == 'increase') {
-                        parseInt(this.form.activities[index].amountAdults++)
+                        this.form.activities[index].amountAdults++
                     }
 
                     if (action == 'decrease') {
-                        if (parseInt(this.form.activities[index].amountAdults) != 0) {
-                            parseInt(this.form.activities[index].amountAdults--)
+                        /* do not decrease below zero */
+                        if (this.form.activities[index].amountAdults > 0) {
+                            this.form.activities[index].amountAdults--
                         }
                     }
                 }
             }
         },
 
+        /**
+         * Fetch the trip data and assign it to vue props.
+         * Create some additional activities props with the 
+         * price calculated if there is any discounts.
+         */
         mounted() {
             this.prices.single = trip.prices.single
             this.prices.double = trip.prices.double
@@ -428,5 +435,25 @@
 
     .step {
         margin-bottom: 20px;
+    }
+
+    .space-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .total-price {
+        font-size: 1.4em;
+    }
+
+    .enrolment__button {
+        padding: 10px 15px;
+        border: 0;
+        background: #FFCA2D;
+        border-radius: 2px;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 1em;
     }
 </style>

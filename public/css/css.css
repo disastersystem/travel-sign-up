@@ -3,23 +3,9 @@ html, body {
 	margin: 0;
 	font-family: 'Raleway';
 	font-weight: 600;
+	background: #373D4A;
 }
 
-nav.main {
-	border-bottom: 1px solid #ddd;
-	padding: 10px 20px;
-	display: flex;
-	align-items: center;
-}
-
-.trip__title {
-	flex: 1;
-	margin: 10px;
-}
-
-.enrolment__button {
-	padding: 10px 15px;
-}
 
 /* fade in and fade out animation */
 .fade-enter-active,

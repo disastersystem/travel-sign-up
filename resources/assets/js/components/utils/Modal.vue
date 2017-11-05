@@ -190,8 +190,7 @@
 		overflow: hidden;
 	}
 
-	.b-modal-card-head,
-	.b-modal-card-foot {
+	.b-modal-card-head {
 		align-items: center;
 		background-color: whitesmoke;
 		display: flex;
@@ -216,11 +215,13 @@
 	}
 
 	.b-modal-card-foot {
+		padding: 10px 20px 10px 20px;
+		position: relative;
+		background-color: whitesmoke;
 		border-bottom-left-radius: 2px;
 		border-bottom-right-radius: 2px;
 		border-top: 1px solid #dbdbdb;
-		justify-content: flex-end;
-		padding-top: 0;
+		/*justify-content: flex-end;*/
 	}
 
 	.b-modal-card-foot .button:not(:last-child) {
