@@ -2,9 +2,21 @@
     <div>
         <modal :show="showModal" @close="showModal = false" :title="'Påmelding ' + title">
             <div style="padding: 40px;">
+
+            <!-- <el-steps :active="1" align-center>
+                <el-step title="Hotell" description="Velg hotellrom"></el-step>
+                <el-step title="Bestiller" description="Kontakt informasjon om bestiller"></el-step>
+                <el-step title="Aktiviteter" description="Velg tilleggsaktiviteter"></el-step>
+                <el-step title="Annet" description="Tilleggsinfomasjon"></el-step>
+            </el-steps> -->
+
                 <el-form label-position="top" :model="form">
 
                     <section class="step rooms">
+                        <div class="section__title">
+                            <h3>Hotellrom</h3>
+                        </div>
+
                         <el-row>
                             <el-form-item label="enkeltrom" style="text-align: center;">
                                 {{ prices.single }},- per person
@@ -94,6 +106,10 @@
                     </section>
 
                     <section class="step orderer">
+                        <div class="section__title">
+                            <h3>Bestiller</h3>
+                        </div>
+
                         <el-row>
                             <el-form-item label="Navn">
                                 <el-input v-model="form.name"></el-input>
@@ -103,7 +119,7 @@
                                 <el-input v-model="form.mail"></el-input>
                             </el-form-item>
 
-                            <el-form-item label="Telefon">
+                            <el-form-item label="Telefon"> <!-- <i style="color: #ddd;">valgfri</i> -->
                                 <el-input v-model="form.phone"></el-input>
                             </el-form-item>
 
@@ -125,20 +141,20 @@
                             </el-form-item>
 
                             <el-form-item label="Ønsket avreisested">
-                                <el-radio-group v-model="form.departure">
-                                    <el-radio-button label="Gjøvik"></el-radio-button>
-                                    <el-radio-button label="Hunndalen"></el-radio-button>
-                                    <el-radio-button label="Raufoss"></el-radio-button>
-                                    <el-radio-button label="Reinsvoll"></el-radio-button>
-                                    <el-radio-button label="Eina"></el-radio-button>
-                                    <el-radio-button label="Gran"></el-radio-button>
-                                </el-radio-group>
+                                <el-select v-model="form.departure" placeholder="Avreisested">
+                                    <el-option key="Gjøvik" value="Gjøvik" label="Gjøvik"></el-option>
+                                    <el-option key="Hunndalen" value="Hunndalen" label="Hunndalen"></el-option>
+                                    <el-option key="Raufoss" value="Raufoss" label="Raufoss"></el-option>
+                                    <el-option key="Reinsvoll" value="Reinsvoll" label="Reinsvoll"></el-option>
+                                    <el-option key="Eina" value="Eina" label="Eina"></el-option>
+                                    <el-option key="Gran" value="Gran" label="Gran"></el-option>
+                                </el-select>
                             </el-form-item>
                         </el-row>
                     </section>
 
                     <section class="step activities">
-                        <div v-show="form.activities.length">
+                        <div v-show="form.activities.length" class="section__title">
                             <h3>Ekstra Aktiviteter</h3>
                         </div>
 
@@ -198,12 +214,12 @@
 
             <div slot="footer">
                 <div class="space-between">
-                    <span class="total-price">
+                    <span class="total__price">
                         {{ totalPrice }},-
                     </span>
 
                     <el-button type="success" :disabled="form.name == ''">
-                        Send <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
+                        Send påmelding <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
                     </el-button>
                 </div>
             </div>
@@ -432,21 +448,20 @@
         display: flex;
         justify-content: center;
     }
-
     .step {
         margin-bottom: 20px;
     }
-
+    .section__title {
+        border-bottom: 1px solid #ddd;
+    }
     .space-between {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    .total-price {
+    .total__price {
         font-size: 1.4em;
     }
-
     .enrolment__button {
         padding: 10px 15px;
         border: 0;
