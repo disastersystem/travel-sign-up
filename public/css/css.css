@@ -6,7 +6,6 @@ html, body {
 	background: #373D4A;
 }
 
-
 /* fade in and fade out animation */
 .fade-enter-active,
 .fade-leave-active {
@@ -16,4 +15,12 @@ html, body {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
+}
+
+/* ELEMENT UI RESETS */
+/* reset some element ui form label styling */
+.el-form--label-top .el-form-item__label {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
 }

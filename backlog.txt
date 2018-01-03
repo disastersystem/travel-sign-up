@@ -1,4 +1,36 @@
 
+SUBMIT KNAPP ER IKKE INNE I FORM ELEMENTET.
+
+do some validation on the backend (and frontend) for when people write -2 and money gets subtracted
+
+Bestiller må skive info to ganger: personen vil også skrive seg på et rom. Droppe noe av info bare spørre om mail?
+La et kort bli valgt som bestiller og add epost etc?
+
+Clean up form spacing (Group labels with their inputs)
+Use field length as affordance
+
+endre default value i departure dropdown?
+
+Se på hvordan element form docs adds/removes new fiels.
+
+Kursiv faded - valgfri
+Change fonts?
+
+Auto date formatting: https://codepen.io/fauxserious/pen/XKrYvv
+
+The child prop needs to be related to the room itself
+
+Thinner modal header.
+
+Place checkboxes (and radios) underneath each other for scannability
+Specify errors inline
+Use inline validation after the user fills out the field (unless it helps them while in the process)
+Don’t hide basic helper text
+Differentiate primary from secondary actions
 
 
-do some validation on the backend for when people write -2 and money gets subtracted
+
+Escape:
+	- If to many hotel rooms gets selected (to many people join) then plane tickets gets a red border.
+	- When activites are selected it remembers how many people has joined the trip and you've to uncheck those not joining.
+	- Sammendrag av side 1 på side 2.
