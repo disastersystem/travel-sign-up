@@ -62,17 +62,24 @@
                         </el-row>
 
                         <el-row>
-                            <el-col v-for="room in form.rooms.single" :span="12" :key="room">
+                            <el-col v-for="(room, index) in form.rooms.single" :span="12" :key="index">
                                 <el-card class="box-card" style="box-shadow: 0; margin-bottom: 10px;">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1; font-weight: 800;">
                                             <strong v-text="'Enkeltrom ' + room.num"></strong>
                                         </div>
 
-                                        <el-button type="default" @click.stop="">
+                                        <!-- <el-button type="default" @click.stop="" class="add-bed__button">
                                             legg til barneseng [+]
-                                            <!-- +barneseng -->
-                                        </el-button>
+                                            +barneseng
+                                        </el-button> -->
+                                        <el-form-item label="Ekstra barneseng">
+                                            <el-select :value="0" @change="" placeholder="legg til barneseng [+]">
+                                                <el-option :key="0" :value="0" :label="0"></el-option>
+                                                <el-option :key="1" :value="1" :label="1"></el-option>
+                                                <el-option :key="2" :value="2" :label="2"></el-option>
+                                            </el-select>
+                                        </el-form-item>
                                     </div>
 
                                     <div class="text item">
@@ -94,8 +101,8 @@
                                             <strong v-text="'Dobbeltrom ' + room.num"></strong>
                                         </div>
 
-                                        <el-button type="default" @click.stop="">
-                                            [+] legg til barneseng <!-- +barneseng -->
+                                        <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
+                                            +barneseng
                                         </el-button>
                                     </div>
                                     
@@ -129,7 +136,7 @@
                                             <strong v-text="'Twinrom ' + room.num"></strong>
                                         </div>
 
-                                        <el-button type="default" @click.stop="">
+                                        <el-button type="default" @click.stop="" class="add-bed__button">
                                             [+] legg til barneseng <!-- +barneseng -->
                                         </el-button>
                                     </div>
@@ -276,7 +283,7 @@
                             </el-select>
                         </el-form-item>
 
-                        <el-form-item label="">
+                        <el-form-item label="Flybilletter">
                             <el-checkbox style="background: #fff;"
                                 v-model="form.planeTickets"
                                 label="Ønsker å bestille reisen med flybilletter"
@@ -287,14 +294,22 @@
 
                     <section class="step">
                         <el-row type="flex" class="row-bg" justify="center">
-                            <el-form-item label="">
-                                <a target="_blank" href="reisebetingelser.html">reisebetingelser</a>
-                                <el-checkbox style="background: #fff;"
-                                    v-model="form.travelConditions"
-                                    label="Jeg har lest og godtar reisebetingelsene"
-                                    border
-                                ></el-checkbox>
-                            </el-form-item>
+                            <el-checkbox
+                                class="conditions__checkbox"
+                                v-model="form.travelConditions"
+                                label="Jeg har lest og godtar"
+                                border
+                            ></el-checkbox>
+
+                            <div class="conditions__link">
+                                <a target="_blank" href="reisebetingelser.html">
+                                    reisebetingelsene 
+                                </a>
+                                
+                                <i class="material-icons" style="color: #ccc; font-size: 18px; margin-left: 5px;">
+                                    open_in_new
+                                </i>
+                            </div>
                         </el-row>
                     </section>
 
@@ -305,7 +320,7 @@
                 <div class="space-between">
                     <div>
                         <span class="total__price">
-                            {{ totalPrice }},-
+                            Totalt {{ totalPrice }} kr
                         </span>
                     </div>
                     
@@ -514,11 +529,25 @@
                         }
                     }
                 }
+            },
+
+            addBed(roomType, index) {
+                // switch(roomType) {
+                //     case 'single':
+                //         this.form.rooms.double[index].push()
+                //         break;
+                //     case 'double':
+
+                //         break;
+                //     case 'twin':
+
+                //         break;
+                // }
             }
         },
 
         onSubmit() {
-            console.log('Submitted')
+            console.log('Attempt submit')
         },
 
         /**
@@ -562,6 +591,29 @@
     .section__title h3 {
         padding: 0;
         margin: 0;
+    }
+    .el-card:nth-child(odd) {
+        margin-right: 40px;
+    }
+    .conditions__checkbox {
+        background: #fff;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .conditions__link {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-right: 8px;
+        border: 1px solid #c1c1c1; 
+        border-radius: 4px;
+        border-left: 1px dashed #c1c1c1;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: 10px;
+        line-height: 19px;
+        font-size: 14px;
     }
     .space-between {
         display: flex;

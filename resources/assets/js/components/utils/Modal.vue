@@ -100,7 +100,7 @@
 	.b-modal-content,
 	.b-modal-card {
 		margin: 0;
-		max-height: calc(100vh - 160px);
+		max-height: calc(100vh - 20px);
 		height: 100%;
 		overflow: auto;
 		position: relative;
@@ -112,7 +112,7 @@
 		.b-modal-content,
 		.b-modal-card {
 			margin: 10px auto;
-			max-height: calc(100vh - 40px);
+			max-height: calc(100vh - 20px);
 			width: 500px;
 		}
 	}
@@ -186,7 +186,7 @@
 	.b-modal-card {
 		display: flex;
 		flex-direction: column;
-		max-height: calc(100vh - 40px);
+		max-height: calc(100vh - 20px);
 		overflow: hidden;
 	}
 

@@ -86951,7 +86951,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\n.flex-center[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.space-between[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.enrolment__button[data-v-04fcb030] {\n    padding: 10px 15px;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n", ""]);
+exports.push([module.i, "\n.flex-center[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.el-card[data-v-04fcb030]:nth-child(odd) {\n    margin-right: 40px;\n}\n.conditions__checkbox[data-v-04fcb030] {\n    background: #fff;\n    border-right: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.conditions__link[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    text-align: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-right: 8px;\n    border: 1px solid #c1c1c1; \n    border-radius: 4px;\n    border-left: 1px dashed #c1c1c1;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    padding-left: 10px;\n    line-height: 19px;\n    font-size: 14px;\n}\n.space-between[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.enrolment__button[data-v-04fcb030] {\n    padding: 10px 15px;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n", ""]);
 
 // exports
 
@@ -86965,6 +86965,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_Modal__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__utils_Modal__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -87471,11 +87486,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     }
                 }
             }
+        },
+        addBed: function addBed(roomType, index) {
+            // switch(roomType) {
+            //     case 'single':
+            //         this.form.rooms.double[index].push()
+            //         break;
+            //     case 'double':
+
+            //         break;
+            //     case 'twin':
+
+            //         break;
+            // }
         }
     },
 
     onSubmit: function onSubmit() {
-        console.log('Submitted');
+        console.log('Attempt submit');
     },
 
 
@@ -87612,7 +87640,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\n.b-modal-background[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tbackground-color: rgba(10, 10, 10, 0.6);\n\tz-index: 900;\n}\n.b-modal-content[data-v-af808f9a],\n.b-modal-card[data-v-af808f9a] {\n\tmargin: 0;\n\tmax-height: calc(100vh - 160px);\n\theight: 100%;\n\toverflow: auto;\n\tposition: relative;\n\twidth: 100%;\n\tz-index: 950;\n}\n@media screen and (min-width: 769px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\tmargin: 10px auto;\n\t\tmax-height: calc(100vh - 40px);\n\t\twidth: 500px;\n}\n}\n@media screen and (max-width: 768px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\twidth: 94%;\n}\n}\n.b-modal-close[data-v-af808f9a] {\n\t-webkit-touch-callout: none;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\t-ms-user-select: none;\n\tuser-select: none;\n\t-moz-appearance: none;\n\t-webkit-appearance: none;\n\tbackground-color: rgba(10, 10, 10, 0.2);\n\tborder: none;\n\tborder-radius: 290486px;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\t-webkit-box-flex: 0;\n\t-ms-flex-positive: 0;\n\tflex-grow: 0;\n\t-ms-flex-negative: 0;\n\tflex-shrink: 0;\n\tfont-size: 1rem;\n\theight: 30px;\n\tmax-height: 30px;\n\tmax-width: 30px;\n\tmin-height: 30px;\n\tmin-width: 30px;\n\toutline: none;\n\tposition: relative;\n\tvertical-align: top;\n\twidth: 30px;\n}\n.b-modal-close[data-v-af808f9a]:before, .b-modal-close[data-v-af808f9a]:after {\n\tbackground-color: white;\n\tcontent: \"\";\n\tdisplay: block;\n\tleft: 50%;\n\tposition: absolute;\n\ttop: 50%;\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t        transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t-webkit-transform-origin: center center;\n\t        transform-origin: center center;\n}\n.b-modal-close[data-v-af808f9a]:before {\n\theight: 2px;\n\twidth: 50%;\n}\n.b-modal-close[data-v-af808f9a]:after {\n\theight: 50%;\n\twidth: 2px;\n}\n.b-modal-close[data-v-af808f9a]:hover, .b-modal-close[data-v-af808f9a]:focus {\n\tbackground-color: rgba(10, 10, 10, 0.3);\n}\n.b-modal-close[data-v-af808f9a]:active {\n\tbackground-color: rgba(10, 10, 10, 0.4);\n}\n.b-modal-card[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmax-height: calc(100vh - 40px);\n\toverflow: hidden;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tbackground-color: whitesmoke;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\t-webkit-box-pack: start;\n\t    -ms-flex-pack: start;\n\t        justify-content: flex-start;\n\tpadding: 10px 20px 0 20px;\n\tposition: relative;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\tborder-bottom: 1px solid #dbdbdb;\n\tborder-top-left-radius: 2px;\n\tborder-top-right-radius: 2px;\n}\n.b-modal-card-title[data-v-af808f9a] {\n\tcolor: #363636;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\tfont-size: 1.3rem;\n\tline-height: 1;\n}\n.b-modal-card-foot[data-v-af808f9a] {\n\tpadding: 10px 20px 10px 20px;\n\tposition: relative;\n\tbackground-color: whitesmoke;\n\tborder-bottom-left-radius: 2px;\n\tborder-bottom-right-radius: 2px;\n\tborder-top: 1px solid #dbdbdb;\n\t/*justify-content: flex-end;*/\n}\n.b-modal-card-foot .button[data-v-af808f9a]:not(:last-child) {\n\tmargin-right: 10px;\n}\n.b-modal-card-body[data-v-af808f9a] {\n\t-webkit-overflow-scrolling: touch;\n\tbackground-color: white;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 1;\n\t    flex-shrink: 1;\n\toverflow: auto;\n}\n.b-modal[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\ttop: 0;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tdisplay: none;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\toverflow: hidden;\n\tposition: fixed !important;\n\tz-index: 1000;\n}\n.b-modal.b-is-active[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n}\n", ""]);
+exports.push([module.i, "\n.b-modal-background[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tbackground-color: rgba(10, 10, 10, 0.6);\n\tz-index: 900;\n}\n.b-modal-content[data-v-af808f9a],\n.b-modal-card[data-v-af808f9a] {\n\tmargin: 0;\n\tmax-height: calc(100vh - 20px);\n\theight: 100%;\n\toverflow: auto;\n\tposition: relative;\n\twidth: 100%;\n\tz-index: 950;\n}\n@media screen and (min-width: 769px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\tmargin: 10px auto;\n\t\tmax-height: calc(100vh - 20px);\n\t\twidth: 500px;\n}\n}\n@media screen and (max-width: 768px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\twidth: 94%;\n}\n}\n.b-modal-close[data-v-af808f9a] {\n\t-webkit-touch-callout: none;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\t-ms-user-select: none;\n\tuser-select: none;\n\t-moz-appearance: none;\n\t-webkit-appearance: none;\n\tbackground-color: rgba(10, 10, 10, 0.2);\n\tborder: none;\n\tborder-radius: 290486px;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\t-webkit-box-flex: 0;\n\t-ms-flex-positive: 0;\n\tflex-grow: 0;\n\t-ms-flex-negative: 0;\n\tflex-shrink: 0;\n\tfont-size: 1rem;\n\theight: 30px;\n\tmax-height: 30px;\n\tmax-width: 30px;\n\tmin-height: 30px;\n\tmin-width: 30px;\n\toutline: none;\n\tposition: relative;\n\tvertical-align: top;\n\twidth: 30px;\n}\n.b-modal-close[data-v-af808f9a]:before, .b-modal-close[data-v-af808f9a]:after {\n\tbackground-color: white;\n\tcontent: \"\";\n\tdisplay: block;\n\tleft: 50%;\n\tposition: absolute;\n\ttop: 50%;\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t        transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t-webkit-transform-origin: center center;\n\t        transform-origin: center center;\n}\n.b-modal-close[data-v-af808f9a]:before {\n\theight: 2px;\n\twidth: 50%;\n}\n.b-modal-close[data-v-af808f9a]:after {\n\theight: 50%;\n\twidth: 2px;\n}\n.b-modal-close[data-v-af808f9a]:hover, .b-modal-close[data-v-af808f9a]:focus {\n\tbackground-color: rgba(10, 10, 10, 0.3);\n}\n.b-modal-close[data-v-af808f9a]:active {\n\tbackground-color: rgba(10, 10, 10, 0.4);\n}\n.b-modal-card[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmax-height: calc(100vh - 20px);\n\toverflow: hidden;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tbackground-color: whitesmoke;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\t-webkit-box-pack: start;\n\t    -ms-flex-pack: start;\n\t        justify-content: flex-start;\n\tpadding: 10px 20px 0 20px;\n\tposition: relative;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\tborder-bottom: 1px solid #dbdbdb;\n\tborder-top-left-radius: 2px;\n\tborder-top-right-radius: 2px;\n}\n.b-modal-card-title[data-v-af808f9a] {\n\tcolor: #363636;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\tfont-size: 1.3rem;\n\tline-height: 1;\n}\n.b-modal-card-foot[data-v-af808f9a] {\n\tpadding: 10px 20px 10px 20px;\n\tposition: relative;\n\tbackground-color: whitesmoke;\n\tborder-bottom-left-radius: 2px;\n\tborder-bottom-right-radius: 2px;\n\tborder-top: 1px solid #dbdbdb;\n\t/*justify-content: flex-end;*/\n}\n.b-modal-card-foot .button[data-v-af808f9a]:not(:last-child) {\n\tmargin-right: 10px;\n}\n.b-modal-card-body[data-v-af808f9a] {\n\t-webkit-overflow-scrolling: touch;\n\tbackground-color: white;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 1;\n\t    flex-shrink: 1;\n\toverflow: auto;\n}\n.b-modal[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\ttop: 0;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tdisplay: none;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\toverflow: hidden;\n\tposition: fixed !important;\n\tz-index: 1000;\n}\n.b-modal.b-is-active[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n}\n", ""]);
 
 // exports
 
@@ -87972,10 +88000,10 @@ var render = function() {
                       _c(
                         "el-row",
                         [
-                          _vm._l(_vm.form.rooms.single, function(room) {
+                          _vm._l(_vm.form.rooms.single, function(room, index) {
                             return _c(
                               "el-col",
-                              { key: room, attrs: { span: 12 } },
+                              { key: index, attrs: { span: 12 } },
                               [
                                 _c(
                                   "el-card",
@@ -88018,20 +88046,43 @@ var render = function() {
                                         ),
                                         _vm._v(" "),
                                         _c(
-                                          "el-button",
+                                          "el-form-item",
                                           {
-                                            attrs: { type: "default" },
-                                            on: {
-                                              click: function($event) {
-                                                $event.stopPropagation()
-                                              }
-                                            }
+                                            attrs: { label: "Ekstra barneseng" }
                                           },
                                           [
-                                            _vm._v(
-                                              "\n                                        legg til barneseng [+]\n                                        "
+                                            _c(
+                                              "el-select",
+                                              {
+                                                attrs: {
+                                                  value: 0,
+                                                  placeholder:
+                                                    "legg til barneseng [+]"
+                                                },
+                                                on: {
+                                                  change: function($event) {}
+                                                }
+                                              },
+                                              [
+                                                _c("el-option", {
+                                                  key: 0,
+                                                  attrs: { value: 0, label: 0 }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("el-option", {
+                                                  key: 1,
+                                                  attrs: { value: 1, label: 1 }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("el-option", {
+                                                  key: 2,
+                                                  attrs: { value: 2, label: 2 }
+                                                })
+                                              ],
+                                              1
                                             )
-                                          ]
+                                          ],
+                                          1
                                         )
                                       ],
                                       1
@@ -88113,16 +88164,18 @@ var render = function() {
                                             _c(
                                               "el-button",
                                               {
+                                                staticClass: "add-bed__button",
                                                 attrs: { type: "default" },
                                                 on: {
                                                   click: function($event) {
                                                     $event.stopPropagation()
+                                                    _vm.addBed("double", index)
                                                   }
                                                 }
                                               },
                                               [
                                                 _vm._v(
-                                                  "\n                                        [+] legg til barneseng "
+                                                  "\n                                        +barneseng\n                                    "
                                                 )
                                               ]
                                             )
@@ -88305,6 +88358,7 @@ var render = function() {
                                             _c(
                                               "el-button",
                                               {
+                                                staticClass: "add-bed__button",
                                                 attrs: { type: "default" },
                                                 on: {
                                                   click: function($event) {
@@ -88944,7 +88998,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "el-form-item",
-                        { attrs: { label: "" } },
+                        { attrs: { label: "Flybilletter" } },
                         [
                           _c("el-checkbox", {
                             staticStyle: { background: "#fff" },
@@ -88979,39 +89033,54 @@ var render = function() {
                           attrs: { type: "flex", justify: "center" }
                         },
                         [
-                          _c(
-                            "el-form-item",
-                            { attrs: { label: "" } },
-                            [
-                              _c(
-                                "a",
-                                {
-                                  attrs: {
-                                    target: "_blank",
-                                    href: "reisebetingelser.html"
-                                  }
-                                },
-                                [_vm._v("reisebetingelser")]
-                              ),
-                              _vm._v(" "),
-                              _c("el-checkbox", {
-                                staticStyle: { background: "#fff" },
+                          _c("el-checkbox", {
+                            staticClass: "conditions__checkbox",
+                            attrs: {
+                              label: "Jeg har lest og godtar",
+                              border: ""
+                            },
+                            model: {
+                              value: _vm.form.travelConditions,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "travelConditions", $$v)
+                              },
+                              expression: "form.travelConditions"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "conditions__link" }, [
+                            _c(
+                              "a",
+                              {
                                 attrs: {
-                                  label:
-                                    "Jeg har lest og godtar reisebetingelsene",
-                                  border: ""
-                                },
-                                model: {
-                                  value: _vm.form.travelConditions,
-                                  callback: function($$v) {
-                                    _vm.$set(_vm.form, "travelConditions", $$v)
-                                  },
-                                  expression: "form.travelConditions"
+                                  target: "_blank",
+                                  href: "reisebetingelser.html"
                                 }
-                              })
-                            ],
-                            1
-                          )
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                reisebetingelsene \n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "i",
+                              {
+                                staticClass: "material-icons",
+                                staticStyle: {
+                                  color: "#ccc",
+                                  "font-size": "18px",
+                                  "margin-left": "5px"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                open_in_new\n                            "
+                                )
+                              ]
+                            )
+                          ])
                         ],
                         1
                       )
@@ -89029,9 +89098,9 @@ var render = function() {
               _c("div", [
                 _c("span", { staticClass: "total__price" }, [
                   _vm._v(
-                    "\n                        " +
+                    "\n                        Totalt " +
                       _vm._s(_vm.totalPrice) +
-                      ",-\n                    "
+                      " kr\n                    "
                   )
                 ])
               ]),

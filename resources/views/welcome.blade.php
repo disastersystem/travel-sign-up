@@ -10,6 +10,7 @@
 
         <!-- fonts/icons -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,500,600,700,800,900" rel="stylesheet" type="text/css">
         
         <!-- include this because the import does not work -->
