@@ -3,12 +3,12 @@
         <modal :show="showModal" @close="showModal = false" :title="'Påmelding ' + title">
             <div style="padding: 40px;">
 
-            <!-- <el-steps :active="1" align-center>
-                <el-step title="Hotell" description="Velg hotellrom"></el-step>
-                <el-step title="Bestiller" description="Kontakt informasjon om bestiller"></el-step>
-                <el-step title="Aktiviteter" description="Velg tilleggsaktiviteter"></el-step>
-                <el-step title="Annet" description="Tilleggsinfomasjon"></el-step>
-            </el-steps> -->
+                <el-steps :active="1" align-center>
+                    <el-step title="Hotell" description="Velg hotellrom"></el-step>
+                    <el-step title="Bestiller" description="Kontakt informasjon om bestiller"></el-step>
+                    <el-step title="Aktiviteter" description="Velg tilleggsaktiviteter"></el-step>
+                    <el-step title="Annet" description="Tilleggsinfomasjon"></el-step>
+                </el-steps>
 
                 <el-form label-position="top" :model="form" @submit.native.prevent>
 
@@ -19,12 +19,15 @@
 
                         <el-row>
                             <el-col :span="8">
-                                <el-form-item label="enkeltrom" style="text-align: center;">
-                                    {{ prices.single }},- per person
+                                <h2 style="text-align: center;">Enkeltrom</h2>
+
+                                <h5 style="font-weight: normal; text-align: center;">{{ prices.single }},- per person</h5>
+
+                                <el-form-item label="" style="text-align: center;">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountSingle"
-                                            @change="onSingleChange"
+                                            @change="onRoomChange('single')"
                                             :min="0"
                                             :max="10"
                                         ></el-input-number>
@@ -33,12 +36,15 @@
                             </el-col>
 
                             <el-col :span="8">
-                                <el-form-item label="dobbeltrom" style="text-align: center;">
-                                    {{ prices.double }},- per person
+                                <h2 style="text-align: center;">Dobbeltrom</h2>
+
+                                <h5 style="font-weight: normal; text-align: center;">{{ prices.double }},- per person</h5>
+
+                                <el-form-item style="text-align: center;">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountDouble"
-                                            @change="onDoubleChange"
+                                            @change="onRoomChange('double')"
                                             :min="0"
                                             :max="10"
                                         ></el-input-number>
@@ -47,12 +53,19 @@
                             </el-col>
 
                             <el-col :span="8">
-                                <el-form-item label="twinrom" style="text-align: center;">
+                                <h2 style="text-align: center;">
+                                    Twinrom
+                                </h2>
+
+                                <h5 style="font-weight: normal; text-align: center;">
                                     {{ prices.twin }},- per person
+                                </h5>
+
+                                <el-form-item label="" style="text-align: center;">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountTwin"
-                                            @change="onTwinChange"
+                                            @change="onRoomChange('twin')"
                                             :min="0"
                                             :max="10"
                                         ></el-input-number>
@@ -61,20 +74,16 @@
                             </el-col>
                         </el-row>
 
-                        <el-row>
-                            <el-col v-for="(room, index) in form.rooms.single" :span="12" :key="index">
-                                <el-card class="box-card" style="box-shadow: 0; margin-bottom: 10px;">
+                        <el-row class="room__cards">
+                            <el-col v-for="(room, index) in form.rooms.single" :key="index" :span="12">
+                                <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Enkeltrom ' + room.num"></strong>
+                                            <strong v-text="'Enkeltrom ' + (index + 1)"></strong>
                                         </div>
 
-                                        <!-- <el-button type="default" @click.stop="" class="add-bed__button">
-                                            legg til barneseng [+]
-                                            +barneseng
-                                        </el-button> -->
                                         <el-form-item label="Ekstra barneseng">
-                                            <el-select :value="0" @change="" placeholder="legg til barneseng [+]">
+                                            <el-select :value="0" @change="" placeholder="legg til barneseng">
                                                 <el-option :key="0" :value="0" :label="0"></el-option>
                                                 <el-option :key="1" :value="1" :label="1"></el-option>
                                                 <el-option :key="2" :value="2" :label="2"></el-option>
@@ -82,88 +91,74 @@
                                         </el-form-item>
                                     </div>
 
-                                    <div class="text item">
+                                    <div class="text item" v-for="person in room">
                                         <el-form-item label="Navn">
-                                            <el-input></el-input>
+                                            <el-input v-model="person.name"></el-input>
                                         </el-form-item>
 
                                         <el-form-item label="Fødselsdato">
-                                            <el-input></el-input>
+                                            <el-input v-model="person.dob"></el-input>
                                         </el-form-item>
                                     </div>
                                 </el-card>
                             </el-col>
 
-                            <el-col v-for="(room, index) in form.rooms.double" :span="12" :key="index" v-if="index % 2 === 0">
-                                <el-card class="box-card" style="box-shadow: 0; margin-bottom: 10px;">
+                            <el-col v-for="(room, index) in form.rooms.double" :key="index" :span="12">
+                                <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Dobbeltrom ' + room.num"></strong>
+                                            <strong v-text="'Dobbeltrom ' + (index + 1)"></strong>
                                         </div>
 
-                                        <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
+                                        <!-- <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
                                             +barneseng
-                                        </el-button>
+                                        </el-button> -->
                                     </div>
                                     
                                     <div class="text item">
-                                        <p>Person 1</p>
-                                        <el-form-item label="Navn">
-                                            <el-input v-model="room.name"></el-input>
-                                        </el-form-item>
+                                        <template v-for="(person, i) in room">
+                                            <div v-if="i % 2 === 0" class="separator__line"></div>
 
-                                        <el-form-item label="Fødselsdato">
-                                            <el-input v-model="room.dob" placeholder="dd.mm.yyyy"></el-input>
-                                        </el-form-item>
+                                            <p v-text="'Person ' + i"></p>
 
-                                        <div style="border-top: 1px solid #ddd;"></div>
-                                        <p>Person 2</p>
-                                        <el-form-item label="Navn">
-                                            <el-input v-model="form.rooms.double[index + 1].name"></el-input>
-                                        </el-form-item>
+                                            <el-form-item label="Navn">
+                                                <el-input v-model="person.name"></el-input>
+                                            </el-form-item>
 
-                                        <el-form-item label="Fødselsdato">
-                                            <el-input v-model="form.rooms.double[index + 1].dob" placeholder="dd.mm.yyyy"></el-input>
-                                        </el-form-item>
+                                            <el-form-item label="Fødselsdato">
+                                                <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
+                                            </el-form-item>
+                                        </template>
                                     </div>
                                 </el-card>
                             </el-col>
 
-                            <el-col v-for="(room, index) in form.rooms.twin" :span="12" :key="index" v-if="index % 2 === 0">
-                                <el-card class="box-card" style="box-shadow: 0; margin-bottom: 10px;">
+                            <el-col v-for="(room, index) in form.rooms.twin" :key="index" :span="12">
+                                <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Twinrom ' + room.num"></strong>
+                                            <strong v-text="'Twinrom ' + (index + 1)"></strong>
                                         </div>
 
-                                        <el-button type="default" @click.stop="" class="add-bed__button">
-                                            [+] legg til barneseng <!-- +barneseng -->
-                                        </el-button>
+                                        <!-- <el-button type="default" @click.stop="" class="add-bed__button">
+                                            [+] legg til barneseng
+                                        </el-button> -->
                                     </div>
                                     
                                     <div class="text item">
-                                        <!-- <el-col :span="12"> -->
-                                            <p>Person 1</p>
+                                        <template v-for="(person, i) in room">
+                                            <div v-if="i % 2 === 0" class="separator__line"></div>
+
+                                            <p>Person {{ i }}</p>
+
                                             <el-form-item label="Navn">
-                                                <el-input v-model="room.name"></el-input>
+                                                <el-input v-model="person.name"></el-input>
                                             </el-form-item>
 
                                             <el-form-item label="Fødselsdato">
-                                                <el-input v-model="room.dob" placeholder="dd.mm.yyyy"></el-input>
+                                                <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
                                             </el-form-item>
-                                        <!-- </el-col> -->
-
-                                        <!-- <el-col :span="12"> -->
-                                            <div style="border-top: 1px solid #ddd;"></div>
-                                            <p>Person 2</p>
-                                            <el-form-item label="Navn">
-                                                <el-input v-model="form.rooms.twin[index + 1].name"></el-input>
-                                            </el-form-item>
-
-                                            <el-form-item label="Fødselsdato">
-                                                <el-input v-model="form.rooms.twin[index + 1].dob" placeholder="dd.mm.yyyy"></el-input>
-                                            </el-form-item>
-                                        <!-- </el-col> -->
+                                        </template>
                                     </div>
                                 </el-card>
                             </el-col>
@@ -393,10 +388,14 @@
 
         computed: {
             /**
-             * Total price for the trip.
+             * Total price for the whole trip.
              */
             totalPrice() {
                 return this.roomsPrice + this.activitiesPrice
+            },
+
+            amountSingleV() {
+                return this.form.amountSingle
             },
             
             /**
@@ -427,78 +426,52 @@
         },
 
         methods: {
-            onSingleChange(numRooms) {
-                /* get the difference between the current number of rooms and the newly selected amount */
-                let amountAdded = (numRooms - this.form.amountSingle)
+            onRoomChange(roomType) {
+                let capitalizedRoomType = (roomType.charAt(0).toUpperCase() + roomType.slice(1))
+                let prev = this.form['amount' + capitalizedRoomType]
+             
+                this.$nextTick(function () {
+                    //get the difference between the current number of rooms and the newly selected amount
+                    let amountAdded = (this.form['amount' + capitalizedRoomType] - prev)
 
-                /* if the number is positive = rooms have been added */
-                if (amountAdded > 0) {
-                    for (let i = 1; i <= amountAdded; i++) {
-                        this.form.rooms.single.push(
-                            {num: this.form.amountSingle + i, name: '', dob: ''}
-                        )
+                    //if the number is positive rooms have been added
+                    if (amountAdded > 0) {
+                        this.addRoom(amountAdded, roomType)
                     }
-                }
 
-                /* if the number is negative = rooms have beeen removed */
-                if (amountAdded < 0) {
-                    for (let i = 0; i < Math.abs(amountAdded); i++) {
-                        this.form.rooms.single.splice(-1, 1)
+                    //if the number is negative rooms have beeen removed
+                    if (amountAdded < 0) {
+                        this.removeRoom(amountAdded, roomType)
                     }
-                }
-
-                /* update the number of rooms */
-                this.form.amountSingle = numRooms
+                })
             },
 
-            onDoubleChange(numRooms) {
-                /* get the difference between the current number of rooms and the newly selected amount */
-                let amountAdded = (numRooms - this.form.amountDouble)
+            addRoom(amountAdded, roomType) {
+                let numPeople = (roomType == 'single') ? 1 : 2
+                // for (let j = 1; j <= numPeople; j++) {
+                //     1: { name: '', dob: '' }
+                // }
 
-                /* if the number is positive */
-                if (amountAdded > 0) {
-                    for (let i = 1; i <= amountAdded; i++) {
-                        this.form.rooms.double.push(
-                            {num: this.form.amountDouble + i, name: '', dob: ''},
-                            {num: this.form.amountDouble + i, name: '', dob: ''}
+                for (let i = 1; i <= amountAdded; i++) {
+                    if (numPeople == 1) {
+                        this.form.rooms[roomType].push({
+                                1: { name: '', dob: '' }
+                            }
+                        )
+                    } else {
+                        this.form.rooms[roomType].push({
+                                1: { name: '', dob: '' },
+                                2: { name: '', dob: '' }
+                            }
                         )
                     }
                 }
-
-                /* if the number is negative */
-                if (amountAdded < 0) {
-                    for (let i = 0; i < Math.abs(amountAdded); i++) {
-                        this.form.rooms.double.splice(-2, 2)
-                    }
-                }
-
-                /* update the number of rooms */
-                this.form.amountDouble = numRooms
             },
 
-            onTwinChange(numRooms) {
-                /* get the difference between the current number of rooms and the newly selected amount */
-                let amountAdded = (numRooms - this.form.amountTwin)
-                
-                /* if the number is positive = rooms have been added */
-                if (amountAdded > 0) {
-                    for (let i = 1; i <= amountAdded; i++) {
-                        this.form.rooms.twin.push(
-                            {num: this.form.amountTwin + i, name: '', dob: ''},
-                            {num: this.form.amountTwin + i, name: '', dob: ''}
-                        )
-                    }
+            removeRoom(amountAdded, roomType) {
+                for (let i = 0; i < Math.abs(amountAdded); i++) {
+                    this.form.rooms[roomType].splice(-1, 1)
                 }
-
-                /* if the number is negative */
-                if (amountAdded < 0) {
-                    for (let i = 0; i < Math.abs(amountAdded); i++) {
-                        this.form.rooms.twin.splice(-2, 2)
-                    }
-                }
-
-                /* update the number of rooms */
-                this.form.amountTwin = numRooms
             },
 
             /**
@@ -531,18 +504,22 @@
                 }
             },
 
-            addBed(roomType, index) {
-                // switch(roomType) {
-                //     case 'single':
-                //         this.form.rooms.double[index].push()
-                //         break;
-                //     case 'double':
+            onChildBedChange(roomType, index) {
+                switch(roomType) {
+                    case 'single':
+                        // this.form.rooms.single[index].extraChildBeds = amount
+                        // this.form.rooms.single.push(
+                        //     {num: this.form.amountSingle + index, name: '', dob: ''}
+                        // )
+                        // console.log(value)
+                    break;
+                    case 'double':
 
-                //         break;
-                //     case 'twin':
+                    break;
+                    case 'twin':
 
-                //         break;
-                // }
+                    break;
+                }
             }
         },
 
@@ -592,8 +569,18 @@
         padding: 0;
         margin: 0;
     }
-    .el-card:nth-child(odd) {
-        margin-right: 40px;
+    .room__cards .el-col:nth-child(odd) {
+        padding-right: 10px;
+    }
+    .el-col {
+        padding-bottom: 10px;
+    }
+    .box-card {
+        /*box-shadow: 0;
+        margin-bottom: 10px;*/
+    }
+    .separator__line {
+        border-top: 1px solid #ddd;
     }
     .conditions__checkbox {
         background: #fff;

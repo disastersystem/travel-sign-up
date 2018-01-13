@@ -36,3 +36,13 @@ html, body {
 .add-bed__button {
 	border-color: #E6A23C;
 }
+
+/* typography */
+.main-title,
+.title,
+.small-title,
+.body-text,
+.body-text-small,
+.supplementary-text {
+
+}

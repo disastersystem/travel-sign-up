@@ -86951,7 +86951,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\n.flex-center[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.el-card[data-v-04fcb030]:nth-child(odd) {\n    margin-right: 40px;\n}\n.conditions__checkbox[data-v-04fcb030] {\n    background: #fff;\n    border-right: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.conditions__link[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    text-align: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-right: 8px;\n    border: 1px solid #c1c1c1; \n    border-radius: 4px;\n    border-left: 1px dashed #c1c1c1;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    padding-left: 10px;\n    line-height: 19px;\n    font-size: 14px;\n}\n.space-between[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.enrolment__button[data-v-04fcb030] {\n    padding: 10px 15px;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n", ""]);
+exports.push([module.i, "\n.flex-center[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.room__cards .el-col[data-v-04fcb030]:nth-child(odd) {\n    padding-right: 10px;\n}\n.el-col[data-v-04fcb030] {\n    padding-bottom: 10px;\n}\n.box-card[data-v-04fcb030] {\n    /*box-shadow: 0;\n    margin-bottom: 10px;*/\n}\n.separator__line[data-v-04fcb030] {\n    border-top: 1px solid #ddd;\n}\n.conditions__checkbox[data-v-04fcb030] {\n    background: #fff;\n    border-right: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.conditions__link[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    text-align: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-right: 8px;\n    border: 1px solid #c1c1c1; \n    border-radius: 4px;\n    border-left: 1px dashed #c1c1c1;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    padding-left: 10px;\n    line-height: 19px;\n    font-size: 14px;\n}\n.space-between[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.enrolment__button[data-v-04fcb030] {\n    padding: 10px 15px;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n", ""]);
 
 // exports
 
@@ -86965,11 +86965,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_Modal__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__utils_Modal__);
-//
-//
-//
-//
-//
 //
 //
 //
@@ -87361,10 +87356,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     computed: {
         /**
-         * Total price for the trip.
+         * Total price for the whole trip.
          */
         totalPrice: function totalPrice() {
             return this.roomsPrice + this.activitiesPrice;
+        },
+        amountSingleV: function amountSingleV() {
+            return this.form.amountSingle;
         },
 
 
@@ -87393,68 +87391,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        onSingleChange: function onSingleChange(numRooms) {
-            /* get the difference between the current number of rooms and the newly selected amount */
-            var amountAdded = numRooms - this.form.amountSingle;
+        onRoomChange: function onRoomChange(roomType) {
+            var capitalizedRoomType = roomType.charAt(0).toUpperCase() + roomType.slice(1);
+            var prev = this.form['amount' + capitalizedRoomType];
 
-            /* if the number is positive = rooms have been added */
-            if (amountAdded > 0) {
-                for (var i = 1; i <= amountAdded; i++) {
-                    this.form.rooms.single.push({ num: this.form.amountSingle + i, name: '', dob: '' });
+            this.$nextTick(function () {
+                //get the difference between the current number of rooms and the newly selected amount
+                var amountAdded = this.form['amount' + capitalizedRoomType] - prev;
+
+                //if the number is positive rooms have been added
+                if (amountAdded > 0) {
+                    this.addRoom(amountAdded, roomType);
                 }
-            }
 
-            /* if the number is negative = rooms have beeen removed */
-            if (amountAdded < 0) {
-                for (var _i = 0; _i < Math.abs(amountAdded); _i++) {
-                    this.form.rooms.single.splice(-1, 1);
+                //if the number is negative rooms have beeen removed
+                if (amountAdded < 0) {
+                    this.removeRoom(amountAdded, roomType);
                 }
-            }
-
-            /* update the number of rooms */
-            this.form.amountSingle = numRooms;
+            });
         },
-        onDoubleChange: function onDoubleChange(numRooms) {
-            /* get the difference between the current number of rooms and the newly selected amount */
-            var amountAdded = numRooms - this.form.amountDouble;
+        addRoom: function addRoom(amountAdded, roomType) {
+            var numPeople = roomType == 'single' ? 1 : 2;
+            // for (let j = 1; j <= numPeople; j++) {
+            //     1: { name: '', dob: '' }
+            // }
 
-            /* if the number is positive */
-            if (amountAdded > 0) {
-                for (var i = 1; i <= amountAdded; i++) {
-                    this.form.rooms.double.push({ num: this.form.amountDouble + i, name: '', dob: '' }, { num: this.form.amountDouble + i, name: '', dob: '' });
+            for (var i = 1; i <= amountAdded; i++) {
+                if (numPeople == 1) {
+                    this.form.rooms[roomType].push({
+                        1: { name: '', dob: '' }
+                    });
+                } else {
+                    this.form.rooms[roomType].push({
+                        1: { name: '', dob: '' },
+                        2: { name: '', dob: '' }
+                    });
                 }
             }
-
-            /* if the number is negative */
-            if (amountAdded < 0) {
-                for (var _i2 = 0; _i2 < Math.abs(amountAdded); _i2++) {
-                    this.form.rooms.double.splice(-2, 2);
-                }
-            }
-
-            /* update the number of rooms */
-            this.form.amountDouble = numRooms;
         },
-        onTwinChange: function onTwinChange(numRooms) {
-            /* get the difference between the current number of rooms and the newly selected amount */
-            var amountAdded = numRooms - this.form.amountTwin;
-
-            /* if the number is positive = rooms have been added */
-            if (amountAdded > 0) {
-                for (var i = 1; i <= amountAdded; i++) {
-                    this.form.rooms.twin.push({ num: this.form.amountTwin + i, name: '', dob: '' }, { num: this.form.amountTwin + i, name: '', dob: '' });
-                }
+        removeRoom: function removeRoom(amountAdded, roomType) {
+            for (var i = 0; i < Math.abs(amountAdded); i++) {
+                this.form.rooms[roomType].splice(-1, 1);
             }
-
-            /* if the number is negative */
-            if (amountAdded < 0) {
-                for (var _i3 = 0; _i3 < Math.abs(amountAdded); _i3++) {
-                    this.form.rooms.twin.splice(-2, 2);
-                }
-            }
-
-            /* update the number of rooms */
-            this.form.amountTwin = numRooms;
         },
 
 
@@ -87487,18 +87465,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             }
         },
-        addBed: function addBed(roomType, index) {
-            // switch(roomType) {
-            //     case 'single':
-            //         this.form.rooms.double[index].push()
-            //         break;
-            //     case 'double':
+        onChildBedChange: function onChildBedChange(roomType, index) {
+            switch (roomType) {
+                case 'single':
+                    // this.form.rooms.single[index].extraChildBeds = amount
+                    // this.form.rooms.single.push(
+                    //     {num: this.form.amountSingle + index, name: '', dob: ''}
+                    // )
+                    // console.log(value)
+                    break;
+                case 'double':
 
-            //         break;
-            //     case 'twin':
+                    break;
+                case 'twin':
 
-            //         break;
-            // }
+                    break;
+            }
         }
     },
 
@@ -87841,6 +87823,35 @@ var render = function() {
             { staticStyle: { padding: "40px" } },
             [
               _c(
+                "el-steps",
+                { attrs: { active: 1, "align-center": "" } },
+                [
+                  _c("el-step", {
+                    attrs: { title: "Hotell", description: "Velg hotellrom" }
+                  }),
+                  _vm._v(" "),
+                  _c("el-step", {
+                    attrs: {
+                      title: "Bestiller",
+                      description: "Kontakt informasjon om bestiller"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-step", {
+                    attrs: {
+                      title: "Aktiviteter",
+                      description: "Velg tilleggsaktiviteter"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("el-step", {
+                    attrs: { title: "Annet", description: "Tilleggsinfomasjon" }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
                 "el-form",
                 {
                   attrs: { "label-position": "top", model: _vm.form },
@@ -87867,24 +87878,44 @@ var render = function() {
                             { attrs: { span: 8 } },
                             [
                               _c(
-                                "el-form-item",
+                                "h2",
+                                { staticStyle: { "text-align": "center" } },
+                                [_vm._v("Enkeltrom")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h5",
                                 {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: { label: "enkeltrom" }
+                                  staticStyle: {
+                                    "font-weight": "normal",
+                                    "text-align": "center"
+                                  }
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                " +
-                                      _vm._s(_vm.prices.single) +
-                                      ",- per person\n                                "
-                                  ),
+                                    _vm._s(_vm.prices.single) + ",- per person"
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "el-form-item",
+                                {
+                                  staticStyle: { "text-align": "center" },
+                                  attrs: { label: "" }
+                                },
+                                [
                                   _c(
                                     "div",
                                     { staticClass: "flex-center" },
                                     [
                                       _c("el-input-number", {
                                         attrs: { min: 0, max: 10 },
-                                        on: { change: _vm.onSingleChange },
+                                        on: {
+                                          change: function($event) {
+                                            _vm.onRoomChange("single")
+                                          }
+                                        },
                                         model: {
                                           value: _vm.form.amountSingle,
                                           callback: function($$v) {
@@ -87911,24 +87942,41 @@ var render = function() {
                             { attrs: { span: 8 } },
                             [
                               _c(
-                                "el-form-item",
+                                "h2",
+                                { staticStyle: { "text-align": "center" } },
+                                [_vm._v("Dobbeltrom")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h5",
                                 {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: { label: "dobbeltrom" }
+                                  staticStyle: {
+                                    "font-weight": "normal",
+                                    "text-align": "center"
+                                  }
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                " +
-                                      _vm._s(_vm.prices.double) +
-                                      ",- per person\n                                "
-                                  ),
+                                    _vm._s(_vm.prices.double) + ",- per person"
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "el-form-item",
+                                { staticStyle: { "text-align": "center" } },
+                                [
                                   _c(
                                     "div",
                                     { staticClass: "flex-center" },
                                     [
                                       _c("el-input-number", {
                                         attrs: { min: 0, max: 10 },
-                                        on: { change: _vm.onDoubleChange },
+                                        on: {
+                                          change: function($event) {
+                                            _vm.onRoomChange("double")
+                                          }
+                                        },
                                         model: {
                                           value: _vm.form.amountDouble,
                                           callback: function($$v) {
@@ -87955,24 +88003,50 @@ var render = function() {
                             { attrs: { span: 8 } },
                             [
                               _c(
-                                "el-form-item",
+                                "h2",
+                                { staticStyle: { "text-align": "center" } },
+                                [
+                                  _vm._v(
+                                    "\n                                Twinrom\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h5",
                                 {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: { label: "twinrom" }
+                                  staticStyle: {
+                                    "font-weight": "normal",
+                                    "text-align": "center"
+                                  }
                                 },
                                 [
                                   _vm._v(
                                     "\n                                " +
                                       _vm._s(_vm.prices.twin) +
-                                      ",- per person\n                                "
-                                  ),
+                                      ",- per person\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "el-form-item",
+                                {
+                                  staticStyle: { "text-align": "center" },
+                                  attrs: { label: "" }
+                                },
+                                [
                                   _c(
                                     "div",
                                     { staticClass: "flex-center" },
                                     [
                                       _c("el-input-number", {
                                         attrs: { min: 0, max: 10 },
-                                        on: { change: _vm.onTwinChange },
+                                        on: {
+                                          change: function($event) {
+                                            _vm.onRoomChange("twin")
+                                          }
+                                        },
                                         model: {
                                           value: _vm.form.amountTwin,
                                           callback: function($$v) {
@@ -87999,6 +88073,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "el-row",
+                        { staticClass: "room__cards" },
                         [
                           _vm._l(_vm.form.rooms.single, function(room, index) {
                             return _c(
@@ -88007,13 +88082,7 @@ var render = function() {
                               [
                                 _c(
                                   "el-card",
-                                  {
-                                    staticClass: "box-card",
-                                    staticStyle: {
-                                      "box-shadow": "0",
-                                      "margin-bottom": "10px"
-                                    }
-                                  },
+                                  { staticClass: "box-card" },
                                   [
                                     _c(
                                       "div",
@@ -88038,7 +88107,7 @@ var render = function() {
                                             _c("strong", {
                                               domProps: {
                                                 textContent: _vm._s(
-                                                  "Enkeltrom " + room.num
+                                                  "Enkeltrom " + (index + 1)
                                                 )
                                               }
                                             })
@@ -88057,7 +88126,7 @@ var render = function() {
                                                 attrs: {
                                                   value: 0,
                                                   placeholder:
-                                                    "legg til barneseng [+]"
+                                                    "legg til barneseng"
                                                 },
                                                 on: {
                                                   change: function($event) {}
@@ -88088,27 +88157,54 @@ var render = function() {
                                       1
                                     ),
                                     _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "text item" },
-                                      [
-                                        _c(
-                                          "el-form-item",
-                                          { attrs: { label: "Navn" } },
-                                          [_c("el-input")],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "el-form-item",
-                                          { attrs: { label: "Fødselsdato" } },
-                                          [_c("el-input")],
-                                          1
-                                        )
-                                      ],
-                                      1
-                                    )
-                                  ]
+                                    _vm._l(room, function(person) {
+                                      return _c(
+                                        "div",
+                                        { staticClass: "text item" },
+                                        [
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Navn" } },
+                                            [
+                                              _c("el-input", {
+                                                model: {
+                                                  value: person.name,
+                                                  callback: function($$v) {
+                                                    _vm.$set(
+                                                      person,
+                                                      "name",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression: "person.name"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Fødselsdato" } },
+                                            [
+                                              _c("el-input", {
+                                                model: {
+                                                  value: person.dob,
+                                                  callback: function($$v) {
+                                                    _vm.$set(person, "dob", $$v)
+                                                  },
+                                                  expression: "person.dob"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    })
+                                  ],
+                                  2
                                 )
                               ],
                               1
@@ -88116,390 +88212,215 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _vm._l(_vm.form.rooms.double, function(room, index) {
-                            return index % 2 === 0
-                              ? _c(
-                                  "el-col",
-                                  { key: index, attrs: { span: 12 } },
-                                  [
-                                    _c(
-                                      "el-card",
-                                      {
-                                        staticClass: "box-card",
-                                        staticStyle: {
-                                          "box-shadow": "0",
-                                          "margin-bottom": "10px"
-                                        }
+                            return _c(
+                              "el-col",
+                              { key: index, attrs: { span: 12 } },
+                              [
+                                _c("el-card", { staticClass: "box-card" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticStyle: {
+                                        display: "flex",
+                                        "align-items": "center"
                                       },
-                                      [
-                                        _c(
-                                          "div",
-                                          {
-                                            staticStyle: {
-                                              display: "flex",
-                                              "align-items": "center"
-                                            },
-                                            attrs: { slot: "header" },
-                                            slot: "header"
-                                          },
-                                          [
-                                            _c(
-                                              "div",
-                                              {
-                                                staticStyle: {
-                                                  flex: "1",
-                                                  "font-weight": "800"
-                                                }
-                                              },
-                                              [
-                                                _c("strong", {
-                                                  domProps: {
-                                                    textContent: _vm._s(
-                                                      "Dobbeltrom " + room.num
+                                      attrs: { slot: "header" },
+                                      slot: "header"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticStyle: {
+                                            flex: "1",
+                                            "font-weight": "800"
+                                          }
+                                        },
+                                        [
+                                          _c("strong", {
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                "Dobbeltrom " + (index + 1)
+                                              )
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "text item" },
+                                    [
+                                      _vm._l(room, function(person, i) {
+                                        return [
+                                          i % 2 === 0
+                                            ? _c("div", {
+                                                staticClass: "separator__line"
+                                              })
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          _c("p", {
+                                            domProps: {
+                                              textContent: _vm._s("Person " + i)
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Navn" } },
+                                            [
+                                              _c("el-input", {
+                                                model: {
+                                                  value: person.name,
+                                                  callback: function($$v) {
+                                                    _vm.$set(
+                                                      person,
+                                                      "name",
+                                                      $$v
                                                     )
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-button",
-                                              {
-                                                staticClass: "add-bed__button",
-                                                attrs: { type: "default" },
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.stopPropagation()
-                                                    _vm.addBed("double", index)
-                                                  }
+                                                  },
+                                                  expression: "person.name"
                                                 }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "\n                                        +barneseng\n                                    "
-                                                )
-                                              ]
-                                            )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "text item" },
-                                          [
-                                            _c("p", [_vm._v("Person 1")]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              { attrs: { label: "Navn" } },
-                                              [
-                                                _c("el-input", {
-                                                  model: {
-                                                    value: room.name,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        room,
-                                                        "name",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression: "room.name"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              {
-                                                attrs: { label: "Fødselsdato" }
-                                              },
-                                              [
-                                                _c("el-input", {
-                                                  attrs: {
-                                                    placeholder: "dd.mm.yyyy"
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Fødselsdato" } },
+                                            [
+                                              _c("el-input", {
+                                                attrs: {
+                                                  placeholder: "dd.mm.yyyy"
+                                                },
+                                                model: {
+                                                  value: person.dob,
+                                                  callback: function($$v) {
+                                                    _vm.$set(person, "dob", $$v)
                                                   },
-                                                  model: {
-                                                    value: room.dob,
-                                                    callback: function($$v) {
-                                                      _vm.$set(room, "dob", $$v)
-                                                    },
-                                                    expression: "room.dob"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c("div", {
-                                              staticStyle: {
-                                                "border-top": "1px solid #ddd"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("p", [_vm._v("Person 2")]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              { attrs: { label: "Navn" } },
-                                              [
-                                                _c("el-input", {
-                                                  model: {
-                                                    value:
-                                                      _vm.form.rooms.double[
-                                                        index + 1
-                                                      ].name,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        _vm.form.rooms.double[
-                                                          index + 1
-                                                        ],
-                                                        "name",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "form.rooms.double[index + 1].name"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              {
-                                                attrs: { label: "Fødselsdato" }
-                                              },
-                                              [
-                                                _c("el-input", {
-                                                  attrs: {
-                                                    placeholder: "dd.mm.yyyy"
-                                                  },
-                                                  model: {
-                                                    value:
-                                                      _vm.form.rooms.double[
-                                                        index + 1
-                                                      ].dob,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        _vm.form.rooms.double[
-                                                          index + 1
-                                                        ],
-                                                        "dob",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "form.rooms.double[index + 1].dob"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
+                                                  expression: "person.dob"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      })
+                                    ],
+                                    2
+                                  )
+                                ])
+                              ],
+                              1
+                            )
                           }),
                           _vm._v(" "),
                           _vm._l(_vm.form.rooms.twin, function(room, index) {
-                            return index % 2 === 0
-                              ? _c(
-                                  "el-col",
-                                  { key: index, attrs: { span: 12 } },
-                                  [
-                                    _c(
-                                      "el-card",
-                                      {
-                                        staticClass: "box-card",
-                                        staticStyle: {
-                                          "box-shadow": "0",
-                                          "margin-bottom": "10px"
-                                        }
+                            return _c(
+                              "el-col",
+                              { key: index, attrs: { span: 12 } },
+                              [
+                                _c("el-card", { staticClass: "box-card" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticStyle: {
+                                        display: "flex",
+                                        "align-items": "center"
                                       },
-                                      [
-                                        _c(
-                                          "div",
-                                          {
-                                            staticStyle: {
-                                              display: "flex",
-                                              "align-items": "center"
-                                            },
-                                            attrs: { slot: "header" },
-                                            slot: "header"
-                                          },
-                                          [
-                                            _c(
-                                              "div",
-                                              {
-                                                staticStyle: {
-                                                  flex: "1",
-                                                  "font-weight": "800"
-                                                }
-                                              },
-                                              [
-                                                _c("strong", {
-                                                  domProps: {
-                                                    textContent: _vm._s(
-                                                      "Twinrom " + room.num
+                                      attrs: { slot: "header" },
+                                      slot: "header"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticStyle: {
+                                            flex: "1",
+                                            "font-weight": "800"
+                                          }
+                                        },
+                                        [
+                                          _c("strong", {
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                "Twinrom " + (index + 1)
+                                              )
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "text item" },
+                                    [
+                                      _vm._l(room, function(person, i) {
+                                        return [
+                                          index % 2 === 0
+                                            ? _c("div", {
+                                                staticClass: "separator__line"
+                                              })
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v("Person " + _vm._s(i))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Navn" } },
+                                            [
+                                              _c("el-input", {
+                                                model: {
+                                                  value: person.name,
+                                                  callback: function($$v) {
+                                                    _vm.$set(
+                                                      person,
+                                                      "name",
+                                                      $$v
                                                     )
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-button",
-                                              {
-                                                staticClass: "add-bed__button",
-                                                attrs: { type: "default" },
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.stopPropagation()
-                                                  }
+                                                  },
+                                                  expression: "person.name"
                                                 }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "\n                                        [+] legg til barneseng "
-                                                )
-                                              ]
-                                            )
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "text item" },
-                                          [
-                                            _c("p", [_vm._v("Person 1")]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              { attrs: { label: "Navn" } },
-                                              [
-                                                _c("el-input", {
-                                                  model: {
-                                                    value: room.name,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        room,
-                                                        "name",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression: "room.name"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              {
-                                                attrs: { label: "Fødselsdato" }
-                                              },
-                                              [
-                                                _c("el-input", {
-                                                  attrs: {
-                                                    placeholder: "dd.mm.yyyy"
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "el-form-item",
+                                            { attrs: { label: "Fødselsdato" } },
+                                            [
+                                              _c("el-input", {
+                                                attrs: {
+                                                  placeholder: "dd.mm.yyyy"
+                                                },
+                                                model: {
+                                                  value: person.dob,
+                                                  callback: function($$v) {
+                                                    _vm.$set(person, "dob", $$v)
                                                   },
-                                                  model: {
-                                                    value: room.dob,
-                                                    callback: function($$v) {
-                                                      _vm.$set(room, "dob", $$v)
-                                                    },
-                                                    expression: "room.dob"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c("div", {
-                                              staticStyle: {
-                                                "border-top": "1px solid #ddd"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("p", [_vm._v("Person 2")]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              { attrs: { label: "Navn" } },
-                                              [
-                                                _c("el-input", {
-                                                  model: {
-                                                    value:
-                                                      _vm.form.rooms.twin[
-                                                        index + 1
-                                                      ].name,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        _vm.form.rooms.twin[
-                                                          index + 1
-                                                        ],
-                                                        "name",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "form.rooms.twin[index + 1].name"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "el-form-item",
-                                              {
-                                                attrs: { label: "Fødselsdato" }
-                                              },
-                                              [
-                                                _c("el-input", {
-                                                  attrs: {
-                                                    placeholder: "dd.mm.yyyy"
-                                                  },
-                                                  model: {
-                                                    value:
-                                                      _vm.form.rooms.twin[
-                                                        index + 1
-                                                      ].dob,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        _vm.form.rooms.twin[
-                                                          index + 1
-                                                        ],
-                                                        "dob",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "form.rooms.twin[index + 1].dob"
-                                                  }
-                                                })
-                                              ],
-                                              1
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
+                                                  expression: "person.dob"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      })
+                                    ],
+                                    2
+                                  )
+                                ])
+                              ],
+                              1
+                            )
                           })
                         ],
                         2
