@@ -87298,9 +87298,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 
@@ -87412,21 +87409,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         addRoom: function addRoom(amountAdded, roomType) {
             var numPeople = roomType == 'single' ? 1 : 2;
-            // for (let j = 1; j <= numPeople; j++) {
-            //     1: { name: '', dob: '' }
-            // }
+
+            var people = Array(numPeople).fill({ name: '', dob: '' });
 
             for (var i = 1; i <= amountAdded; i++) {
-                if (numPeople == 1) {
-                    this.form.rooms[roomType].push({
-                        1: { name: '', dob: '' }
-                    });
-                } else {
-                    this.form.rooms[roomType].push({
-                        1: { name: '', dob: '' },
-                        2: { name: '', dob: '' }
-                    });
-                }
+                this.form.rooms[roomType].push({ people: people, numChildBeds: 0 });
             }
         },
         removeRoom: function removeRoom(amountAdded, roomType) {
@@ -87877,33 +87864,19 @@ var render = function() {
                             "el-col",
                             { attrs: { span: 8 } },
                             [
-                              _c(
-                                "h2",
-                                { staticStyle: { "text-align": "center" } },
-                                [_vm._v("Enkeltrom")]
-                              ),
+                              _c("h2", { staticClass: "text-align-center" }, [
+                                _vm._v("Enkeltrom")
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "h5",
-                                {
-                                  staticStyle: {
-                                    "font-weight": "normal",
-                                    "text-align": "center"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(_vm.prices.single) + ",- per person"
-                                  )
-                                ]
-                              ),
+                              _c("h5", { staticClass: "body-text" }, [
+                                _vm._v(
+                                  _vm._s(_vm.prices.single) + ",- per person"
+                                )
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "el-form-item",
-                                {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: { label: "" }
-                                },
+                                { staticClass: "text-align-center" },
                                 [
                                   _c(
                                     "div",
@@ -87941,30 +87914,19 @@ var render = function() {
                             "el-col",
                             { attrs: { span: 8 } },
                             [
-                              _c(
-                                "h2",
-                                { staticStyle: { "text-align": "center" } },
-                                [_vm._v("Dobbeltrom")]
-                              ),
+                              _c("h2", { staticClass: "text-align-center" }, [
+                                _vm._v("Dobbeltrom")
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "h5",
-                                {
-                                  staticStyle: {
-                                    "font-weight": "normal",
-                                    "text-align": "center"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(_vm.prices.double) + ",- per person"
-                                  )
-                                ]
-                              ),
+                              _c("h5", { staticClass: "body-text" }, [
+                                _vm._v(
+                                  _vm._s(_vm.prices.double) + ",- per person"
+                                )
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "el-form-item",
-                                { staticStyle: { "text-align": "center" } },
+                                { staticClass: "text-align-center" },
                                 [
                                   _c(
                                     "div",
@@ -88002,39 +87964,19 @@ var render = function() {
                             "el-col",
                             { attrs: { span: 8 } },
                             [
-                              _c(
-                                "h2",
-                                { staticStyle: { "text-align": "center" } },
-                                [
-                                  _vm._v(
-                                    "\n                                Twinrom\n                            "
-                                  )
-                                ]
-                              ),
+                              _c("h2", { staticClass: "text-align-center" }, [
+                                _vm._v("Twinrom")
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "h5",
-                                {
-                                  staticStyle: {
-                                    "font-weight": "normal",
-                                    "text-align": "center"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(_vm.prices.twin) +
-                                      ",- per person\n                            "
-                                  )
-                                ]
-                              ),
+                              _c("h5", { staticClass: "body-text" }, [
+                                _vm._v(
+                                  _vm._s(_vm.prices.twin) + ",- per person"
+                                )
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "el-form-item",
-                                {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: { label: "" }
-                                },
+                                { staticClass: "text-align-center" },
                                 [
                                   _c(
                                     "div",
@@ -88089,7 +88031,9 @@ var render = function() {
                                       {
                                         staticStyle: {
                                           display: "flex",
-                                          "align-items": "center"
+                                          "align-items": "center",
+                                          padding: "0",
+                                          margin: "0"
                                         },
                                         attrs: { slot: "header" },
                                         slot: "header"
@@ -88104,7 +88048,7 @@ var render = function() {
                                             }
                                           },
                                           [
-                                            _c("strong", {
+                                            _c("h3", {
                                               domProps: {
                                                 textContent: _vm._s(
                                                   "Enkeltrom " + (index + 1)
@@ -88117,7 +88061,11 @@ var render = function() {
                                         _c(
                                           "el-form-item",
                                           {
-                                            attrs: { label: "Ekstra barneseng" }
+                                            staticStyle: {
+                                              width: "70px",
+                                              margin: "0"
+                                            },
+                                            attrs: { label: "barneseng" }
                                           },
                                           [
                                             _c(
@@ -88130,6 +88078,18 @@ var render = function() {
                                                 },
                                                 on: {
                                                   change: function($event) {}
+                                                },
+                                                model: {
+                                                  value: room.numChildBeds,
+                                                  callback: function($$v) {
+                                                    _vm.$set(
+                                                      room,
+                                                      "numChildBeds",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression:
+                                                    "room.numChildBeds"
                                                 }
                                               },
                                               [
@@ -88157,7 +88117,7 @@ var render = function() {
                                       1
                                     ),
                                     _vm._v(" "),
-                                    _vm._l(room, function(person) {
+                                    _vm._l(room.people, function(person) {
                                       return _c(
                                         "div",
                                         { staticClass: "text item" },
@@ -88253,17 +88213,13 @@ var render = function() {
                                     "div",
                                     { staticClass: "text item" },
                                     [
-                                      _vm._l(room, function(person, i) {
+                                      _vm._l(room.people, function(person, i) {
                                         return [
-                                          i % 2 === 0
-                                            ? _c("div", {
-                                                staticClass: "separator__line"
-                                              })
-                                            : _vm._e(),
-                                          _vm._v(" "),
                                           _c("p", {
                                             domProps: {
-                                              textContent: _vm._s("Person " + i)
+                                              textContent: _vm._s(
+                                                "Person " + (i + 1)
+                                              )
                                             }
                                           }),
                                           _vm._v(" "),
@@ -88306,7 +88262,13 @@ var render = function() {
                                               })
                                             ],
                                             1
-                                          )
+                                          ),
+                                          _vm._v(" "),
+                                          i % 2 === 0
+                                            ? _c("div", {
+                                                staticClass: "separator__line"
+                                              })
+                                            : _vm._e()
                                         ]
                                       })
                                     ],
@@ -88360,17 +88322,15 @@ var render = function() {
                                     "div",
                                     { staticClass: "text item" },
                                     [
-                                      _vm._l(room, function(person, i) {
+                                      _vm._l(room.people, function(person, i) {
                                         return [
-                                          index % 2 === 0
-                                            ? _c("div", {
-                                                staticClass: "separator__line"
-                                              })
-                                            : _vm._e(),
-                                          _vm._v(" "),
-                                          _c("p", [
-                                            _vm._v("Person " + _vm._s(i))
-                                          ]),
+                                          _c("p", {
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                "Person " + (i + 1)
+                                              )
+                                            }
+                                          }),
                                           _vm._v(" "),
                                           _c(
                                             "el-form-item",
@@ -88411,7 +88371,13 @@ var render = function() {
                                               })
                                             ],
                                             1
-                                          )
+                                          ),
+                                          _vm._v(" "),
+                                          i % 2 === 0
+                                            ? _c("div", {
+                                                staticClass: "separator__line"
+                                              })
+                                            : _vm._e()
                                         ]
                                       })
                                     ],

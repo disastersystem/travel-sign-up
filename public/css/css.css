@@ -46,3 +46,12 @@ html, body {
 .supplementary-text {
 
 }
+
+.body-text {
+	font-weight: normal;
+	text-align: center;
+}
+
+.text-align-center {
+    text-align: center;
+}

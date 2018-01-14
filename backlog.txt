@@ -6,7 +6,6 @@ do some validation on the backend (and frontend) for when people write -2 and mo
 Bestiller må skive info to ganger: personen vil også skrive seg på et rom. Droppe noe av info bare spørre om mail?
 La et kort bli valgt som bestiller og add epost etc?
 
-Clean up form spacing (Group labels with their inputs)
 Use field length as affordance
 
 endre default value i departure dropdown?
@@ -34,3 +33,13 @@ Escape:
 	- If to many hotel rooms gets selected (to many people join) then plane tickets gets a red border.
 	- When activites are selected it remembers how many people has joined the trip and you've to uncheck those not joining.
 	- Sammendrag av side 1 på side 2.
+
+
+
+-------
+
+// let people = []
+                
+// for (let i = 1; i <= numPeople; i++) {
+//     people.push( { name: '', dob: '' } )
+// }

@@ -19,11 +19,11 @@
 
                         <el-row>
                             <el-col :span="8">
-                                <h2 style="text-align: center;">Enkeltrom</h2>
+                                <h2 class="text-align-center">Enkeltrom</h2>
 
-                                <h5 style="font-weight: normal; text-align: center;">{{ prices.single }},- per person</h5>
+                                <h5 class="body-text">{{ prices.single }},- per person</h5>
 
-                                <el-form-item label="" style="text-align: center;">
+                                <el-form-item class="text-align-center">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountSingle"
@@ -36,11 +36,11 @@
                             </el-col>
 
                             <el-col :span="8">
-                                <h2 style="text-align: center;">Dobbeltrom</h2>
+                                <h2 class="text-align-center">Dobbeltrom</h2>
 
-                                <h5 style="font-weight: normal; text-align: center;">{{ prices.double }},- per person</h5>
+                                <h5 class="body-text">{{ prices.double }},- per person</h5>
 
-                                <el-form-item style="text-align: center;">
+                                <el-form-item class="text-align-center">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountDouble"
@@ -53,15 +53,11 @@
                             </el-col>
 
                             <el-col :span="8">
-                                <h2 style="text-align: center;">
-                                    Twinrom
-                                </h2>
+                                <h2 class="text-align-center">Twinrom</h2>
 
-                                <h5 style="font-weight: normal; text-align: center;">
-                                    {{ prices.twin }},- per person
-                                </h5>
+                                <h5 class="body-text">{{ prices.twin }},- per person</h5>
 
-                                <el-form-item label="" style="text-align: center;">
+                                <el-form-item class="text-align-center">
                                     <div class="flex-center">
                                         <el-input-number
                                             v-model="form.amountTwin"
@@ -76,14 +72,15 @@
 
                         <el-row class="room__cards">
                             <el-col v-for="(room, index) in form.rooms.single" :key="index" :span="12">
+                                
                                 <el-card class="box-card">
-                                    <div slot="header" style="display: flex; align-items: center;">
+                                    <div slot="header" style="display: flex; align-items: center; padding: 0; margin: 0;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Enkeltrom ' + (index + 1)"></strong>
+                                            <h3 v-text="'Enkeltrom ' + (index + 1)"></h3>
                                         </div>
 
-                                        <el-form-item label="Ekstra barneseng">
-                                            <el-select :value="0" @change="" placeholder="legg til barneseng">
+                                        <el-form-item label="barneseng" style="width: 70px; margin: 0;">
+                                            <el-select :value="0" v-model="room.numChildBeds" @change="" placeholder="legg til barneseng">
                                                 <el-option :key="0" :value="0" :label="0"></el-option>
                                                 <el-option :key="1" :value="1" :label="1"></el-option>
                                                 <el-option :key="2" :value="2" :label="2"></el-option>
@@ -91,7 +88,7 @@
                                         </el-form-item>
                                     </div>
 
-                                    <div class="text item" v-for="person in room">
+                                    <div class="text item" v-for="person in room.people">
                                         <el-form-item label="Navn">
                                             <el-input v-model="person.name"></el-input>
                                         </el-form-item>
@@ -116,10 +113,8 @@
                                     </div>
                                     
                                     <div class="text item">
-                                        <template v-for="(person, i) in room">
-                                            <div v-if="i % 2 === 0" class="separator__line"></div>
-
-                                            <p v-text="'Person ' + i"></p>
+                                        <template v-for="(person, i) in room.people">
+                                            <p v-text="'Person ' + (i + 1)"></p>
 
                                             <el-form-item label="Navn">
                                                 <el-input v-model="person.name"></el-input>
@@ -128,6 +123,8 @@
                                             <el-form-item label="Fødselsdato">
                                                 <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
                                             </el-form-item>
+
+                                            <div v-if="i % 2 === 0" class="separator__line"></div>
                                         </template>
                                     </div>
                                 </el-card>
@@ -146,10 +143,8 @@
                                     </div>
                                     
                                     <div class="text item">
-                                        <template v-for="(person, i) in room">
-                                            <div v-if="i % 2 === 0" class="separator__line"></div>
-
-                                            <p>Person {{ i }}</p>
+                                        <template v-for="(person, i) in room.people">
+                                            <p v-text="'Person ' + (i + 1)"></p>
 
                                             <el-form-item label="Navn">
                                                 <el-input v-model="person.name"></el-input>
@@ -158,6 +153,8 @@
                                             <el-form-item label="Fødselsdato">
                                                 <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
                                             </el-form-item>
+
+                                            <div v-if="i % 2 === 0" class="separator__line"></div>
                                         </template>
                                     </div>
                                 </el-card>
@@ -448,23 +445,13 @@
 
             addRoom(amountAdded, roomType) {
                 let numPeople = (roomType == 'single') ? 1 : 2
-                // for (let j = 1; j <= numPeople; j++) {
-                //     1: { name: '', dob: '' }
-                // }
+                
+                let people = Array(numPeople).fill({ name: '', dob: '' })
 
                 for (let i = 1; i <= amountAdded; i++) {
-                    if (numPeople == 1) {
-                        this.form.rooms[roomType].push({
-                                1: { name: '', dob: '' }
-                            }
-                        )
-                    } else {
-                        this.form.rooms[roomType].push({
-                                1: { name: '', dob: '' },
-                                2: { name: '', dob: '' }
-                            }
-                        )
-                    }
+                    this.form.rooms[roomType].push(
+                        { people, numChildBeds: 0 }
+                    )
                 }
             },
 
