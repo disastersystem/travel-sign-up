@@ -1,22 +1,19 @@
 <template>
     <div>
         <modal :show="showModal" @close="showModal = false" :title="'Påmelding ' + title">
-            <div style="padding: 40px;">
 
-                <el-steps :active="1" align-center>
-                    <el-step title="Hotell" description="Velg hotellrom"></el-step>
-                    <el-step title="Bestiller" description="Kontakt informasjon om bestiller"></el-step>
-                    <el-step title="Aktiviteter" description="Velg tilleggsaktiviteter"></el-step>
-                    <el-step title="Annet" description="Tilleggsinfomasjon"></el-step>
+            <div style="padding: 40px 10px; border-bottom: 1px solid #ddd;">
+                <el-steps :active="activeStep" align-center> <!-- finish-status="success" direction="vertical" --> 
+                    <el-step title="Hotellrom"></el-step>
+                    <el-step title="Bestiller"></el-step> <!-- description="Kontakt informasjon om bestiller" -->
+                    <el-step title="Valgfrie Aktiviteter"></el-step>
+                    <el-step title="Annet"></el-step>
                 </el-steps>
+            </div>
 
+            <div style="padding: 40px;">
                 <el-form label-position="top" :model="form" @submit.native.prevent>
-
-                    <section class="step rooms">
-                        <div class="section__title">
-                            <h3>Hotellrom</h3>
-                        </div>
-
+                    <section v-if="activeStep == 0" class="step rooms">
                         <el-row>
                             <el-col :span="8">
                                 <h2 class="text-align-center">Enkeltrom</h2>
@@ -76,7 +73,7 @@
                                 <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center; padding: 0; margin: 0;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <h3 v-text="'Enkeltrom ' + (index + 1)"></h3>
+                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Enkeltrom ' + (index + 1)"></h2>
                                         </div>
 
                                         <el-form-item label="barneseng" style="width: 70px; margin: 0;">
@@ -103,8 +100,9 @@
                             <el-col v-for="(room, index) in form.rooms.double" :key="index" :span="12">
                                 <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
-                                        <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Dobbeltrom ' + (index + 1)"></strong>
+                                        <div style="flex: 1;">
+                                            <!-- <strong v-text="'Dobbeltrom ' + (index + 1)"></strong> -->
+                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Dobbeltrom ' + (index + 1)"></h2>
                                         </div>
 
                                         <!-- <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
@@ -114,7 +112,7 @@
                                     
                                     <div class="text item">
                                         <template v-for="(person, i) in room.people">
-                                            <p v-text="'Person ' + (i + 1)"></p>
+                                            <h3 v-text="'Person ' + (i + 1)"></h3>
 
                                             <el-form-item label="Navn">
                                                 <el-input v-model="person.name"></el-input>
@@ -134,7 +132,7 @@
                                 <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1; font-weight: 800;">
-                                            <strong v-text="'Twinrom ' + (index + 1)"></strong>
+                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Twinrom ' + (index + 1)"></h2>
                                         </div>
 
                                         <!-- <el-button type="default" @click.stop="" class="add-bed__button">
@@ -144,7 +142,7 @@
                                     
                                     <div class="text item">
                                         <template v-for="(person, i) in room.people">
-                                            <p v-text="'Person ' + (i + 1)"></p>
+                                            <h3 v-text="'Person ' + (i + 1)"></h3>
 
                                             <el-form-item label="Navn">
                                                 <el-input v-model="person.name"></el-input>
@@ -162,11 +160,7 @@
                         </el-row>
                     </section>
 
-                    <section class="step orderer">
-                        <div class="section__title">
-                            <h3>Bestiller</h3>
-                        </div>
-
+                    <section v-if="activeStep == 1" class="step orderer">
                         <el-row>
                             <el-form-item label="Navn (som i pass)">
                                 <el-input v-model="form.name"></el-input>
@@ -199,11 +193,7 @@
                         </el-row>
                     </section>
 
-                    <section class="step activities">
-                        <div v-show="form.activities.length" class="section__title">
-                            <h3>Ekstra Aktiviteter</h3>
-                        </div>
-
+                    <section v-if="activeStep == 2" class="step activities">
                         <div v-for="(activity, index) in form.activities">
                             <el-row>
                                 <h4>{{ activity.title }}</h4>
@@ -255,11 +245,7 @@
                         </div>
                     </section>
 
-                    <section class="step other">
-                        <div class="section__title">
-                            <h3>Annet</h3>
-                        </div>
-
+                    <section v-if="activeStep == 3" class="step other">
                         <el-form-item label="Noe du ønsker å tilføye? (helse/allergier, bonuskort, m.m.) - valgfritt felt">
                             <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
                         </el-form-item>
@@ -282,10 +268,8 @@
                                 border
                             ></el-checkbox>
                         </el-form-item>
-                    </section>
 
-                    <section class="step">
-                        <el-row type="flex" class="row-bg" justify="center">
+                        <el-row type="flex" class="row-bg" justify="center" style="margin-top: 70px;">
                             <el-checkbox
                                 class="conditions__checkbox"
                                 v-model="form.travelConditions"
@@ -305,6 +289,10 @@
                         </el-row>
                     </section>
 
+                    <!-- <section v-if="activeStep == 4" class="step">
+                        Oppsumering
+                    </section> -->
+
                 </el-form>
             </div>
 
@@ -317,7 +305,15 @@
                     </div>
                     
                     <div>
-                        <el-button type="success" :disabled="form.travelConditions == false" @click="onSubmit()">
+                        <el-button v-if="activeStep > 0" type="default" icon="el-icon-arrow-left" @click="prevStep">
+                            Tilbake <!-- el-icon-back -->
+                        </el-button>
+
+                        <el-button v-if="activeStep < 3" type="primary" @click="nextStep">
+                            Neste <i class="el-icon-arrow-right el-icon-right" style="margin-left: 4px;"></i>
+                        </el-button>
+
+                        <el-button v-if="activeStep == 3" type="success" :disabled="form.travelConditions == false" @click="onSubmit()">
                             Send påmelding <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
                         </el-button>
                     </div>
@@ -340,10 +336,10 @@
             return {
                 showModal: false,
                 finished: false,
+                activeStep: 0,
 
                 title: trip.title,
-                child: 0, // this need to be linked with the room itself
-
+                
                 form: {
                     amountSingle: 0,
                     amountDouble: 0,
@@ -423,9 +419,28 @@
         },
 
         methods: {
+            nextStep() {
+                if (this.activeStep < 4) {
+                    if (this.activeStep++ > 3) {
+                        // this.activeStep = 0
+                    }
+                }
+
+                console.log(this.activeStep)
+            },
+
+            prevStep() {
+                if (this.activeStep > 0) {
+                    if (this.activeStep-- < 3) {
+                        // this.activeStep = 3
+                    }
+                }
+                console.log(this.activeStep)
+            },
+
             onRoomChange(roomType) {
                 let capitalizedRoomType = (roomType.charAt(0).toUpperCase() + roomType.slice(1))
-                let prev = this.form['amount' + capitalizedRoomType]
+                let prev = this.form['amount' + capitalizedRoomType] // e.g. amountDouble
              
                 this.$nextTick(function () {
                     //get the difference between the current number of rooms and the newly selected amount

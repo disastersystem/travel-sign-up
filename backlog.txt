@@ -8,6 +8,8 @@ La et kort bli valgt som bestiller og add epost etc?
 
 Use field length as affordance
 
+Frontend validation.
+
 endre default value i departure dropdown?
 
 Se på hvordan element form docs adds/removes new fiels.
@@ -17,9 +19,9 @@ Change fonts?
 
 Auto date formatting: https://codepen.io/fauxserious/pen/XKrYvv
 
-The child prop needs to be related to the room itself
-
 Thinner modal header.
+
+Style scrollbar
 
 Place checkboxes (and radios) underneath each other for scannability
 Specify errors inline
@@ -43,3 +45,8 @@ Escape:
 // for (let i = 1; i <= numPeople; i++) {
 //     people.push( { name: '', dob: '' } )
 // }
+
+
+<!-- <div v-show="form.activities.length" class="section__title">
+	    <h3>Ekstra Aktiviteter</h3>
+	</div> -->
