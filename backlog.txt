@@ -1,18 +1,15 @@
 
-SUBMIT KNAPP ER IKKE INNE I FORM ELEMENTET.
+Submit button is not inside form element, this does however not matter as we're submitting the vue form object.
 
-do some validation on the backend (and frontend) for when people write -2 and money gets subtracted
+Do not submit the total price from frontend directly to the mail, calculate the price after it hits backend
+(they might want to calculate the price themselves) the price could have been modified.
 
 Bestiller må skive info to ganger: personen vil også skrive seg på et rom. Droppe noe av info bare spørre om mail?
 La et kort bli valgt som bestiller og add epost etc?
 
-Use field length as affordance
-
-Frontend validation.
-
 endre default value i departure dropdown?
 
-Se på hvordan element form docs adds/removes new fiels.
+Se på hvordan element form docs adds/removes new fields.
 
 Kursiv faded - valgfri
 Change fonts?
@@ -21,15 +18,18 @@ Auto date formatting: https://codepen.io/fauxserious/pen/XKrYvv
 
 Thinner modal header.
 
-Style scrollbar
-
-Place checkboxes (and radios) underneath each other for scannability
 Specify errors inline
-Use inline validation after the user fills out the field (unless it helps them while in the process)
-Don’t hide basic helper text
-Differentiate primary from secondary actions
+	- use element ui built in error system OR our previously built class
 
+Draw a map of how the elements relate to each other in the hierarcy. Then figure out
+how they can be visually placed/styled to indicate the relation.
 
+General form design rules:
+	- Use inline validation after the user fills out the field (unless it helps them while in the process)
+	- Don’t hide basic helper text
+	- Differentiate primary from secondary actions
+	- Use field length as affordance
+	- Place checkboxes (and radios) underneath each other for scannability
 
 Escape:
 	- If to many hotel rooms gets selected (to many people join) then plane tickets gets a red border.

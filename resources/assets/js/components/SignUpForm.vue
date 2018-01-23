@@ -1,18 +1,22 @@
 <template>
-    <div>
+    <div class="sign-up__form">
         <modal :show="showModal" @close="showModal = false" :title="'Påmelding ' + title">
 
-            <div style="padding: 40px 10px; border-bottom: 1px solid #ddd;">
-                <el-steps :active="activeStep" align-center> <!-- finish-status="success" direction="vertical" --> 
-                    <el-step title="Hotellrom"></el-step>
-                    <el-step title="Bestiller"></el-step> <!-- description="Kontakt informasjon om bestiller" -->
-                    <el-step title="Valgfrie Aktiviteter"></el-step>
-                    <el-step title="Annet"></el-step>
-                </el-steps>
+            <!-- padding: 40px 0 40px 0; -->
+            <div style=" box-shadow: 0px 6px 43px -20px rgba(156,154,156,1);">
+                <div style="display: flex; align-items: center;">
+                    <el-steps :active="activeStep" align-center finish-status="wait" style="flex: 1;"> <!-- finish-status="success" direction="vertical" -->
+                        <el-step @click.native="activeStep = 0" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; border-left: 0; padding-top: 5px;" title="Hotellrom"></el-step>
+                        <el-step @click.native="activeStep = 1" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Bestiller"></el-step> <!-- description="Kontakt informasjon om bestiller" -->
+                        <el-step @click.native="activeStep = 2" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Valgfrie Aktiviteter"></el-step>
+                        <el-step @click.native="activeStep = 3" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Annet"></el-step>
+                    </el-steps>
+                </div>
             </div>
 
             <div style="padding: 40px;">
                 <el-form label-position="top" :model="form" @submit.native.prevent>
+                    <transition name="fadetwo">
                     <section v-if="activeStep == 0" class="step rooms">
                         <el-row>
                             <el-col :span="8">
@@ -98,6 +102,7 @@
                             </el-col>
 
                             <el-col v-for="(room, index) in form.rooms.double" :key="index" :span="12">
+                                <!-- <room-card :data="room"></room-card> -->
                                 <el-card class="box-card">
                                     <div slot="header" style="display: flex; align-items: center;">
                                         <div style="flex: 1;">
@@ -159,7 +164,9 @@
                             </el-col>
                         </el-row>
                     </section>
+                </transition>
 
+                <transition name="fadetwo">
                     <section v-if="activeStep == 1" class="step orderer">
                         <el-row>
                             <el-form-item label="Navn (som i pass)">
@@ -192,59 +199,49 @@
                             </el-row>
                         </el-row>
                     </section>
+                </transition>
 
+                <transition name="fadetwo">
+                    <!-- and activity.length != 0 -->
                     <section v-if="activeStep == 2" class="step activities">
-                        <div v-for="(activity, index) in form.activities">
-                            <el-row>
-                                <h4>{{ activity.title }}</h4>
-                            </el-row>
-                            
-                            <el-row>
-                                <el-col :span="8">
-                                    <label class="el-form-item__label">
-                                        Voksne
-                                    </label>
-                                </el-col>
-                                <el-col :span="8">
-                                    <label class="el-form-item__label">
-                                        Pris {{ activity.price }},-
-                                    </label>
-                                </el-col>
-                                <el-col :span="8" style="display: flex;">
-                                    <div @click="increment('adults', 'decrease', index)">
-                                        <i class="el-icon-minus"></i>
-                                    </div>
-                                    <input v-model.number="activity.amountAdults" type="text">
-                                    <div @click="increment('adults', 'increase', index)">
-                                        <i class="el-icon-plus"></i>
-                                    </div>
-                                </el-col>
-                            </el-row>
+                        <el-col v-for="(activity, index) in form.activities" :key="index" :span="12">
 
-                            <el-row>
-                                <el-col :span="8">
-                                    <label class="el-form-item__label">
-                                        Barn (4-12 år)
-                                    </label>
-                                </el-col>
-                                <el-col :span="8">
-                                    <label class="el-form-item__label">
-                                        Pris {{ activity.priceAfterDiscount }},-
-                                    </label>
-                                </el-col>
-                                <el-col :span="8" style="display: flex;">
-                                    <div @click="increment('children', 'decrease', index)">
-                                        <i class="el-icon-minus"></i>
+                            <h2 class="text-align-center">{{ activity.title }}</h2>
+
+                            <el-col :span="24" style="display: flex;">
+                                
+
+                                <el-form-item label="Antall Barn (4-12 år)" class="text-align-center">
+                                    <div class="flex-center">
+                                        <el-select v-model.number="activity.amountAdults" placeholder="">
+                                            <el-option key="0" value="0" label="0"></el-option>
+                                            <el-option key="1" value="1" label="1"></el-option>
+                                        </el-select>
                                     </div>
-                                    <input v-model.number="activity.amountChildren" type="text">
-                                    <div @click="increment('children', 'increase', index)">
-                                        <i class="el-icon-plus"></i>
+                                </el-form-item>
+                                <h5 class="body-text">{{ activity.price }},- per person</h5>
+                            </el-col>
+
+                            <el-col :span="24" style="display: flex;">
+                                
+
+                                <el-form-item label="Antall Voksne" class="text-align-center">
+                                    <div class="flex-center">
+                                        <el-select v-model.number="activity.amountChildren" placeholder="">
+                                            <el-option key="0" value="0" label="0"></el-option>
+                                            <el-option key="1" value="1" label="1"></el-option>
+                                        </el-select>
                                     </div>
-                                </el-col>
-                            </el-row>
-                        </div>
+                                </el-form-item>
+
+                                <h5 class="body-text">{{ activity.priceAfterDiscount }},- per person</h5>
+                            </el-col>
+
+                        </el-col>
                     </section>
+                </transition>
 
+                <transition name="fadetwo">
                     <section v-if="activeStep == 3" class="step other">
                         <el-form-item label="Noe du ønsker å tilføye? (helse/allergier, bonuskort, m.m.) - valgfritt felt">
                             <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
@@ -288,6 +285,7 @@
                             </div>
                         </el-row>
                     </section>
+                </transition>
 
                     <!-- <section v-if="activeStep == 4" class="step">
                         Oppsumering
@@ -303,18 +301,18 @@
                             Totalt {{ totalPrice }} kr
                         </span>
                     </div>
-                    
+
                     <div>
-                        <el-button v-if="activeStep > 0" type="default" icon="el-icon-arrow-left" @click="prevStep">
+                        <el-button @click="prevStep" v-if="activeStep > 0" :disabled="activeStep < 1" icon="el-icon-arrow-left" style="border-radius: 0;">
                             Tilbake <!-- el-icon-back -->
                         </el-button>
 
-                        <el-button v-if="activeStep < 3" type="primary" @click="nextStep">
+                        <el-button @click="nextStep" :disabled="activeStep > 2" type="primary" style="border-radius: 0;">
                             Neste <i class="el-icon-arrow-right el-icon-right" style="margin-left: 4px;"></i>
                         </el-button>
 
-                        <el-button v-if="activeStep == 3" type="success" :disabled="form.travelConditions == false" @click="onSubmit()">
-                            Send påmelding <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
+                        <el-button v-if="activeStep == 3" type="success" :disabled="form.travelConditions == false" @click="onSubmit">
+                            Send Påmelding <i class="fa fa-paper-plane" aria-hidden="true" style="margin-left: 5px;"></i>
                         </el-button>
                     </div>
                 </div>
@@ -328,6 +326,7 @@
 </template>
 
 <script>
+    import form from '../core/Form'
     import trip from '../data'
     import modal from './utils/Modal'
 
@@ -339,7 +338,8 @@
                 activeStep: 0,
 
                 title: trip.title,
-                
+
+                // form: new Form({
                 form: {
                     amountSingle: 0,
                     amountDouble: 0,
@@ -419,28 +419,25 @@
         },
 
         methods: {
-            nextStep() {
-                if (this.activeStep < 4) {
-                    if (this.activeStep++ > 3) {
-                        // this.activeStep = 0
-                    }
-                }
+            step(index) {
+                console.log(index)
+            },
 
-                console.log(this.activeStep)
+            nextStep() {
+                if (this.activeStep <= 3 && this.activeStep >= 0) {
+                    this.activeStep++
+                }
             },
 
             prevStep() {
-                if (this.activeStep > 0) {
-                    if (this.activeStep-- < 3) {
-                        // this.activeStep = 3
-                    }
+                if (this.activeStep >= 0 && this.activeStep <= 3) {
+                    this.activeStep--
                 }
-                console.log(this.activeStep)
             },
 
             onRoomChange(roomType) {
                 let capitalizedRoomType = (roomType.charAt(0).toUpperCase() + roomType.slice(1))
-                let prev = this.form['amount' + capitalizedRoomType] // e.g. amountDouble
+                let prev = this.form['amount' + capitalizedRoomType] // e.g. this.form.amountDouble
              
                 this.$nextTick(function () {
                     //get the difference between the current number of rooms and the newly selected amount
@@ -522,12 +519,25 @@
 
                     break;
                 }
-            }
+            },
+
+            /**
+             * 
+             */
+            onSubmit() {
+                axios.post('enrollment/store', this.form).then(function(response) {
+                    console.log(response.data)
+
+                    if (response.data[0] == true) {
+                        console.log(response.data[1])
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error)
+                })
+            },
         },
 
-        onSubmit() {
-            console.log('Attempt submit')
-        },
 
         /**
          * Fetch the trip data and assign it to vue props.
@@ -560,6 +570,11 @@
         margin-bottom: 60px;
         margin-top: 40px;
     }
+    div.el-step div.el-step__head div.el-step__line {
+        display: none;
+        height: 0;
+    }
+
     .activities, .other {
         padding-bottom: 22px;
     }
@@ -571,15 +586,16 @@
         padding: 0;
         margin: 0;
     }
+    .room__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     .room__cards .el-col:nth-child(odd) {
         padding-right: 10px;
     }
     .el-col {
         padding-bottom: 10px;
-    }
-    .box-card {
-        /*box-shadow: 0;
-        margin-bottom: 10px;*/
     }
     .separator__line {
         border-top: 1px solid #ddd;

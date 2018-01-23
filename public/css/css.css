@@ -33,6 +33,20 @@ html, body {
     opacity: 0;
 }
 
+/* fade variant */
+.fadetwo-enter-active {
+    transition: opacity .5s;
+}
+
+.fadetwo-leave-active {
+	transition: opacity 0s;
+}
+
+.fadetwo-enter,
+.fadetwo-leave-to {
+    opacity: 0;
+}
+
 /* ELEMENT UI RESETS */
 
 /* reset some element ui form label styling */
