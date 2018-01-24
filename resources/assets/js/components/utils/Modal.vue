@@ -12,7 +12,7 @@
 					<button class="b-modal-close" @click="$emit('close')"></button>
 				</header>
 
-				<section class="b-modal-card-body">
+				<section class="b-modal-card-body" ref="modalCardBody">
 					<slot></slot>
 				</section>
 				

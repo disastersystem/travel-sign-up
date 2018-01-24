@@ -1,4 +1,7 @@
 
+Animate so that the step item is aniamted before/after/at the same time as the section.
+Background styling of the step titles.
+
 Submit button is not inside form element, this does however not matter as we're submitting the vue form object.
 
 Do not submit the total price from frontend directly to the mail, calculate the price after it hits backend
@@ -50,3 +53,34 @@ Escape:
 <!-- <div v-show="form.activities.length" class="section__title">
 	    <h3>Ekstra Aktiviteter</h3>
 	</div> -->
+
+
+/**
+             * 
+             */
+             increment(age, action, index) {
+                if (age == 'children') {
+                    if (action == 'increase') {
+                        this.form.activities[index].amountChildren++
+                    }
+
+                    if (action == 'decrease') {
+                        if (this.form.activities[index].amountChildren > 0) {
+                            this.form.activities[index].amountChildren--
+                        }
+                    }
+                }
+
+                if (age == 'adults') {
+                    if (action == 'increase') {
+                        this.form.activities[index].amountAdults++
+                    }
+
+                    if (action == 'decrease') {
+                        /* do not decrease below zero */
+                        if (this.form.activities[index].amountAdults > 0) {
+                            this.form.activities[index].amountAdults--
+                        }
+                    }
+                }
+            },

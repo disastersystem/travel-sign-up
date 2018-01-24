@@ -5,287 +5,288 @@
             <!-- padding: 40px 0 40px 0; -->
             <div style=" box-shadow: 0px 6px 43px -20px rgba(156,154,156,1);">
                 <div style="display: flex; align-items: center;">
-                    <el-steps :active="activeStep" align-center finish-status="wait" style="flex: 1;"> <!-- finish-status="success" direction="vertical" -->
-                        <el-step @click.native="activeStep = 0" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; border-left: 0; padding-top: 5px;" title="Hotellrom"></el-step>
-                        <el-step @click.native="activeStep = 1" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Bestiller"></el-step> <!-- description="Kontakt informasjon om bestiller" -->
-                        <el-step @click.native="activeStep = 2" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Valgfrie Aktiviteter"></el-step>
-                        <el-step @click.native="activeStep = 3" style="cursor: pointer; z-index: 800; border: 1px solid #ddd; border-right: 0; padding-top: 5px;" title="Annet"></el-step>
+                    <!-- description="Kontakt informasjon om bestiller" -->
+                    <!-- finish-status="success" direction="vertical" -->
+                    <el-steps :active="activeStep" align-center finish-status="wait" style="flex: 1;">
+                        <el-step class="step__btn" @click.native="activeStep = 0" title="Hotellrom" style="border-left: 0;"></el-step>
+                        <el-step class="step__btn" @click.native="activeStep = 1" title="Bestiller"></el-step>
+                        <el-step class="step__btn" @click.native="activeStep = 2" title="Valgfrie Aktiviteter"></el-step>
+                        <el-step class="step__btn" @click.native="activeStep = 3" title="Annet"></el-step>
                     </el-steps>
                 </div>
             </div>
 
             <div style="padding: 40px;">
                 <el-form label-position="top" :model="form" @submit.native.prevent>
-                    <transition name="fadetwo">
-                    <section v-if="activeStep == 0" class="step rooms">
-                        <el-row>
-                            <el-col :span="8">
-                                <h2 class="text-align-center">Enkeltrom</h2>
 
-                                <h5 class="body-text">{{ prices.single }},- per person</h5>
-
-                                <el-form-item class="text-align-center">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountSingle"
-                                            @change="onRoomChange('single')"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
-                                    </div>
-                                </el-form-item>
-                            </el-col>
-
-                            <el-col :span="8">
-                                <h2 class="text-align-center">Dobbeltrom</h2>
-
-                                <h5 class="body-text">{{ prices.double }},- per person</h5>
-
-                                <el-form-item class="text-align-center">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountDouble"
-                                            @change="onRoomChange('double')"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
-                                    </div>
-                                </el-form-item>
-                            </el-col>
-
-                            <el-col :span="8">
-                                <h2 class="text-align-center">Twinrom</h2>
-
-                                <h5 class="body-text">{{ prices.twin }},- per person</h5>
-
-                                <el-form-item class="text-align-center">
-                                    <div class="flex-center">
-                                        <el-input-number
-                                            v-model="form.amountTwin"
-                                            @change="onRoomChange('twin')"
-                                            :min="0"
-                                            :max="10"
-                                        ></el-input-number>
-                                    </div>
-                                </el-form-item>
-                            </el-col>
-                        </el-row>
-
-                        <el-row class="room__cards">
-                            <el-col v-for="(room, index) in form.rooms.single" :key="index" :span="12">
-                                
-                                <el-card class="box-card">
-                                    <div slot="header" style="display: flex; align-items: center; padding: 0; margin: 0;">
-                                        <div style="flex: 1; font-weight: 800;">
-                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Enkeltrom ' + (index + 1)"></h2>
-                                        </div>
-
-                                        <el-form-item label="barneseng" style="width: 70px; margin: 0;">
-                                            <el-select :value="0" v-model="room.numChildBeds" @change="" placeholder="legg til barneseng">
-                                                <el-option :key="0" :value="0" :label="0"></el-option>
-                                                <el-option :key="1" :value="1" :label="1"></el-option>
-                                                <el-option :key="2" :value="2" :label="2"></el-option>
-                                            </el-select>
-                                        </el-form-item>
-                                    </div>
-
-                                    <div class="text item" v-for="person in room.people">
-                                        <el-form-item label="Navn">
-                                            <el-input v-model="person.name"></el-input>
-                                        </el-form-item>
-
-                                        <el-form-item label="Fødselsdato">
-                                            <el-input v-model="person.dob"></el-input>
-                                        </el-form-item>
-                                    </div>
-                                </el-card>
-                            </el-col>
-
-                            <el-col v-for="(room, index) in form.rooms.double" :key="index" :span="12">
-                                <!-- <room-card :data="room"></room-card> -->
-                                <el-card class="box-card">
-                                    <div slot="header" style="display: flex; align-items: center;">
-                                        <div style="flex: 1;">
-                                            <!-- <strong v-text="'Dobbeltrom ' + (index + 1)"></strong> -->
-                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Dobbeltrom ' + (index + 1)"></h2>
-                                        </div>
-
-                                        <!-- <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
-                                            +barneseng
-                                        </el-button> -->
-                                    </div>
-                                    
-                                    <div class="text item">
-                                        <template v-for="(person, i) in room.people">
-                                            <h3 v-text="'Person ' + (i + 1)"></h3>
-
-                                            <el-form-item label="Navn">
-                                                <el-input v-model="person.name"></el-input>
-                                            </el-form-item>
-
-                                            <el-form-item label="Fødselsdato">
-                                                <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
-                                            </el-form-item>
-
-                                            <div v-if="i % 2 === 0" class="separator__line"></div>
-                                        </template>
-                                    </div>
-                                </el-card>
-                            </el-col>
-
-                            <el-col v-for="(room, index) in form.rooms.twin" :key="index" :span="12">
-                                <el-card class="box-card">
-                                    <div slot="header" style="display: flex; align-items: center;">
-                                        <div style="flex: 1; font-weight: 800;">
-                                            <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Twinrom ' + (index + 1)"></h2>
-                                        </div>
-
-                                        <!-- <el-button type="default" @click.stop="" class="add-bed__button">
-                                            [+] legg til barneseng
-                                        </el-button> -->
-                                    </div>
-                                    
-                                    <div class="text item">
-                                        <template v-for="(person, i) in room.people">
-                                            <h3 v-text="'Person ' + (i + 1)"></h3>
-
-                                            <el-form-item label="Navn">
-                                                <el-input v-model="person.name"></el-input>
-                                            </el-form-item>
-
-                                            <el-form-item label="Fødselsdato">
-                                                <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
-                                            </el-form-item>
-
-                                            <div v-if="i % 2 === 0" class="separator__line"></div>
-                                        </template>
-                                    </div>
-                                </el-card>
-                            </el-col>
-                        </el-row>
-                    </section>
-                </transition>
-
-                <transition name="fadetwo">
-                    <section v-if="activeStep == 1" class="step orderer">
-                        <el-row>
-                            <el-form-item label="Navn (som i pass)">
-                                <el-input v-model="form.name"></el-input>
-                            </el-form-item>
-
-                            <el-form-item label="E-post">
-                                <el-input v-model="form.mail"></el-input>
-                            </el-form-item>
-
-                            <el-form-item label="Telefon">
-                                <el-input v-model="form.phone"></el-input>
-                            </el-form-item>
-
-                            <el-form-item label="Adresse">
-                                <el-input v-model="form.address"></el-input>
-                            </el-form-item>
-
+                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                        <section v-if="activeStep == 0" class="step rooms">
                             <el-row>
                                 <el-col :span="8">
-                                    <el-form-item label="Postnr">
-                                        <el-input v-model="form.postalcode" style="width: 140px;"></el-input>
+                                    <h2 class="text-align-center">Enkeltrom</h2>
+
+                                    <h5 class="body-text">{{ prices.single }},- per person</h5>
+
+                                    <el-form-item class="text-align-center">
+                                        <div class="flex-center">
+                                            <el-input-number
+                                                v-model="form.amountSingle"
+                                                @change="onRoomChange('single')"
+                                                :min="0"
+                                                :max="10"
+                                            ></el-input-number>
+                                        </div>
                                     </el-form-item>
                                 </el-col>
-                                <el-col :span="12">
-                                    <el-form-item label="Poststed">
-                                        <el-input v-model="form.city"></el-input>
+
+                                <el-col :span="8">
+                                    <h2 class="text-align-center">Dobbeltrom</h2>
+
+                                    <h5 class="body-text">{{ prices.double }},- per person</h5>
+
+                                    <el-form-item class="text-align-center">
+                                        <div class="flex-center">
+                                            <el-input-number
+                                                v-model="form.amountDouble"
+                                                @change="onRoomChange('double')"
+                                                :min="0"
+                                                :max="10"
+                                            ></el-input-number>
+                                        </div>
+                                    </el-form-item>
+                                </el-col>
+
+                                <el-col :span="8">
+                                    <h2 class="text-align-center">Twinrom</h2>
+
+                                    <h5 class="body-text">{{ prices.twin }},- per person</h5>
+
+                                    <el-form-item class="text-align-center">
+                                        <div class="flex-center">
+                                            <el-input-number
+                                                v-model="form.amountTwin"
+                                                @change="onRoomChange('twin')"
+                                                :min="0"
+                                                :max="10"
+                                            ></el-input-number>
+                                        </div>
                                     </el-form-item>
                                 </el-col>
                             </el-row>
-                        </el-row>
-                    </section>
-                </transition>
 
-                <transition name="fadetwo">
-                    <!-- and activity.length != 0 -->
-                    <section v-if="activeStep == 2" class="step activities">
-                        <el-col v-for="(activity, index) in form.activities" :key="index" :span="12">
+                            <el-row class="room__cards">
+                                <el-col v-for="(room, index) in form.rooms.single" :key="index" :span="12">
+                                    
+                                    <el-card class="box-card">
+                                        <div slot="header" style="display: flex; align-items: center; padding: 0; margin: 0;">
+                                            <div style="flex: 1; font-weight: 800;">
+                                                <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Enkeltrom ' + (index + 1)"></h2>
+                                            </div>
 
-                            <h2 class="text-align-center">{{ activity.title }}</h2>
+                                            <el-form-item label="barneseng" style="width: 70px; margin: 0;">
+                                                <el-select :value="0" v-model="room.numChildBeds" @change="" placeholder="legg til barneseng">
+                                                    <el-option :key="0" :value="0" :label="0"></el-option>
+                                                    <el-option :key="1" :value="1" :label="1"></el-option>
+                                                    <el-option :key="2" :value="2" :label="2"></el-option>
+                                                </el-select>
+                                            </el-form-item>
+                                        </div>
 
-                            <el-col :span="24" style="display: flex;">
-                                
+                                        <div class="text item" v-for="person in room.people">
+                                            <el-form-item label="Navn">
+                                                <el-input v-model="person.name"></el-input>
+                                            </el-form-item>
 
-                                <el-form-item label="Antall Barn (4-12 år)" class="text-align-center">
-                                    <div class="flex-center">
-                                        <el-select v-model.number="activity.amountAdults" placeholder="">
-                                            <el-option key="0" value="0" label="0"></el-option>
-                                            <el-option key="1" value="1" label="1"></el-option>
-                                        </el-select>
-                                    </div>
+                                            <el-form-item label="Fødselsdato">
+                                                <el-input v-model="person.dob"></el-input>
+                                            </el-form-item>
+                                        </div>
+                                    </el-card>
+                                </el-col>
+
+                                <el-col v-for="(room, index) in form.rooms.double" :key="index" :span="12">
+                                    <!-- <room-card :data="room"></room-card> -->
+                                    <el-card class="box-card">
+                                        <div slot="header" style="display: flex; align-items: center;">
+                                            <div style="flex: 1;">
+                                                <!-- <strong v-text="'Dobbeltrom ' + (index + 1)"></strong> -->
+                                                <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Dobbeltrom ' + (index + 1)"></h2>
+                                            </div>
+
+                                            <!-- <el-button type="default" @click.stop="addBed('double', index)" class="add-bed__button">
+                                                +barneseng
+                                            </el-button> -->
+                                        </div>
+                                        
+                                        <div class="text item">
+                                            <template v-for="(person, i) in room.people">
+                                                <h3 v-text="'Person ' + (i + 1)"></h3>
+
+                                                <el-form-item label="Navn">
+                                                    <el-input v-model="person.name"></el-input>
+                                                </el-form-item>
+
+                                                <el-form-item label="Fødselsdato">
+                                                    <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
+                                                </el-form-item>
+
+                                                <div v-if="i % 2 === 0" class="separator__line"></div>
+                                            </template>
+                                        </div>
+                                    </el-card>
+                                </el-col>
+
+                                <el-col v-for="(room, index) in form.rooms.twin" :key="index" :span="12">
+                                    <el-card class="box-card">
+                                        <div slot="header" style="display: flex; align-items: center;">
+                                            <div style="flex: 1; font-weight: 800;">
+                                                <h2 style="margin: 6px 0; font-size: 1.3em;" v-text="'Twinrom ' + (index + 1)"></h2>
+                                            </div>
+
+                                            <!-- <el-button type="default" @click.stop="" class="add-bed__button">
+                                                [+] legg til barneseng
+                                            </el-button> -->
+                                        </div>
+                                        
+                                        <div class="text item">
+                                            <template v-for="(person, i) in room.people">
+                                                <h3 v-text="'Person ' + (i + 1)"></h3>
+
+                                                <el-form-item label="Navn">
+                                                    <el-input v-model="person.name"></el-input>
+                                                </el-form-item>
+
+                                                <el-form-item label="Fødselsdato">
+                                                    <el-input v-model="person.dob" placeholder="dd.mm.yyyy"></el-input>
+                                                </el-form-item>
+
+                                                <div v-if="i % 2 === 0" class="separator__line"></div>
+                                            </template>
+                                        </div>
+                                    </el-card>
+                                </el-col>
+                            </el-row>
+                        </section>
+                    </transition>
+
+                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                        <section v-if="activeStep == 1" class="step orderer">
+                            <el-row>
+                                <el-form-item label="Navn (som i pass)">
+                                    <el-input v-model="form.name"></el-input>
                                 </el-form-item>
-                                <h5 class="body-text">{{ activity.price }},- per person</h5>
-                            </el-col>
 
-                            <el-col :span="24" style="display: flex;">
-                                
-
-                                <el-form-item label="Antall Voksne" class="text-align-center">
-                                    <div class="flex-center">
-                                        <el-select v-model.number="activity.amountChildren" placeholder="">
-                                            <el-option key="0" value="0" label="0"></el-option>
-                                            <el-option key="1" value="1" label="1"></el-option>
-                                        </el-select>
-                                    </div>
+                                <el-form-item label="E-post">
+                                    <el-input v-model="form.mail"></el-input>
                                 </el-form-item>
 
-                                <h5 class="body-text">{{ activity.priceAfterDiscount }},- per person</h5>
+                                <el-form-item label="Telefon">
+                                    <el-input v-model="form.phone"></el-input>
+                                </el-form-item>
+
+                                <el-form-item label="Adresse">
+                                    <el-input v-model="form.address"></el-input>
+                                </el-form-item>
+
+                                <el-row>
+                                    <el-col :span="8">
+                                        <el-form-item label="Postnr">
+                                            <el-input v-model="form.postalcode" style="width: 140px;"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                    <el-col :span="12">
+                                        <el-form-item label="Poststed">
+                                            <el-input v-model="form.city"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                            </el-row>
+                        </section>
+                    </transition>
+
+                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                        <section v-if="activeStep == 2 && form.activities.length != 0" class="step activities">
+                            <el-col v-for="(activity, index) in form.activities" :key="index" :span="12">
+
+                                <h2 class="text-align-center">{{ activity.title }}</h2>
+
+                                <el-col :span="24" style="display: flex;">
+                                    
+                                    <el-form-item label="Antall Barn (4-12 år)" class="text-align-center">
+                                        <div class="flex-center">
+                                            <el-select v-model.number="activity.amountAdults" placeholder="">
+                                                <el-option key="0" value="0" label="0"></el-option>
+                                                <el-option key="1" value="1" label="1"></el-option>
+                                            </el-select>
+                                        </div>
+                                    </el-form-item>
+                                    <h5 class="body-text">{{ activity.price }},- per person</h5>
+                                </el-col>
+
+                                <el-col :span="24" style="display: flex;">
+                                    
+
+                                    <el-form-item label="Antall Voksne" class="text-align-center">
+                                        <div class="flex-center">
+                                            <el-select v-model.number="activity.amountChildren" placeholder="">
+                                                <el-option key="0" value="0" label="0"></el-option>
+                                                <el-option key="1" value="1" label="1"></el-option>
+                                            </el-select>
+                                        </div>
+                                    </el-form-item>
+
+                                    <h5 class="body-text">{{ activity.priceAfterDiscount }},- per person</h5>
+                                </el-col>
+
                             </el-col>
+                        </section>
+                    </transition>
 
-                        </el-col>
-                    </section>
-                </transition>
+                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                        <section v-if="activeStep == 3" class="step other">
+                            <el-form-item label="Noe du ønsker å tilføye? (helse/allergier, bonuskort, m.m.) - valgfritt felt">
+                                <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
+                            </el-form-item>
 
-                <transition name="fadetwo">
-                    <section v-if="activeStep == 3" class="step other">
-                        <el-form-item label="Noe du ønsker å tilføye? (helse/allergier, bonuskort, m.m.) - valgfritt felt">
-                            <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
-                        </el-form-item>
+                            <el-form-item label="Ønsket avreisested">
+                                <el-select v-model="form.departure" placeholder="Avreisested">
+                                    <el-option key="Gjøvik" value="Gjøvik" label="Gjøvik"></el-option>
+                                    <el-option key="Hunndalen" value="Hunndalen" label="Hunndalen"></el-option>
+                                    <el-option key="Raufoss" value="Raufoss" label="Raufoss"></el-option>
+                                    <el-option key="Reinsvoll" value="Reinsvoll" label="Reinsvoll"></el-option>
+                                    <el-option key="Eina" value="Eina" label="Eina"></el-option>
+                                    <el-option key="Gran" value="Gran" label="Gran"></el-option>
+                                </el-select>
+                            </el-form-item>
 
-                        <el-form-item label="Ønsket avreisested">
-                            <el-select v-model="form.departure" placeholder="Avreisested">
-                                <el-option key="Gjøvik" value="Gjøvik" label="Gjøvik"></el-option>
-                                <el-option key="Hunndalen" value="Hunndalen" label="Hunndalen"></el-option>
-                                <el-option key="Raufoss" value="Raufoss" label="Raufoss"></el-option>
-                                <el-option key="Reinsvoll" value="Reinsvoll" label="Reinsvoll"></el-option>
-                                <el-option key="Eina" value="Eina" label="Eina"></el-option>
-                                <el-option key="Gran" value="Gran" label="Gran"></el-option>
-                            </el-select>
-                        </el-form-item>
+                            <el-form-item label="Flybilletter">
+                                <el-checkbox style="background: #fff;"
+                                    v-model="form.planeTickets"
+                                    label="Ønsker å bestille reisen med flybilletter"
+                                    border
+                                ></el-checkbox>
+                            </el-form-item>
 
-                        <el-form-item label="Flybilletter">
-                            <el-checkbox style="background: #fff;"
-                                v-model="form.planeTickets"
-                                label="Ønsker å bestille reisen med flybilletter"
-                                border
-                            ></el-checkbox>
-                        </el-form-item>
+                            <el-row type="flex" class="row-bg" justify="center" style="margin-top: 70px;">
+                                <el-checkbox
+                                    class="conditions__checkbox"
+                                    v-model="form.travelConditions"
+                                    label="Jeg har lest og godtar"
+                                    border
+                                ></el-checkbox>
 
-                        <el-row type="flex" class="row-bg" justify="center" style="margin-top: 70px;">
-                            <el-checkbox
-                                class="conditions__checkbox"
-                                v-model="form.travelConditions"
-                                label="Jeg har lest og godtar"
-                                border
-                            ></el-checkbox>
-
-                            <div class="conditions__link">
-                                <a target="_blank" href="reisebetingelser.html">
-                                    reisebetingelsene 
-                                </a>
-                                
-                                <i class="material-icons" style="color: #ccc; font-size: 18px; margin-left: 5px;">
-                                    open_in_new
-                                </i>
-                            </div>
-                        </el-row>
-                    </section>
-                </transition>
+                                <div class="conditions__link">
+                                    <a target="_blank" href="reisebetingelser.html">
+                                        reisebetingelsene 
+                                    </a>
+                                    
+                                    <i class="material-icons" style="color: #ccc; font-size: 18px; margin-left: 5px;">
+                                        open_in_new
+                                    </i>
+                                </div>
+                            </el-row>
+                        </section>
+                    </transition>
 
                     <!-- <section v-if="activeStep == 4" class="step">
                         Oppsumering
@@ -307,7 +308,7 @@
                             Tilbake <!-- el-icon-back -->
                         </el-button>
 
-                        <el-button @click="nextStep" :disabled="activeStep > 2" type="primary" style="border-radius: 0;">
+                        <el-button @click="nextStep" v-if="activeStep < 3" :disabled="activeStep > 2" type="primary" style="border-radius: 0;">
                             Neste <i class="el-icon-arrow-right el-icon-right" style="margin-left: 4px;"></i>
                         </el-button>
 
@@ -419,8 +420,19 @@
         },
 
         methods: {
-            step(index) {
-                console.log(index)
+            beforeEnter(el) {
+                // console.log(el.parentNode.parentNode.parentNode.parentNode)
+                document.querySelector('.b-modal-card-body').style.overflow = 'hidden'
+                // this.$children[0].$refs.modalCardBody.style.overflow = 'hidden'
+                // this.$el.querySelector(...)
+            },
+
+            afterEnter(el) {
+                // console.log(el)
+                // el.style.overflowX = 'auto'
+                document.querySelector('.b-modal-card-body').style.overflow = 'auto'
+                // console.log(this.$children.$children)
+                // this.$children[0].$refs.modalCardBody.style.overflow = 'auto'
             },
 
             nextStep() {
@@ -470,36 +482,6 @@
             removeRoom(amountAdded, roomType) {
                 for (let i = 0; i < Math.abs(amountAdded); i++) {
                     this.form.rooms[roomType].splice(-1, 1)
-                }
-            },
-
-            /**
-             * 
-             */
-             increment(age, action, index) {
-                if (age == 'children') {
-                    if (action == 'increase') {
-                        this.form.activities[index].amountChildren++
-                    }
-
-                    if (action == 'decrease') {
-                        if (this.form.activities[index].amountChildren > 0) {
-                            this.form.activities[index].amountChildren--
-                        }
-                    }
-                }
-
-                if (age == 'adults') {
-                    if (action == 'increase') {
-                        this.form.activities[index].amountAdults++
-                    }
-
-                    if (action == 'decrease') {
-                        /* do not decrease below zero */
-                        if (this.form.activities[index].amountAdults > 0) {
-                            this.form.activities[index].amountAdults--
-                        }
-                    }
                 }
             },
 
@@ -562,19 +544,19 @@
 </script>
 
 <style scoped>
-    .flex-center {
-        display: flex;
-        justify-content: center;
+    .enrolment__button {
+        padding: 10px 15px;
+        border: 0;
+        background: #FFCA2D;
+        border-radius: 2px;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 1em;
     }
     .step {
         margin-bottom: 60px;
         margin-top: 40px;
     }
-    div.el-step div.el-step__head div.el-step__line {
-        display: none;
-        height: 0;
-    }
-
     .activities, .other {
         padding-bottom: 22px;
     }
@@ -620,21 +602,15 @@
         line-height: 19px;
         font-size: 14px;
     }
-    .space-between {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
     .total__price {
         font-size: 1.4em;
     }
-    .enrolment__button {
-        padding: 10px 15px;
-        border: 0;
-        background: #FFCA2D;
-        border-radius: 2px;
+    .step__btn {
         cursor: pointer;
-        font-weight: 800;
-        font-size: 1em;
+        z-index: 10;
+        border: 1px solid #ddd;
+        border-right: 0;
+        padding-top: 8px;
+        padding-bottom: 2px;
     }
 </style>
