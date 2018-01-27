@@ -1,25 +1,34 @@
 html, body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Raleway';
+	font-family: 'Raleway', 'Arial';
 	font-weight: 600;
 	background: #373D4A;
 }
 
 /* global scrollbar styling */
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.b-modal-card-body::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.b-modal-card-body::-webkit-scrollbar {
 	width: 10px;
 	background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.b-modal-card-body::-webkit-scrollbar-thumb {
 	background-color: #BBB;
 	/*border: 2px solid #555555;*/
+}
+
+/* Some elements is not defaulted to inherit font settings, let's change this */
+textarea, select {
+   font-family: inherit;
+   font-size: inherit;
 }
 
 /* fade in and fade out animation */
@@ -32,6 +41,25 @@ html, body {
 .fade-leave-to {
     opacity: 0;
 }
+
+/* when elements are moved in a transition-group */
+.fade-move {
+  transition: transform .3s;
+  /*transform: translateY(200px);*/
+}
+
+/*.fade-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateY(200px);
+}
+.fade-leave-active {
+  position: absolute;
+}*/
 
 /* ELEMENT UI RESETS */
 
@@ -60,16 +88,14 @@ html, body {
 	border-color: #E6A23C;
 }
 
-/* typography */
-.main-title,
-.title,
-.small-title,
-.body-text,
-.body-text-small,
-.supplementary-text {
-
+.el-step__icon-inner {
+    font-family: Arial;
 }
+/*.el-scrollbar__bar .is-horizontal {
+	display: none;
+}*/
 
+/* typography */
 .body-text {
 	font-weight: normal;
 	text-align: center;
@@ -79,6 +105,7 @@ html, body {
     text-align: center;
 }
 
+/* positioning */
 .flex-center {
     display: flex;
     justify-content: center;
@@ -91,12 +118,13 @@ html, body {
 }
 
 
-/* Animate.css */
+/* ANIMATE.CSS */
 .animated {
 	animation-duration: .5s;
 	animation-fill-mode: both;
 }
 
+/* slide in left */
 @keyframes slideInLeft {
 	from {
 		transform: translate3d(-100%, 0, 0);
@@ -111,6 +139,7 @@ html, body {
 	animation-name: slideInLeft;
 }
 
+/* slide in right */
 @keyframes slideInRight {
 	from {
 		transform: translate3d(100%, 0, 0);

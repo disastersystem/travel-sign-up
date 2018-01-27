@@ -2,6 +2,12 @@
 Animate so that the step item is aniamted before/after/at the same time as the section.
 Background styling of the step titles.
 
+// todo: +children
+
+Set step menyen på toppen til fixed.
+
+https://vuejs.org/v2/guide/transitions.html#List-Entering-Leaving-Transitions
+
 Submit button is not inside form element, this does however not matter as we're submitting the vue form object.
 
 Do not submit the total price from frontend directly to the mail, calculate the price after it hits backend
@@ -42,6 +48,8 @@ Escape:
 
 
 -------
+
+<h5 class="body-text">{{ activity.price }},- per person</h5>
 
 // let people = []
                 

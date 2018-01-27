@@ -18,8 +18,12 @@
 
             <div style="padding: 40px;">
                 <el-form label-position="top" :model="form" @submit.native.prevent>
-
-                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                    <transition
+                        name="custom-classes-transition"
+                        enter-active-class="animated slideInRight"
+                        @before-enter="beforeEnter"
+                        @after-enter="afterEnter"
+                    >
                         <section v-if="activeStep == 0" class="step rooms">
                             <el-row>
                                 <el-col :span="8">
@@ -74,7 +78,8 @@
                                 </el-col>
                             </el-row>
 
-                            <el-row class="room__cards">
+                            <!-- <el-row class="room__cards"> -->
+                            <transition-group name="fade" tag="div" class="room__cards">
                                 <el-col v-for="(room, index) in form.rooms.single" :key="index" :span="12">
                                     
                                     <el-card class="box-card">
@@ -165,11 +170,18 @@
                                         </div>
                                     </el-card>
                                 </el-col>
-                            </el-row>
+                            </transition-group>
+
+                            <!-- </el-row> -->
                         </section>
                     </transition>
 
-                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                    <transition 
+                        name="custom-classes-transition"
+                        enter-active-class="animated slideInRight"
+                        @before-enter="beforeEnter"
+                        @after-enter="afterEnter"
+                    >
                         <section v-if="activeStep == 1" class="step orderer">
                             <el-row>
                                 <el-form-item label="Navn (som i pass)">
@@ -204,48 +216,66 @@
                         </section>
                     </transition>
 
-                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                    <transition
+                        name="custom-classes-transition"
+                        enter-active-class="animated slideInRight"
+                        @before-enter="beforeEnter"
+                        @after-enter="afterEnter"
+                    >
                         <section v-if="activeStep == 2 && form.activities.length != 0" class="step activities">
-                            <el-col v-for="(activity, index) in form.activities" :key="index" :span="12">
+                            <el-col v-for="(activity, index) in form.activities" :key="index" :span="24">
 
-                                <h2 class="text-align-center">{{ activity.title }}</h2>
+                                <h2 class="text-align-center" style="margin-bottom: 30px;">{{ activity.title }}</h2>
 
-                                <el-col :span="24" style="display: flex;">
-                                    
+                                <el-col :span="12" style="display: flex; justify-content: flex-end; padding-right: 15px;">
                                     <el-form-item label="Antall Barn (4-12 år)" class="text-align-center">
                                         <div class="flex-center">
-                                            <el-select v-model.number="activity.amountAdults" placeholder="">
-                                                <el-option key="0" value="0" label="0"></el-option>
-                                                <el-option key="1" value="1" label="1"></el-option>
+                                            <el-select v-model.number="activity.amountAdults" placeholder="" style="width: 80px; padding-top: 10px;">
+                                                <el-option key="0" value="0" label="0">
+                                                    <span class="select-value-label">0</span>
+                                                    <span class="select-hint-label"></span>
+                                                </el-option>
+                                                <el-option v-for="indx in numPeople" :key="indx" :value="indx" :label="indx">
+                                                    <span class="select-value-label">{{ indx }}</span>
+                                                    <span class="select-hint-label">{{ activity.price * indx }} kr</span>
+                                                </el-option>
                                             </el-select>
                                         </div>
                                     </el-form-item>
-                                    <h5 class="body-text">{{ activity.price }},- per person</h5>
                                 </el-col>
 
-                                <el-col :span="24" style="display: flex;">
-                                    
-
+                                <el-col :span="12" style="display: flex; justify-content: flex-start; padding-left: 15px;">
                                     <el-form-item label="Antall Voksne" class="text-align-center">
                                         <div class="flex-center">
-                                            <el-select v-model.number="activity.amountChildren" placeholder="">
-                                                <el-option key="0" value="0" label="0"></el-option>
-                                                <el-option key="1" value="1" label="1"></el-option>
+                                            <el-select v-model.number="activity.amountChildren" placeholder="" style="width: 80px; padding-top: 10px;">
+                                                <el-option key="0" value="0" label="0">
+                                                    <span class="select-value-label">0</span>
+                                                    <span class="select-hint-label"></span>
+                                                </el-option>
+                                                <el-option v-for="indx in numPeople" :key="indx" :value="indx" :label="indx">
+                                                    <span class="select-value-label">{{ indx }}</span>
+                                                    <span class="select-hint-label">{{ activity.priceAfterDiscount * indx }} kr</span>
+                                                </el-option>
                                             </el-select>
                                         </div>
                                     </el-form-item>
 
-                                    <h5 class="body-text">{{ activity.priceAfterDiscount }},- per person</h5>
+                                    <!-- <h5 class="body-text">,- per person</h5> -->
                                 </el-col>
 
                             </el-col>
                         </section>
                     </transition>
 
-                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" @before-enter="beforeEnter" @after-enter="afterEnter">
+                    <transition
+                        name="custom-classes-transition"
+                        enter-active-class="animated slideInRight"
+                        @before-enter="beforeEnter"
+                        @after-enter="afterEnter"
+                    >
                         <section v-if="activeStep == 3" class="step other">
                             <el-form-item label="Noe du ønsker å tilføye? (helse/allergier, bonuskort, m.m.) - valgfritt felt">
-                                <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 2}"></el-input>
+                                <el-input v-model="form.extra" type="textarea" :autosize="{minRows: 3}"></el-input>
                             </el-form-item>
 
                             <el-form-item label="Ønsket avreisested">
@@ -335,8 +365,8 @@
         data() {
             return {
                 showModal: false,
-                finished: false,
-                activeStep: 0,
+
+                activeStep: 0, //current step in the form
 
                 title: trip.title,
 
@@ -387,10 +417,6 @@
             totalPrice() {
                 return this.roomsPrice + this.activitiesPrice
             },
-
-            amountSingleV() {
-                return this.form.amountSingle
-            },
             
             /**
              * Total price of all rooms.
@@ -416,7 +442,19 @@
                         (value.price * value.amountAdults) + (value.priceAfterDiscount * value.amountChildren)
                     )
                 }, 0)
-            }
+            },
+
+            /**
+             * Amount of people signed up.
+             */
+            numPeople() {
+                // return 0 while no hotel rooms are selected */
+                if (!this.form.amountSingle || !this.form.amountDouble || !this.form.amountTwin) {
+                    return 0
+                }
+                // todo: +children
+                return this.form.amountSingle + (this.form.amountDouble * 2) + (this.form.amountTwin * 2)
+            },
         },
 
         methods: {
@@ -560,6 +598,9 @@
     .activities, .other {
         padding-bottom: 22px;
     }
+    .activities > div:not(:first-child) { /* every element except the first */
+        margin-top: 40px;
+    }
     .section__title {
         border-bottom: 1px solid #ddd;
         margin-bottom: 15px;
@@ -612,5 +653,14 @@
         border-right: 0;
         padding-top: 8px;
         padding-bottom: 2px;
+    }
+    .select-value-label {
+        float: left;
+    }
+    .select-hint-label {
+        float: right;
+        color: #8492a6;
+        font-size: 14px;
+        padding-left: 30px;
     }
 </style>
