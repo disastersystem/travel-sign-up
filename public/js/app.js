@@ -86795,7 +86795,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\nnav.main[data-v-10c80cc3] {\n\t/*border-bottom: 1px solid #ddd;*/\n\tbackground: #4A5263;\n\tpadding: 10px 20px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n}\n.trip__title[data-v-10c80cc3] {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\tmargin: 10px;\n\tcolor: #fff;\n}\n", ""]);
+exports.push([module.i, "\nnav.main[data-v-10c80cc3] {\n\t/*border-bottom: 1px solid #ddd;*/\n\tbackground: #4A5263;\n\tpadding: 10px 20px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t/*height: ;*/\n}\n.trip__title[data-v-10c80cc3] {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\tmargin: 10px;\n\tcolor: #fff;\n}\nmain[data-v-10c80cc3] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\theight: 70vh;\n}\n", ""]);
 
 // exports
 
@@ -86841,8 +86841,6 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SignUpForm__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_SignUpForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_SignUpForm__);
-//
-//
 //
 //
 //
@@ -86951,7 +86949,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\n.enrolment__button[data-v-04fcb030] {\n    padding: 10px 15px;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.activities > div[data-v-04fcb030]:not(:first-child) { /* every element except the first */\n    margin-top: 40px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.room__cards[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.room__cards .el-col[data-v-04fcb030]:nth-child(odd) {\n    padding-right: 10px;\n}\n.el-col[data-v-04fcb030] {\n    padding-bottom: 10px;\n}\n.separator__line[data-v-04fcb030] {\n    border-top: 1px solid #ddd;\n}\n.conditions__checkbox[data-v-04fcb030] {\n    background: #fff;\n    border-right: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.conditions__link[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    text-align: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-right: 8px;\n    border: 1px solid #c1c1c1; \n    border-radius: 4px;\n    border-left: 1px dashed #c1c1c1;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    padding-left: 10px;\n    line-height: 19px;\n    font-size: 14px;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.step__btn[data-v-04fcb030] {\n    cursor: pointer;\n    z-index: 10;\n    border: 1px solid #ddd;\n    border-right: 0;\n    padding-top: 8px;\n    padding-bottom: 2px;\n}\n.select-value-label[data-v-04fcb030] {\n    float: left;\n}\n.select-hint-label[data-v-04fcb030] {\n    float: right;\n    color: #8492a6;\n    font-size: 14px;\n    padding-left: 30px;\n}\n", ""]);
+exports.push([module.i, "\n.everything[data-v-04fcb030] {\n    /*background: rgb(131, 209, 99);*/\n    padding: 10px;\n    height: 200px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.top__menu[data-v-04fcb030] {\n    position: absolute; \n    left: 0;\n    right: 0;\n    z-index: 10;\n    -webkit-box-shadow: 0px 6px 43px -20px rgba(156,154,156,1);\n            box-shadow: 0px 6px 43px -20px rgba(156,154,156,1);\n    background: rgba(255,255,255,0.9);\n}\n.form__wrapper[data-v-04fcb030] {\n    padding: 40px;\n    padding-top: 100px;\n}\n.number__input[data-v-04fcb030] {\n    width: 150px;\n    font-size: 30px;\n}\n.box-card-header[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 0;\n    margin: 0;\n}\n.box-card-title-container[data-v-04fcb030] {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    font-weight: 800;\n}\n.box-card-title[data-v-04fcb030] {\n    margin: 6px 0;\n    font-size: 1.3em;\n}\n.amount-children__container[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    padding-right: 15px;\n}\n.amount-adults__container[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; \n    -webkit-box-pack: start; \n        -ms-flex-pack: start; \n            justify-content: flex-start;\n    padding-left: 15px;\n}\n.amount__select[data-v-04fcb030] {\n    width: 80px;\n    padding-top: 10px;\n}\n.plane-tickets__checkbox[data-v-04fcb030] {\n    background: #fff;\n}\n.row-bg[data-v-04fcb030] {\n    margin-top: 70px;\n}\n.activity-title[data-v-04fcb030] {\n    margin-bottom: 30px;\n}\n.postal-code__input[data-v-04fcb030] {\n    padding-right: 15px;\n}\n.add-bed__button[data-v-04fcb030] {\n    border-color: #E6A23C;\n    width: 70px;\n}\n.enrolment__button[data-v-04fcb030] {\n    width: 200px;\n    padding: 0;\n    border: 0;\n    background: #FFCA2D;\n    border-radius: 2px;\n    cursor: pointer;\n    font-weight: 800;\n    font-size: 1em;\n}\n.step[data-v-04fcb030] {\n    margin-bottom: 60px;\n    margin-top: 40px;\n}\n.activities[data-v-04fcb030], .other[data-v-04fcb030] {\n    padding-bottom: 22px;\n}\n.activities > div[data-v-04fcb030]:not(:first-child) { /* every element except the first */\n    margin-top: 40px;\n}\n.section__title[data-v-04fcb030] {\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 15px;\n}\n.section__title h3[data-v-04fcb030] {\n    padding: 0;\n    margin: 0;\n}\n.room__cards[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n}\n.room__cards .el-col[data-v-04fcb030]:nth-child(odd) { /* every odd element */\n    padding-right: 10px;\n}\n.el-col[data-v-04fcb030] {\n    padding-bottom: 10px;\n}\n.separator__line[data-v-04fcb030] {\n    border-top: 1px solid #ddd;\n}\n.conditions__checkbox[data-v-04fcb030] {\n    background: #fff;\n    border-right: 0;\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.conditions__link[data-v-04fcb030] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    text-align: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-right: 8px;\n    border: 1px solid #c1c1c1; \n    border-radius: 4px;\n    border-left: 1px dashed #c1c1c1;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    padding-left: 10px;\n    line-height: 19px;\n    font-size: 14px;\n}\n.total__price[data-v-04fcb030] {\n    font-size: 1.4em;\n}\n.step__btn[data-v-04fcb030] {\n    cursor: pointer;\n    z-index: 10;\n    border: 1px solid #ddd;\n    border-right: 0;\n    padding-top: 8px;\n    padding-bottom: 2px;\n}\n.select-value-label[data-v-04fcb030] {\n    float: left;\n}\n.select-hint-label[data-v-04fcb030] {\n    float: right;\n    color: #8492a6;\n    font-size: 14px;\n    padding-left: 30px;\n}\n.button-text[data-v-04fcb030] {\n    padding: 10px 0;\n}\n\n/* used to reset border rounding on framework elements */\n.no-rounding[data-v-04fcb030] {\n    border-radius: 0;\n}\n.flex-1[data-v-04fcb030] {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n.border-left-none[data-v-04fcb030] {\n    border-left: 0;\n}\n.margin-none[data-v-04fcb030] {\n    margin: 0;\n}\n.el-icon-arrow-right[data-v-04fcb030],\n.fa-paper-plane[data-v-04fcb030] {\n    margin-left: 4px;\n}\n.open-in-new[data-v-04fcb030] {\n    color: #ccc;\n    font-size: 18px;\n    margin-left: 5px;\n}\n", ""]);
 
 // exports
 
@@ -87324,6 +87322,69 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -87338,34 +87399,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             title: __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].title,
 
-            // form: new Form({
+            submitted: false, //has the form been succesfully submitted
+
+            //data that's bound to form elements and should be sent when the form is submitted
             form: {
+                //how many of each room type is selected
                 amountSingle: 0,
                 amountDouble: 0,
                 amountTwin: 0,
 
+                //holds data about the people in the different hotel rooms
                 rooms: {
                     single: [],
                     double: [],
                     twin: []
                 },
 
+                //data related to the person ordering
                 name: '',
                 mail: '',
                 phone: '',
                 address: '',
                 postalcode: '',
                 city: '',
+
+                //misc data
                 extra: '',
                 departure: 'Gjøvik',
 
+                //holds data about the trips optional activities and how many people is joining each
                 activities: [],
 
                 planeTickets: false,
-                travelConditions: false
+                travelConditions: false //whether the travels conditions has been accepted
             },
 
-            /*  */
+            //prices of different hotel room types
             prices: {
                 single: 0,
                 double: 0,
@@ -87413,10 +87482,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
         /**
-         * Amount of people signed up.
+         * Amount of people signed up (caculated from selected hotel rooms).
          */
         numPeople: function numPeople() {
-            return 10; // todo: +children
+            //return 0 while no hotel rooms are selected
+            if (this.form.amountSingle == 0 && this.form.amountDouble == 0 && this.form.amountTwin == 0) {
+                return 0;
+            }
+            //todo: +children
+            return this.form.amountSingle + this.form.amountDouble * 2 + this.form.amountTwin * 2;
         }
     },
 
@@ -87428,94 +87502,120 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             // this.$el.querySelector(...)
         },
         afterEnter: function afterEnter(el) {
-            // console.log(el)
-            // el.style.overflowX = 'auto'
             document.querySelector('.b-modal-card-body').style.overflow = 'auto';
             // console.log(this.$children.$children)
-            // this.$children[0].$refs.modalCardBody.style.overflow = 'auto'
         },
+
+
+        /**
+         * Advance to the next step in the form. This is used by the "next" button.
+         */
         nextStep: function nextStep() {
+            //go forward (increment the current step) one step if we're not on the last step.
             if (this.activeStep <= 3 && this.activeStep >= 0) {
                 this.activeStep++;
-            }
-        },
-        prevStep: function prevStep() {
-            if (this.activeStep >= 0 && this.activeStep <= 3) {
-                this.activeStep--;
-            }
-        },
-        onRoomChange: function onRoomChange(roomType) {
-            var capitalizedRoomType = roomType.charAt(0).toUpperCase() + roomType.slice(1);
-            var prev = this.form['amount' + capitalizedRoomType]; // e.g. this.form.amountDouble
-
-            this.$nextTick(function () {
-                //get the difference between the current number of rooms and the newly selected amount
-                var amountAdded = this.form['amount' + capitalizedRoomType] - prev;
-
-                //if the number is positive rooms have been added
-                if (amountAdded > 0) {
-                    this.addRoom(amountAdded, roomType);
-                }
-
-                //if the number is negative rooms have beeen removed
-                if (amountAdded < 0) {
-                    this.removeRoom(amountAdded, roomType);
-                }
-            });
-        },
-        addRoom: function addRoom(amountAdded, roomType) {
-            var numPeople = roomType == 'single' ? 1 : 2;
-
-            var people = Array(numPeople).fill({ name: '', dob: '' });
-
-            for (var i = 1; i <= amountAdded; i++) {
-                this.form.rooms[roomType].push({ people: people, numChildBeds: 0 });
-            }
-        },
-        removeRoom: function removeRoom(amountAdded, roomType) {
-            for (var i = 0; i < Math.abs(amountAdded); i++) {
-                this.form.rooms[roomType].splice(-1, 1);
-            }
-        },
-        onChildBedChange: function onChildBedChange(roomType, index) {
-            switch (roomType) {
-                case 'single':
-                    // this.form.rooms.single[index].extraChildBeds = amount
-                    // this.form.rooms.single.push(
-                    //     {num: this.form.amountSingle + index, name: '', dob: ''}
-                    // )
-                    // console.log(value)
-                    break;
-                case 'double':
-
-                    break;
-                case 'twin':
-
-                    break;
             }
         },
 
 
         /**
-         * 
+         * Go back one step in the the form. This is used by the "back" button.
+         */
+        prevStep: function prevStep() {
+            //go back (decrement the current step) one step if we're not on the first step.
+            if (this.activeStep >= 0 && this.activeStep <= 3) {
+                this.activeStep--;
+            }
+        },
+
+
+        /**
+         * The user has changed (increased or decreased by any number)
+         * the amount of rooms for ANY of the room types.
+         */
+        onRoomChange: function onRoomChange(roomType) {
+            var capitalizedRoomType = roomType.charAt(0).toUpperCase() + roomType.slice(1);
+            var prevAmount = this.form['amount' + capitalizedRoomType]; //e.g. this.form.amountDouble
+
+            this.$nextTick(function () {
+                //get the difference between the current number of rooms and the newly selected amount
+                var amountAdded = this.form['amount' + capitalizedRoomType] - prevAmount;
+
+                //if the number is positive rooms have been added
+                if (amountAdded > 0) {
+                    this.addRoom(amountAdded, roomType);
+                } else if (amountAdded < 0) {
+                    //negative number = rooms removed
+                    this.removeRoom(amountAdded, roomType);
+                }
+            });
+        },
+
+
+        /**
+         * Add any number of rooms for the specified room type.
+         */
+        addRoom: function addRoom(amountAdded, roomType) {
+            var numPeople = roomType == 'single' ? 1 : 2;
+
+            //create an array with as many objects as the room type dictates
+            var people = Array(numPeople).fill({ name: '', dob: '' });
+            var extraBeds = [];
+
+            //push as many rooms as the user added
+            for (var i = 1; i <= amountAdded; i++) {
+                this.form.rooms[roomType].push({ people: people, numChildBeds: 0, extraBeds: extraBeds });
+            }
+        },
+
+
+        /**
+         * Remove any amount of rooms for any room type.
+         */
+        removeRoom: function removeRoom(amountAdded, roomType) {
+            for (var i = 0; i < Math.abs(amountAdded); i++) {
+                this.form.rooms[roomType].splice(-1, 1);
+            }
+        },
+
+
+        /**
+         * Remove any amount of rooms for any room type.
+         */
+        onExtraBedChange: function onExtraBedChange(room) {
+            this.$nextTick(function () {
+                room.extraBeds = [];
+
+                for (var i = 1; i <= room.numChildBeds; i++) {
+                    room.extraBeds.push({ name: '', dob: '' });
+                }
+            });
+        },
+
+
+        /**
+         * Send the form data to the server.
          */
         onSubmit: function onSubmit() {
-            axios.post('enrollment/store', this.form).then(function (response) {
-                console.log(response.data);
+            var _this = this;
 
+            axios.post('enrollment/store', this.form).then(function (response) {
                 if (response.data[0] == true) {
-                    console.log(response.data[1]);
+                    _this.displaySuccess(response.data[1]);
                 }
-            }).catch(function (error) {
-                console.log(error);
             });
+        },
+        displaySuccess: function displaySuccess(message) {
+            this.submitted = true; //we've got a successful response
+
+            // this.$refs.everything.classList.add('everything')
+            // this.$refs.everything.innerHTML = `<div class="message">${message}</div>`
         }
     },
 
     /**
      * Fetch the trip data and assign it to vue props.
-     * Create some additional activities props with the 
-     * price calculated if there is any discounts.
+     * Create some additional activities props with the price calculated if there is any discounts.
      */
     mounted: function mounted() {
         this.prices.single = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].prices.single;
@@ -87524,7 +87624,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.form.activities = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].activities;
 
-        /* calculate and set initial prices now that activites has been loaded from the server */
+        //calculate and set initial prices now that activites has been loaded from the server
         this.form.activities.forEach(function (activity) {
             Vue.set(activity, 'priceAfterDiscount', activity.price - activity.discountChildren * activity.price / 100);
             Vue.set(activity, 'amountAdults', 0);
@@ -87786,7 +87886,7 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\n.b-modal-background[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tbackground-color: rgba(10, 10, 10, 0.6);\n\tz-index: 900;\n}\n.b-modal-content[data-v-af808f9a],\n.b-modal-card[data-v-af808f9a] {\n\tmargin: 0;\n\tmax-height: calc(100vh - 20px);\n\theight: 100%;\n\toverflow: auto;\n\tposition: relative;\n\twidth: 100%;\n\tz-index: 950;\n}\n@media screen and (min-width: 769px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\tmargin: 10px auto;\n\t\tmax-height: calc(100vh - 20px);\n\t\twidth: 500px;\n}\n}\n@media screen and (max-width: 768px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\twidth: 94%;\n}\n}\n.b-modal-close[data-v-af808f9a] {\n\t-webkit-touch-callout: none;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\t-ms-user-select: none;\n\tuser-select: none;\n\t-moz-appearance: none;\n\t-webkit-appearance: none;\n\tbackground-color: rgba(10, 10, 10, 0.2);\n\tborder: none;\n\tborder-radius: 290486px;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\t-webkit-box-flex: 0;\n\t-ms-flex-positive: 0;\n\tflex-grow: 0;\n\t-ms-flex-negative: 0;\n\tflex-shrink: 0;\n\tfont-size: 1rem;\n\theight: 30px;\n\tmax-height: 30px;\n\tmax-width: 30px;\n\tmin-height: 30px;\n\tmin-width: 30px;\n\toutline: none;\n\tposition: relative;\n\tvertical-align: top;\n\twidth: 30px;\n}\n.b-modal-close[data-v-af808f9a]:before, .b-modal-close[data-v-af808f9a]:after {\n\tbackground-color: white;\n\tcontent: \"\";\n\tdisplay: block;\n\tleft: 50%;\n\tposition: absolute;\n\ttop: 50%;\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t        transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t-webkit-transform-origin: center center;\n\t        transform-origin: center center;\n}\n.b-modal-close[data-v-af808f9a]:before {\n\theight: 2px;\n\twidth: 50%;\n}\n.b-modal-close[data-v-af808f9a]:after {\n\theight: 50%;\n\twidth: 2px;\n}\n.b-modal-close[data-v-af808f9a]:hover, .b-modal-close[data-v-af808f9a]:focus {\n\tbackground-color: rgba(10, 10, 10, 0.3);\n}\n.b-modal-close[data-v-af808f9a]:active {\n\tbackground-color: rgba(10, 10, 10, 0.4);\n}\n.b-modal-card[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmax-height: calc(100vh - 20px);\n\toverflow: hidden;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tbackground-color: whitesmoke;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\t-webkit-box-pack: start;\n\t    -ms-flex-pack: start;\n\t        justify-content: flex-start;\n\tpadding: 10px 20px 0 20px;\n\tposition: relative;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\tborder-bottom: 1px solid #dbdbdb;\n\tborder-top-left-radius: 2px;\n\tborder-top-right-radius: 2px;\n}\n.b-modal-card-title[data-v-af808f9a] {\n\tcolor: #363636;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\tfont-size: 1.3rem;\n\tline-height: 1;\n}\n.b-modal-card-foot[data-v-af808f9a] {\n\tpadding: 10px 20px 10px 20px;\n\tposition: relative;\n\tbackground-color: whitesmoke;\n\tborder-bottom-left-radius: 2px;\n\tborder-bottom-right-radius: 2px;\n\tborder-top: 1px solid #dbdbdb;\n\t/*justify-content: flex-end;*/\n}\n.b-modal-card-foot .button[data-v-af808f9a]:not(:last-child) {\n\tmargin-right: 10px;\n}\n.b-modal-card-body[data-v-af808f9a] {\n\t-webkit-overflow-scrolling: touch;\n\tbackground-color: white;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 1;\n\t    flex-shrink: 1;\n\toverflow: auto;\n}\n.b-modal[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\ttop: 0;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tdisplay: none;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\toverflow: hidden;\n\tposition: fixed !important;\n\tz-index: 1000;\n}\n.b-modal.b-is-active[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n}\n", ""]);
+exports.push([module.i, "\n.b-modal-background[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tbackground-color: rgba(10, 10, 10, 0.6);\n\tz-index: 900;\n}\n.b-modal-content[data-v-af808f9a],\n.b-modal-card[data-v-af808f9a] {\n\tmargin: 0;\n\tmax-height: calc(100vh - 20px);\n\theight: 100%;\n\toverflow: auto;\n\tposition: relative;\n\twidth: 100%;\n\tz-index: 950;\n}\n@media screen and (min-width: 769px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\tmargin: 10px auto;\n\t\tmax-height: calc(100vh - 20px);\n\t\twidth: 500px;\n}\n}\n@media screen and (max-width: 768px), print {\n.b-modal-content[data-v-af808f9a],\n\t.b-modal-card[data-v-af808f9a] {\n\t\twidth: 94%;\n}\n}\n.b-modal-close[data-v-af808f9a] {\n\t-webkit-touch-callout: none;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\t-ms-user-select: none;\n\tuser-select: none;\n\t-moz-appearance: none;\n\t-webkit-appearance: none;\n\tbackground-color: rgba(10, 10, 10, 0.2);\n\tborder: none;\n\tborder-radius: 290486px;\n\tcursor: pointer;\n\tdisplay: inline-block;\n\t-webkit-box-flex: 0;\n\t-ms-flex-positive: 0;\n\tflex-grow: 0;\n\t-ms-flex-negative: 0;\n\tflex-shrink: 0;\n\tfont-size: 1rem;\n\theight: 30px;\n\tmax-height: 30px;\n\tmax-width: 30px;\n\tmin-height: 30px;\n\tmin-width: 30px;\n\toutline: none;\n\tposition: relative;\n\tvertical-align: top;\n\twidth: 30px;\n}\n.b-modal-close[data-v-af808f9a]:before, .b-modal-close[data-v-af808f9a]:after {\n\tbackground-color: white;\n\tcontent: \"\";\n\tdisplay: block;\n\tleft: 50%;\n\tposition: absolute;\n\ttop: 50%;\n\t-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t        transform: translateX(-50%) translateY(-50%) rotate(45deg);\n\t-webkit-transform-origin: center center;\n\t        transform-origin: center center;\n}\n.b-modal-close[data-v-af808f9a]:before {\n\theight: 2px;\n\twidth: 50%;\n}\n.b-modal-close[data-v-af808f9a]:after {\n\theight: 50%;\n\twidth: 2px;\n}\n.b-modal-close[data-v-af808f9a]:hover, .b-modal-close[data-v-af808f9a]:focus {\n\tbackground-color: rgba(10, 10, 10, 0.3);\n}\n.b-modal-close[data-v-af808f9a]:active {\n\tbackground-color: rgba(10, 10, 10, 0.4);\n}\n.b-modal-card[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmax-height: calc(100vh - 20px);\n\toverflow: hidden;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tbackground-color: whitesmoke;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\t-webkit-box-pack: start;\n\t    -ms-flex-pack: start;\n\t        justify-content: flex-start;\n\tpadding: 10px 20px 0 20px;\n\tposition: relative;\n}\n.b-modal-card-head[data-v-af808f9a] {\n\tborder-bottom: 1px solid #dbdbdb;\n\tborder-top-left-radius: 2px;\n\tborder-top-right-radius: 2px;\n}\n.b-modal-card-title[data-v-af808f9a] {\n\tcolor: #363636;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n\tfont-size: 1.3rem;\n\tline-height: 1;\n}\n.b-modal-card-foot[data-v-af808f9a] {\n\tpadding: 10px 20px 10px 20px;\n\tposition: relative;\n\tbackground-color: whitesmoke;\n\tborder-bottom-left-radius: 2px;\n\tborder-bottom-right-radius: 2px;\n\tborder-top: 1px solid #dbdbdb;\n\t/*justify-content: flex-end;*/\n}\n.b-modal-card-foot .button[data-v-af808f9a]:not(:last-child) {\n\tmargin-right: 10px;\n}\n.b-modal-card-body[data-v-af808f9a] {\n\t-webkit-overflow-scrolling: touch;\n\tbackground-color: white;\n\t-webkit-box-flex: 1;\n\t    -ms-flex-positive: 1;\n\t        flex-grow: 1;\n\t-ms-flex-negative: 1;\n\t    flex-shrink: 1;\n\toverflow: auto;\n}\n.b-modal[data-v-af808f9a] {\n\tbottom: 0;\n\tleft: 0;\n\tright: 0;\n\ttop: 0;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\tdisplay: none;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\toverflow: hidden;\n\tposition: fixed !important;\n\tz-index: 1000;\n}\n.b-modal.b-is-active[data-v-af808f9a] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n}\n.date[data-v-af808f9a] {\n\tcolor: #bbb;\n\tfont-size: 80%;\n}\n", ""]);
 
 // exports
 
@@ -87915,7 +88015,10 @@ var render = function() {
             _vm.options.header
               ? _c("header", { staticClass: "b-modal-card-head" }, [
                   _c("h2", { staticClass: "b-modal-card-title" }, [
-                    _vm._v("\n\t\t\t\t\t" + _vm._s(_vm.title) + "\n\t\t\t\t")
+                    _vm._v("\n\t\t\t\t\t" + _vm._s(_vm.title) + " "),
+                    _c("span", { staticClass: "date" }, [
+                      _vm._v("- 22 juli 2018")
+                    ])
                   ]),
                   _vm._v(" "),
                   _c("button", {
@@ -87983,81 +88086,72 @@ var render = function() {
           }
         },
         [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "box-shadow": "0px 6px 43px -20px rgba(156,154,156,1)"
-              }
-            },
-            [
-              _c(
-                "div",
-                { staticStyle: { display: "flex", "align-items": "center" } },
-                [
-                  _c(
-                    "el-steps",
-                    {
-                      staticStyle: { flex: "1" },
-                      attrs: {
-                        active: _vm.activeStep,
-                        "align-center": "",
-                        "finish-status": "wait"
+          _c("div", { staticClass: "top__menu" }, [
+            _c(
+              "div",
+              { staticClass: "flex-horizontal-center" },
+              [
+                _c(
+                  "el-steps",
+                  {
+                    staticClass: "flex-1",
+                    attrs: {
+                      active: _vm.activeStep,
+                      "align-center": "",
+                      "finish-status": "wait"
+                    }
+                  },
+                  [
+                    _c("el-step", {
+                      staticClass: "step__btn border-left-none",
+                      attrs: { title: "Hotellrom" },
+                      nativeOn: {
+                        click: function($event) {
+                          _vm.activeStep = 0
+                        }
                       }
-                    },
-                    [
-                      _c("el-step", {
-                        staticClass: "step__btn",
-                        staticStyle: { "border-left": "0" },
-                        attrs: { title: "Hotellrom" },
-                        nativeOn: {
-                          click: function($event) {
-                            _vm.activeStep = 0
-                          }
+                    }),
+                    _vm._v(" "),
+                    _c("el-step", {
+                      staticClass: "step__btn",
+                      attrs: { title: "Bestiller" },
+                      nativeOn: {
+                        click: function($event) {
+                          _vm.activeStep = 1
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("el-step", {
-                        staticClass: "step__btn",
-                        attrs: { title: "Bestiller" },
-                        nativeOn: {
-                          click: function($event) {
-                            _vm.activeStep = 1
-                          }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("el-step", {
+                      staticClass: "step__btn",
+                      attrs: { title: "Valgfrie Aktiviteter" },
+                      nativeOn: {
+                        click: function($event) {
+                          _vm.activeStep = 2
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("el-step", {
-                        staticClass: "step__btn",
-                        attrs: { title: "Valgfrie Aktiviteter" },
-                        nativeOn: {
-                          click: function($event) {
-                            _vm.activeStep = 2
-                          }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("el-step", {
+                      staticClass: "step__btn",
+                      attrs: { title: "Annet" },
+                      nativeOn: {
+                        click: function($event) {
+                          _vm.activeStep = 3
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("el-step", {
-                        staticClass: "step__btn",
-                        attrs: { title: "Annet" },
-                        nativeOn: {
-                          click: function($event) {
-                            _vm.activeStep = 3
-                          }
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ]
-          ),
+                      }
+                    })
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]),
           _vm._v(" "),
           _c(
             "div",
-            { staticStyle: { padding: "40px" } },
+            { staticClass: "form__wrapper" },
             [
               _c(
                 "el-form",
@@ -88114,9 +88208,13 @@ var render = function() {
                                         [
                                           _c(
                                             "div",
-                                            { staticClass: "flex-center" },
+                                            {
+                                              staticClass:
+                                                "flex-vertical-center"
+                                            },
                                             [
                                               _c("el-input-number", {
+                                                staticClass: "number__input",
                                                 attrs: { min: 0, max: 10 },
                                                 on: {
                                                   change: function($event) {
@@ -88168,9 +88266,13 @@ var render = function() {
                                         [
                                           _c(
                                             "div",
-                                            { staticClass: "flex-center" },
+                                            {
+                                              staticClass:
+                                                "flex-vertical-center"
+                                            },
                                             [
                                               _c("el-input-number", {
+                                                staticClass: "number__input",
                                                 attrs: { min: 0, max: 10 },
                                                 on: {
                                                   change: function($event) {
@@ -88222,9 +88324,13 @@ var render = function() {
                                         [
                                           _c(
                                             "div",
-                                            { staticClass: "flex-center" },
+                                            {
+                                              staticClass:
+                                                "flex-vertical-center"
+                                            },
                                             [
                                               _c("el-input-number", {
+                                                staticClass: "number__input",
                                                 attrs: { min: 0, max: 10 },
                                                 on: {
                                                   change: function($event) {
@@ -88277,12 +88383,7 @@ var render = function() {
                                             _c(
                                               "div",
                                               {
-                                                staticStyle: {
-                                                  display: "flex",
-                                                  "align-items": "center",
-                                                  padding: "0",
-                                                  margin: "0"
-                                                },
+                                                staticClass: "box-card-header",
                                                 attrs: { slot: "header" },
                                                 slot: "header"
                                               },
@@ -88290,17 +88391,13 @@ var render = function() {
                                                 _c(
                                                   "div",
                                                   {
-                                                    staticStyle: {
-                                                      flex: "1",
-                                                      "font-weight": "800"
-                                                    }
+                                                    staticClass:
+                                                      "box-card-title-container"
                                                   },
                                                   [
                                                     _c("h2", {
-                                                      staticStyle: {
-                                                        margin: "6px 0",
-                                                        "font-size": "1.3em"
-                                                      },
+                                                      staticClass:
+                                                        "box-card-title",
                                                       domProps: {
                                                         textContent: _vm._s(
                                                           "Enkeltrom " +
@@ -88314,10 +88411,7 @@ var render = function() {
                                                 _c(
                                                   "el-form-item",
                                                   {
-                                                    staticStyle: {
-                                                      width: "70px",
-                                                      margin: "0"
-                                                    },
+                                                    staticClass: "margin-none",
                                                     attrs: {
                                                       label: "barneseng"
                                                     }
@@ -88326,15 +88420,17 @@ var render = function() {
                                                     _c(
                                                       "el-select",
                                                       {
-                                                        attrs: {
-                                                          value: 0,
-                                                          placeholder:
-                                                            "legg til barneseng"
-                                                        },
+                                                        staticClass:
+                                                          "add-bed__button",
+                                                        attrs: { value: 0 },
                                                         on: {
                                                           change: function(
                                                             $event
-                                                          ) {}
+                                                          ) {
+                                                            _vm.onExtraBedChange(
+                                                              room
+                                                            )
+                                                          }
                                                         },
                                                         model: {
                                                           value:
@@ -88366,14 +88462,6 @@ var render = function() {
                                                           attrs: {
                                                             value: 1,
                                                             label: 1
-                                                          }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c("el-option", {
-                                                          key: 2,
-                                                          attrs: {
-                                                            value: 2,
-                                                            label: 2
                                                           }
                                                         })
                                                       ],
@@ -88449,6 +88537,91 @@ var render = function() {
                                                 ],
                                                 1
                                               )
+                                            }),
+                                            _vm._v(" "),
+                                            _vm._l(room.extraBeds, function(
+                                              child,
+                                              i
+                                            ) {
+                                              return _c(
+                                                "div",
+                                                { staticClass: "text item" },
+                                                [
+                                                  i % 2 === 0
+                                                    ? _c("div", {
+                                                        staticClass:
+                                                          "separator__line"
+                                                      })
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _c("h3", {
+                                                    domProps: {
+                                                      textContent: _vm._s(
+                                                        "Extraseng " + (i + 1)
+                                                      )
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: { label: "Navn" }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        model: {
+                                                          value: child.name,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "name",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.name"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: {
+                                                        label: "Fødselsdato"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        attrs: {
+                                                          placeholder:
+                                                            "dd.mm.yyyy"
+                                                        },
+                                                        model: {
+                                                          value: child.dob,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "dob",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.dob"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
                                             })
                                           ],
                                           2
@@ -88473,25 +88646,19 @@ var render = function() {
                                             _c(
                                               "div",
                                               {
-                                                staticStyle: {
-                                                  display: "flex",
-                                                  "align-items": "center"
-                                                },
+                                                staticClass:
+                                                  "flex-horizontal-center",
                                                 attrs: { slot: "header" },
                                                 slot: "header"
                                               },
                                               [
                                                 _c(
                                                   "div",
-                                                  {
-                                                    staticStyle: { flex: "1" }
-                                                  },
+                                                  { staticClass: "flex-1" },
                                                   [
                                                     _c("h2", {
-                                                      staticStyle: {
-                                                        margin: "6px 0",
-                                                        "font-size": "1.3em"
-                                                      },
+                                                      staticClass:
+                                                        "box-card-title",
                                                       domProps: {
                                                         textContent: _vm._s(
                                                           "Dobbeltrom " +
@@ -88500,8 +88667,80 @@ var render = function() {
                                                       }
                                                     })
                                                   ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "el-form-item",
+                                                  {
+                                                    staticClass: "margin-none",
+                                                    attrs: {
+                                                      label: "barneseng"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "el-select",
+                                                      {
+                                                        staticClass:
+                                                          "add-bed__button",
+                                                        attrs: { value: 0 },
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            _vm.onExtraBedChange(
+                                                              room
+                                                            )
+                                                          }
+                                                        },
+                                                        model: {
+                                                          value:
+                                                            room.numChildBeds,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              room,
+                                                              "numChildBeds",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "room.numChildBeds"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("el-option", {
+                                                          key: 0,
+                                                          attrs: {
+                                                            value: 0,
+                                                            label: 0
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        _c("el-option", {
+                                                          key: 1,
+                                                          attrs: {
+                                                            value: 1,
+                                                            label: 1
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        _c("el-option", {
+                                                          key: 2,
+                                                          attrs: {
+                                                            value: 2,
+                                                            label: 2
+                                                          }
+                                                        })
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
                                                 )
-                                              ]
+                                              ],
+                                              1
                                             ),
                                             _vm._v(" "),
                                             _c(
@@ -88589,8 +88828,94 @@ var render = function() {
                                                 })
                                               ],
                                               2
-                                            )
-                                          ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._l(room.extraBeds, function(
+                                              child,
+                                              i
+                                            ) {
+                                              return _c(
+                                                "div",
+                                                { staticClass: "text item" },
+                                                [
+                                                  i % 2 === 0
+                                                    ? _c("div", {
+                                                        staticClass:
+                                                          "separator__line"
+                                                      })
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _c("h3", {
+                                                    domProps: {
+                                                      textContent: _vm._s(
+                                                        "Extraseng " + (i + 1)
+                                                      )
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: { label: "Navn" }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        model: {
+                                                          value: child.name,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "name",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.name"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: {
+                                                        label: "Fødselsdato"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        attrs: {
+                                                          placeholder:
+                                                            "dd.mm.yyyy"
+                                                        },
+                                                        model: {
+                                                          value: child.dob,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "dob",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.dob"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            })
+                                          ],
+                                          2
                                         )
                                       ],
                                       1
@@ -88612,10 +88937,8 @@ var render = function() {
                                             _c(
                                               "div",
                                               {
-                                                staticStyle: {
-                                                  display: "flex",
-                                                  "align-items": "center"
-                                                },
+                                                staticClass:
+                                                  "flex-vertical-center",
                                                 attrs: { slot: "header" },
                                                 slot: "header"
                                               },
@@ -88623,17 +88946,13 @@ var render = function() {
                                                 _c(
                                                   "div",
                                                   {
-                                                    staticStyle: {
-                                                      flex: "1",
-                                                      "font-weight": "800"
-                                                    }
+                                                    staticClass:
+                                                      "box-card-title-container"
                                                   },
                                                   [
                                                     _c("h2", {
-                                                      staticStyle: {
-                                                        margin: "6px 0",
-                                                        "font-size": "1.3em"
-                                                      },
+                                                      staticClass:
+                                                        "box-card-title",
                                                       domProps: {
                                                         textContent: _vm._s(
                                                           "Twinrom " +
@@ -88642,8 +88961,80 @@ var render = function() {
                                                       }
                                                     })
                                                   ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "el-form-item",
+                                                  {
+                                                    staticClass: "margin-none",
+                                                    attrs: {
+                                                      label: "barneseng"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "el-select",
+                                                      {
+                                                        staticClass:
+                                                          "add-bed__button",
+                                                        attrs: { value: 0 },
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            _vm.onExtraBedChange(
+                                                              room
+                                                            )
+                                                          }
+                                                        },
+                                                        model: {
+                                                          value:
+                                                            room.numChildBeds,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              room,
+                                                              "numChildBeds",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "room.numChildBeds"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("el-option", {
+                                                          key: 0,
+                                                          attrs: {
+                                                            value: 0,
+                                                            label: 0
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        _c("el-option", {
+                                                          key: 1,
+                                                          attrs: {
+                                                            value: 1,
+                                                            label: 1
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        _c("el-option", {
+                                                          key: 2,
+                                                          attrs: {
+                                                            value: 2,
+                                                            label: 2
+                                                          }
+                                                        })
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
                                                 )
-                                              ]
+                                              ],
+                                              1
                                             ),
                                             _vm._v(" "),
                                             _c(
@@ -88731,8 +89122,94 @@ var render = function() {
                                                 })
                                               ],
                                               2
-                                            )
-                                          ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._l(room.extraBeds, function(
+                                              child,
+                                              i
+                                            ) {
+                                              return _c(
+                                                "div",
+                                                { staticClass: "text item" },
+                                                [
+                                                  i % 2 === 0
+                                                    ? _c("div", {
+                                                        staticClass:
+                                                          "separator__line"
+                                                      })
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  _c("h3", {
+                                                    domProps: {
+                                                      textContent: _vm._s(
+                                                        "Extraseng " + (i + 1)
+                                                      )
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: { label: "Navn" }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        model: {
+                                                          value: child.name,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "name",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.name"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "el-form-item",
+                                                    {
+                                                      attrs: {
+                                                        label: "Fødselsdato"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("el-input", {
+                                                        attrs: {
+                                                          placeholder:
+                                                            "dd.mm.yyyy"
+                                                        },
+                                                        model: {
+                                                          value: child.dob,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              child,
+                                                              "dob",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "child.dob"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            })
+                                          ],
+                                          2
                                         )
                                       ],
                                       1
@@ -88764,14 +89241,25 @@ var render = function() {
                       _vm.activeStep == 1
                         ? _c(
                             "section",
-                            { staticClass: "step orderer" },
+                            {
+                              staticClass: "step orderer flex-vertical-center"
+                            },
                             [
                               _c(
-                                "el-row",
+                                "el-col",
+                                {
+                                  attrs: {
+                                    xl: 12,
+                                    lg: 12,
+                                    md: 12,
+                                    sm: 24,
+                                    xs: 24
+                                  }
+                                },
                                 [
                                   _c(
                                     "el-form-item",
-                                    { attrs: { label: "Navn (som i pass)" } },
+                                    { attrs: { label: "Navn" } },
                                     [
                                       _c("el-input", {
                                         model: {
@@ -88842,14 +89330,16 @@ var render = function() {
                                     [
                                       _c(
                                         "el-col",
-                                        { attrs: { span: 8 } },
+                                        { attrs: { span: 8, xs: 24 } },
                                         [
                                           _c(
                                             "el-form-item",
-                                            { attrs: { label: "Postnr" } },
+                                            {
+                                              staticClass: "postal-code__input",
+                                              attrs: { label: "Postnr" }
+                                            },
                                             [
                                               _c("el-input", {
-                                                staticStyle: { width: "140px" },
                                                 model: {
                                                   value: _vm.form.postalcode,
                                                   callback: function($$v) {
@@ -88871,7 +89361,7 @@ var render = function() {
                                       _vm._v(" "),
                                       _c(
                                         "el-col",
-                                        { attrs: { span: 12 } },
+                                        { attrs: { span: 16, xs: 24 } },
                                         [
                                           _c(
                                             "el-form-item",
@@ -88931,14 +89421,14 @@ var render = function() {
                               index
                             ) {
                               return _c(
-                                "el-col",
-                                { key: index, attrs: { span: 24 } },
+                                "el-row",
+                                { key: index },
                                 [
                                   _c(
                                     "h2",
                                     {
-                                      staticClass: "text-align-center",
-                                      staticStyle: { "margin-bottom": "30px" }
+                                      staticClass:
+                                        "activity-title text-align-center"
                                     },
                                     [_vm._v(_vm._s(activity.title))]
                                   ),
@@ -88946,11 +89436,7 @@ var render = function() {
                                   _c(
                                     "el-col",
                                     {
-                                      staticStyle: {
-                                        display: "flex",
-                                        "justify-content": "flex-end",
-                                        "padding-right": "15px"
-                                      },
+                                      staticClass: "amount-children__container",
                                       attrs: { span: 12 }
                                     },
                                     [
@@ -88958,151 +89444,23 @@ var render = function() {
                                         "el-form-item",
                                         {
                                           staticClass: "text-align-center",
-                                          attrs: {
-                                            label: "Antall Barn (4-12 år)"
-                                          }
+                                          attrs: { label: "Voksne" }
                                         },
                                         [
                                           _c(
                                             "div",
-                                            { staticClass: "flex-center" },
+                                            {
+                                              staticClass:
+                                                "flex-vertical-center"
+                                            },
                                             [
                                               _c(
                                                 "el-select",
                                                 {
-                                                  staticStyle: {
-                                                    width: "80px",
-                                                    "padding-top": "10px"
+                                                  staticClass: "amount__select",
+                                                  attrs: {
+                                                    disabled: _vm.numPeople == 0
                                                   },
-                                                  attrs: { placeholder: "" },
-                                                  model: {
-                                                    value:
-                                                      activity.amountAdults,
-                                                    callback: function($$v) {
-                                                      _vm.$set(
-                                                        activity,
-                                                        "amountAdults",
-                                                        _vm._n($$v)
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "activity.amountAdults"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "el-option",
-                                                    {
-                                                      key: "0",
-                                                      attrs: {
-                                                        value: "0",
-                                                        label: "0"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "span",
-                                                        {
-                                                          staticClass:
-                                                            "select-value-label"
-                                                        },
-                                                        [_vm._v("0")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("span", {
-                                                        staticClass:
-                                                          "select-hint-label"
-                                                      })
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm._l(
-                                                    _vm.numPeople,
-                                                    function(indx) {
-                                                      return _c(
-                                                        "el-option",
-                                                        {
-                                                          key: indx,
-                                                          attrs: {
-                                                            value: indx,
-                                                            label: indx
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "select-value-label"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                _vm._s(indx)
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "select-hint-label"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                _vm._s(
-                                                                  activity.price *
-                                                                    indx
-                                                                ) + " kr"
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      )
-                                                    }
-                                                  )
-                                                ],
-                                                2
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "el-col",
-                                    {
-                                      staticStyle: {
-                                        display: "flex",
-                                        "justify-content": "flex-start",
-                                        "padding-left": "15px"
-                                      },
-                                      attrs: { span: 12 }
-                                    },
-                                    [
-                                      _c(
-                                        "el-form-item",
-                                        {
-                                          staticClass: "text-align-center",
-                                          attrs: { label: "Antall Voksne" }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "flex-center" },
-                                            [
-                                              _c(
-                                                "el-select",
-                                                {
-                                                  staticStyle: {
-                                                    width: "80px",
-                                                    "padding-top": "10px"
-                                                  },
-                                                  attrs: { placeholder: "" },
                                                   model: {
                                                     value:
                                                       activity.amountChildren,
@@ -89180,6 +89538,132 @@ var render = function() {
                                                               _vm._v(
                                                                 _vm._s(
                                                                   activity.priceAfterDiscount *
+                                                                    indx
+                                                                ) + " kr"
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    }
+                                                  )
+                                                ],
+                                                2
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "el-col",
+                                    {
+                                      staticClass: "amount-adults__container",
+                                      attrs: { span: 12 }
+                                    },
+                                    [
+                                      _c(
+                                        "el-form-item",
+                                        {
+                                          staticClass: "text-align-center",
+                                          attrs: { label: "Barn (4-12 år)" }
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "flex-vertical-center"
+                                            },
+                                            [
+                                              _c(
+                                                "el-select",
+                                                {
+                                                  staticClass: "amount__select",
+                                                  attrs: {
+                                                    disabled: _vm.numPeople == 0
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      activity.amountAdults,
+                                                    callback: function($$v) {
+                                                      _vm.$set(
+                                                        activity,
+                                                        "amountAdults",
+                                                        _vm._n($$v)
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "activity.amountAdults"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "el-option",
+                                                    {
+                                                      key: "0",
+                                                      attrs: {
+                                                        value: "0",
+                                                        label: "0"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "select-value-label"
+                                                        },
+                                                        [_vm._v("0")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "select-hint-label"
+                                                      })
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _vm._l(
+                                                    _vm.numPeople,
+                                                    function(indx) {
+                                                      return _c(
+                                                        "el-option",
+                                                        {
+                                                          key: indx,
+                                                          attrs: {
+                                                            value: indx,
+                                                            label: indx
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "select-value-label"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                _vm._s(indx)
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "select-hint-label"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                _vm._s(
+                                                                  activity.price *
                                                                     indx
                                                                 ) + " kr"
                                                               )
@@ -89323,7 +89807,7 @@ var render = function() {
                                 { attrs: { label: "Flybilletter" } },
                                 [
                                   _c("el-checkbox", {
-                                    staticStyle: { background: "#fff" },
+                                    staticClass: "plane-tickets__checkbox",
                                     attrs: {
                                       label:
                                         "Ønsker å bestille reisen med flybilletter",
@@ -89345,7 +89829,6 @@ var render = function() {
                                 "el-row",
                                 {
                                   staticClass: "row-bg",
-                                  staticStyle: { "margin-top": "70px" },
                                   attrs: { type: "flex", justify: "center" }
                                 },
                                 [
@@ -89390,12 +89873,8 @@ var render = function() {
                                       _c(
                                         "i",
                                         {
-                                          staticClass: "material-icons",
-                                          staticStyle: {
-                                            color: "#ccc",
-                                            "font-size": "18px",
-                                            "margin-left": "5px"
-                                          }
+                                          staticClass:
+                                            "material-icons open-in-new"
                                         },
                                         [
                                           _vm._v(
@@ -89435,27 +89914,32 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
+                { staticClass: "step-actions" },
                 [
-                  _vm.activeStep > 0
+                  _vm.activeStep > 0 && _vm.submitted == false
                     ? _c(
                         "el-button",
                         {
-                          staticStyle: { "border-radius": "0" },
+                          staticClass: "no-rounding",
                           attrs: {
                             disabled: _vm.activeStep < 1,
                             icon: "el-icon-arrow-left"
                           },
                           on: { click: _vm.prevStep }
                         },
-                        [_vm._v("\n                        Tilbake ")]
+                        [
+                          _vm._v(
+                            "\n                        Tilbake\n                    "
+                          )
+                        ]
                       )
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.activeStep < 3
+                  _vm.activeStep < 3 && _vm.submitted == false
                     ? _c(
                         "el-button",
                         {
-                          staticStyle: { "border-radius": "0" },
+                          staticClass: "no-rounding",
                           attrs: {
                             disabled: _vm.activeStep > 2,
                             type: "primary"
@@ -89465,20 +89949,19 @@ var render = function() {
                         [
                           _vm._v("\n                        Neste "),
                           _c("i", {
-                            staticClass: "el-icon-arrow-right el-icon-right",
-                            staticStyle: { "margin-left": "4px" }
+                            staticClass: "el-icon-arrow-right el-icon-right"
                           })
                         ]
                       )
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.activeStep == 3
+                  _vm.activeStep == 3 && _vm.submitted == false
                     ? _c(
                         "el-button",
                         {
                           attrs: {
-                            type: "success",
-                            disabled: _vm.form.travelConditions == false
+                            disabled: _vm.form.travelConditions == false,
+                            type: "success"
                           },
                           on: { click: _vm.onSubmit }
                         },
@@ -89486,7 +89969,6 @@ var render = function() {
                           _vm._v("\n                        Send Påmelding "),
                           _c("i", {
                             staticClass: "fa fa-paper-plane",
-                            staticStyle: { "margin-left": "5px" },
                             attrs: { "aria-hidden": "true" }
                           })
                         ]
@@ -89500,18 +89982,26 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "enrolment__button",
-          on: {
-            click: function($event) {
-              _vm.showModal = true
+      _c("div", [
+        _c(
+          "button",
+          {
+            staticClass: "enrolment__button",
+            on: {
+              click: function($event) {
+                _vm.showModal = true
+              }
             }
-          }
-        },
-        [_vm._v("\n        Påmelding\n    ")]
-      )
+          },
+          [
+            _c("img", { attrs: { src: "images/toad.gif" } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "button-text" }, [
+              _vm._v("Meld deg på nå!")
+            ])
+          ]
+        )
+      ])
     ],
     1
   )
@@ -89535,23 +90025,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "nav",
-      { staticClass: "main" },
-      [
-        _c("h1", { staticClass: "trip__title" }, [
-          _vm._v("Elvecruise på Douro")
-        ]),
-        _vm._v(" "),
-        _c("sign-up-form")
-      ],
-      1
-    ),
+    _vm._m(0),
     _vm._v(" "),
-    _c("main")
+    _c("main", [_c("sign-up-form")], 1)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("nav", { staticClass: "main" }, [
+      _c("h1", { staticClass: "trip__title" }, [_vm._v("Elvecruise på Douro")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

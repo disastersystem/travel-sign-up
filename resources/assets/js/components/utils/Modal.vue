@@ -6,7 +6,7 @@
 			<div class="b-modal-card" :style="'width: ' + width + 'px;'">
 				<header class="b-modal-card-head" v-if="options.header">
 					<h2 class="b-modal-card-title">
-						{{ title }}
+						{{ title }} <span class="date">- 22 juli 2018</span>
 					</h2>
 			
 					<button class="b-modal-close" @click="$emit('close')"></button>
@@ -251,5 +251,10 @@
 
 	.b-modal.b-is-active {
 		display: flex;
+	}
+
+	.date {
+		color: #bbb;
+		font-size: 80%;
 	}
 </style>

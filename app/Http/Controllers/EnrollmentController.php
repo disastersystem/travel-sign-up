@@ -12,8 +12,30 @@ class EnrollmentController extends Controller
 
     	// set up validation request
 
-    	$youOrThey = 'dere';
+    	// return $request->rooms["single"][0]["people"][0]["name"];
 
-    	return [true, "Takk for påmeldingen! Vi gleder oss til å møte {$youOrThey}."];
+    	// foreach ($request->rooms as $type) {
+    	// 	foreach ($type as $room) {
+    	// 		foreach ($room as $person) {
+    	// 			# code...
+    	// 		}
+    	// 	}
+    	// }
+
+    	// if () {
+    		$youOrThey = 'dere';
+    	// }
+
+
+    	// foreach ($request->activities as $activity) {
+    	// 	$activity["amountAdults"];
+    	// 	$activity["amountChildren"];
+    	// }
+
+    	return [true, "Takk for påmeldingen. Vi gleder oss til å møte {$youOrThey}!"];
     }
+
+    // public function confirmation_mail () {
+
+    // }
 }

@@ -6,6 +6,10 @@ html, body {
 	background: #373D4A;
 }
 
+img {
+	display: block;
+}
+
 /* global scrollbar styling */
 body::-webkit-scrollbar-track,
 .b-modal-card-body::-webkit-scrollbar-track {
@@ -84,10 +88,6 @@ textarea, select {
 
 /* END: ELEMENT UI RESETS */
 
-.add-bed__button {
-	border-color: #E6A23C;
-}
-
 .el-step__icon-inner {
     font-family: Arial;
 }
@@ -106,9 +106,14 @@ textarea, select {
 }
 
 /* positioning */
-.flex-center {
+.flex-vertical-center {
     display: flex;
     justify-content: center;
+}
+
+.flex-horizontal-center {
+    display: flex;
+    align-items: center;
 }
 
 .space-between {

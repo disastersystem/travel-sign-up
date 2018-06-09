@@ -1,14 +1,32 @@
 
 Animate so that the step item is aniamted before/after/at the same time as the section.
-Background styling of the step titles.
+Background styling of the active step title.
 
 // todo: +children
 
-Set step menyen på toppen til fixed.
+Make the form mobile friendly.
+
+<room-card :data="room"></room-card>
+
+Abstract the animations into a custom transition component.
+
+Reset people selected in activities if hotel rooms gets removed.
+
+vertical for mobile?
+finish-status="success" direction="vertical"
+
+Description on every top__menu item?
+description="Kontakt informasjon om bestiller"
+
+Spambot protection.
+
+Display extra bed price?
 
 https://vuejs.org/v2/guide/transitions.html#List-Entering-Leaving-Transitions
 
 Submit button is not inside form element, this does however not matter as we're submitting the vue form object.
+
+Make the steps not hardcoded: this will allow us to dynamically leave the activites step out.
 
 Do not submit the total price from frontend directly to the mail, calculate the price after it hits backend
 (they might want to calculate the price themselves) the price could have been modified.
@@ -27,8 +45,11 @@ Auto date formatting: https://codepen.io/fauxserious/pen/XKrYvv
 
 Thinner modal header.
 
+form: new Form({})
 Specify errors inline
 	- use element ui built in error system OR our previously built class
+
+More focus on barneseng dropdown, slik at de ser det.
 
 Draw a map of how the elements relate to each other in the hierarcy. Then figure out
 how they can be visually placed/styled to indicate the relation.
