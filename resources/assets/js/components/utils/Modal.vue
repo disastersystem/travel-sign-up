@@ -3,17 +3,21 @@
 		<div class="b-modal b-is-active" v-show="show">
 			<div class="b-modal-background"></div>
 
-			<div class="b-modal-card" :style="'width: ' + width + 'px;'">
+			<div class="b-modal-card" :style="'width: ' + width + 'px;'" v-loading="loading" ref="modalBody">
 				<header class="b-modal-card-head" v-if="options.header">
 					<h2 class="b-modal-card-title">
-						{{ title }} <span class="date">- 22 juli 2018</span>
+						{{ title }}
+
+						<span class="b-modal-card-subtitle">
+							{{ subtitle }}
+						</span>
 					</h2>
 			
 					<button class="b-modal-close" @click="$emit('close')"></button>
 				</header>
 
 				<section class="b-modal-card-body" ref="modalCardBody">
-					<slot></slot>
+					<slot name="content"></slot>
 				</section>
 				
 				<footer class="b-modal-card-foot" v-if="options.footer">
@@ -27,6 +31,13 @@
 <script>
 	export default {
         props: {
+        	//if set to 'true' trigger a loading animation covering the whole modal
+        	loading: {
+				type: Boolean,
+				required: false,
+				default: false
+			},
+
 			show: {
 				type: Boolean,
 				required: true
@@ -50,10 +61,16 @@
 			title: {
 				type: String,
 				default: ''
+			},
+
+			subtitle: {
+				type: String,
+				default: ''
 			}
 		},
 
 		watch: {
+			//close if open and vise versa
 			show(status) {
 				(status == true) ? this.open() : this.close()
 			}
@@ -63,7 +80,7 @@
 			open() {
 				this.show = true
 
-				// hide body scrollbar and apply padding to avoid page "jumping"
+				//hide body scrollbar and apply padding to avoid page "jumping"
                 document.documentElement.style.overflowY = 'hidden'
                 document.documentElement.style.paddingRight = '17px'
 			},
@@ -71,7 +88,7 @@
 			close() {
 				this.show = false
 
-				// show body scrollbar
+				//show body scrollbar
                 document.documentElement.removeAttribute('style')
 			}
 		},
@@ -80,7 +97,7 @@
 		 * Incase the whole component is destroyed.
 		 */
 		destroyed() {
-			// show body scrollbar
+			//show body scrollbar
             document.documentElement.removeAttribute('style')
 		}
     }
@@ -106,6 +123,7 @@
 		position: relative;
 		width: 100%;
 		z-index: 950;
+		background: #fff;
 	}
 
 	@media screen and (min-width: 769px), print {
@@ -214,6 +232,11 @@
 		line-height: 1;
 	}
 
+	.b-modal-card-subtitle {
+		color: #bbb;
+		font-size: 80%;
+	}
+
 	.b-modal-card-foot {
 		padding: 10px 20px 10px 20px;
 		position: relative;
@@ -251,10 +274,5 @@
 
 	.b-modal.b-is-active {
 		display: flex;
-	}
-
-	.date {
-		color: #bbb;
-		font-size: 80%;
 	}
 </style>

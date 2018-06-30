@@ -1,9 +1,10 @@
 export default {
 	title: 'Elvecruise på Douro',
+	date: '22 juli 2018',
 	prices: {
-		single: 100,
-        double: 200,
-        twin: 250
+		single: 3000,
+        double: 2000,
+        twin: 2000
 	},
 	activities: [{
 			id: 23,

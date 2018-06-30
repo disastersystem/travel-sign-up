@@ -32,6 +32,8 @@ class EnrollmentController extends Controller
     	// 	$activity["amountChildren"];
     	// }
 
+    	sleep(1);
+
     	return [true, "Takk for påmeldingen. Vi gleder oss til å møte {$youOrThey}!"];
     }
 

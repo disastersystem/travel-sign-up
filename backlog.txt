@@ -4,21 +4,41 @@ Background styling of the active step title.
 
 // todo: +children
 
+"Ekstra barneseng" har feil størrelse/farge.
+
 Make the form mobile friendly.
 
+There is a flash when clicking next.
+
 <room-card :data="room"></room-card>
+
+<!-- <section v-if="activeStep == 4" class="step">
+    Oppsumering
+</section> -->
+
+// this.$refs.everything.classList.add('everything')
+// this.$refs.everything.innerHTML = `<div class="message">${message}</div>`
+console.log( this.$el.querySelector('.b-modal-card') )
 
 Abstract the animations into a custom transition component.
 
 Reset people selected in activities if hotel rooms gets removed.
 
+
+// let people = Array(numPeople).fill({ name: '', dob: '' })
+Why does this not work? It binds to the same v-model
+
 vertical for mobile?
 finish-status="success" direction="vertical"
+
+https://vuejs.org/v2/guide/render-function.html#Nodes-Trees-and-the-Virtual-DOM
 
 Description on every top__menu item?
 description="Kontakt informasjon om bestiller"
 
 Spambot protection.
+
+<!-- (som i pass) -->
 
 Display extra bed price?
 
@@ -113,3 +133,51 @@ Escape:
                     }
                 }
             },
+
+
+Fonts:
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100" rel="stylesheet">
+
+
+
+this.$children[0].$refs.modalBody.innerHTML = 
+                    `<div class="success-mode"
+                        style="font-family: Raleway;
+                        font-size: 20px;
+                        display: flex;
+                        height: 70%;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 50px;"
+                    >
+                        <p>${message}</p>
+                    </div>`
+
+
+// document.querySelector('.b-modal-card-body').style.overflow = 'auto'
+// console.log(el.parentNode.parentNode.parentNode.parentNode)
+// this.$el.querySelector(...)
+// document.querySelector('.b-modal-card-body').style.overflow = 'hidden'
+// console.log(this.$children.$children)
+
+
+    // if (response.data[0] == true || response.data[0] == false) {
+    // this.submitSuccess(response.data[1])
+
+
+
+<!-- <el-form-item label="Navn">
+        <span style="margin: 0; padding: 0;color: #bbb; font-style: italic; font-size: 13px;">Fornavn Etternavn</span>
+        <el-input v-model="person.name" style="margin: 0;"></el-input>
+    </el-form-item>
+
+    <el-form-item label="Født">
+        <span style="color: #bbb; font-style: italic; font-size: 13px;">dd.mm.yy</span>
+        <el-input v-model="person.dob"></el-input>
+    </el-form-item> -->
+
+
+
+<!-- <div v-if="i % 2 === 0" class="separator__line"></div> -->

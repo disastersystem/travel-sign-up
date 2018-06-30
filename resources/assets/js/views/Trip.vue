@@ -5,29 +5,39 @@
 	    </nav>
 
 		<main>
-			<sign-up-form></sign-up-form>
+			<enrolment-form></enrolment-form>
 		</main>
 	</div>
 </template>
 
 <script>
-	import SignUpForm from '../components/SignUpForm'
+	var Trip = {}
+
+	import EnrolmentForm from '../components/EnrolmentForm'
 
 	export default {
+		data() {
+			return {
+				shared: Trip
+			}
+		},
+
 		components: {
-			'sign-up-form': SignUpForm
+			'enrolment-form': EnrolmentForm
+		},
+
+		mounted() {
+			//
 		}
 	}
 </script>
 
 <style scoped>
 	nav.main {
-		/*border-bottom: 1px solid #ddd;*/
 		background: #4A5263;
 		padding: 10px 20px;
 		display: flex;
 		align-items: center;
-		/*height: ;*/
 	}
 
 	.trip__title {
