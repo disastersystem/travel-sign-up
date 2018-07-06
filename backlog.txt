@@ -4,6 +4,8 @@ Background styling of the active step title.
 
 // todo: +children
 
+READ ACTIVITIES AND CREATE NEW object IN FORM OBJECT
+
 "Ekstra barneseng" har feil størrelse/farge.
 
 Make the form mobile friendly.

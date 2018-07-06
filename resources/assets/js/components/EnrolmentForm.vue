@@ -1,9 +1,15 @@
 <template>
     <div class="sign-up__form">
         <!-- modal -->
-        <modal ref="modal" :show="showModal" @close="showModal = false" :title="'Påmelding ' + title" :subtitle="'- ' + date" :loading="submitted">
+        <modal
+            @close="showModal = false"
+            :title="'Påmelding ' + shared.tripData.title" :subtitle="'- ' + shared.tripData.date"
+            :show="showModal"
+            :loading="submitted"
+            ref="modal"
+        >
             <!-- The form view, which is separated into sections: hotel rooms, orderer, activtities, other/misc. 
-                 This view is visible until the form has been submitted. -->
+            This view is visible until the form has been submitted. -->
             <div class="form__view" slot="content" v-if="completed == false">
                 <div class="top__menu">
                     <div class="flex-horizontal-center">
@@ -31,7 +37,9 @@
                                     <el-col :span="8">
                                         <h2 class="text-align-center">Enkeltrom</h2>
 
-                                        <h5 class="body-text">{{ prices.single }},- per person</h5>
+                                        <h5 class="body-text">
+                                            {{ shared.tripData.prices.single }},- per person
+                                        </h5>
 
                                         <el-form-item class="text-align-center">
                                             <div class="flex-vertical-center">
@@ -49,7 +57,9 @@
                                     <el-col :span="8">
                                         <h2 class="text-align-center">Dobbeltrom</h2>
 
-                                        <h5 class="body-text">{{ prices.double }},- per person</h5>
+                                        <h5 class="body-text">
+                                            {{ shared.tripData.prices.double }},- per person
+                                        </h5>
 
                                         <el-form-item class="text-align-center">
                                             <div class="flex-vertical-center">
@@ -67,7 +77,9 @@
                                     <el-col :span="8">
                                         <h2 class="text-align-center">Twinrom</h2>
 
-                                        <h5 class="body-text">{{ prices.twin }},- per person</h5>
+                                        <h5 class="body-text">
+                                            {{ shared.tripData.prices.twin }},- per person
+                                        </h5>
 
                                         <el-form-item class="text-align-center">
                                             <div class="flex-vertical-center">
@@ -105,7 +117,7 @@
                                                 <el-row class="margin-b-20">
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="person.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -129,7 +141,7 @@
                                                 <el-row class="margin-b-20">
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="child.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -169,7 +181,7 @@
                                                     <h3 class="form-section-title" v-text="'Person ' + (i + 1)"></h3>
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="person.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -189,13 +201,16 @@
                                                 <div v-if="i % 2 === 0" class="separator__line"></div>
 
                                                 <h3>
-                                                    Extra barneseng {{ displayNumOrNot(room.numChildBeds, i) }}
+                                                    Extra barneseng
+                                                    <span v-if="room.numChildBeds > 1">
+                                                        {{ i + 1 }}
+                                                    </span>
                                                 </h3>
 
                                                 <el-row class="margin-b-20">
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="child.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -236,7 +251,7 @@
 
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="person.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -256,13 +271,16 @@
                                                 <div v-if="i % 2 === 0" class="separator__line"></div>
                                                 
                                                 <h3>
-                                                    Ekstra barneseng {{ displayNumOrNot(room.numChildBeds, i) }}
+                                                    Ekstra barneseng
+                                                    <span v-if="room.numChildBeds > 1">
+                                                        {{ i + 1 }}
+                                                    </span>
                                                 </h3>
 
                                                 <el-row class="margin-b-20">
                                                     <el-col :span="24">
                                                         <div class="margin-b-10">
-                                                            <label class="input-label">Fullt Navn</label>
+                                                            <label class="input-label">Navn</label>
                                                             <p class="helper-text">Fornavn Etternavn</p>
                                                             <el-input v-model="child.name" class="no-bottom-margin"></el-input>
                                                         </div>
@@ -332,8 +350,8 @@
                             @before-enter="beforeEnter"
                             @after-enter="afterEnter"
                         >
-                            <section v-if="activeStep == 2 && form.activities.length != 0" class="step activities">
-                                <el-row v-for="(activity, index) in form.activities" :key="index">
+                            <section v-if="activeStep == 2 && shared.tripData.activities.length != 0" class="step activities">
+                                <el-row v-for="(activity, index) in shared.tripData.activities" :key="index">
 
                                     <h2 class="activity-title text-align-center">{{ activity.title }}</h2>
 
@@ -477,12 +495,13 @@
 
         <!-- opens modal -->
         <button class="enrolment__button" @click="showModal = true">
-            Meld deg på nå!
+            Påmelding
         </button>
     </div>
 </template>
 
 <script>
+    import store from '../store' //shared data
     import form from '../core/Form'
     import trip from '../data'
     import modal from './utils/Modal'
@@ -492,15 +511,15 @@
             return {
                 showModal: false,
 
+                //the trip data from the db, shared among this component and the EnrolmentForm component
+                shared: store,
+
                 //current step in the form
                 activeStep: 0,
 
-                //trip data from the db
-                title: trip.title,
-                date: trip.date,
-
                 //has the form been submitted
                 submitted: false,
+
                 //has the form been succesfully completed
                 completed: false,
 
@@ -510,6 +529,7 @@
                 //data that's bound to form elements and should be sent when the form is submitted
                 form: {
                     //how many of each room type is selected
+                    //TODO: look into whether we need these
                     amountSingle: 0,
                     amountDouble: 0,
                     amountTwin: 0,
@@ -540,13 +560,6 @@
 
                     //whether the travels conditions has been accepted
                     travelConditions: false
-                },
-
-                //prices of different hotel room types
-                prices: {
-                    single: 0,
-                    double: 0,
-                    twin: 0
                 }
             }
         },
@@ -560,10 +573,10 @@
              * We may or may not have any alternative activities for a trip.
              */
             totalSteps() {
-                if (this.form.activities.length == 0) {
-                    return 2
-                }
-                return 3
+                // if (this.form.activities.length == 0) {
+                //     return 2
+                // }
+                // return 3
             },
 
             /**
@@ -577,9 +590,9 @@
              * Total price of all rooms.
              */
             roomsPrice() {
-                return (this.prices.single * this.form.amountSingle) +
-                       (this.prices.double * this.form.amountDouble) +
-                       (this.prices.twin   * this.form.amountTwin)
+                return (this.shared.tripData.prices.single * this.form.amountSingle) +
+                       (this.shared.tripData.prices.double * this.form.amountDouble) +
+                       (this.shared.tripData.prices.twin   * this.form.amountTwin)
             },
 
             /**
@@ -587,12 +600,12 @@
              */
             activitiesPrice() {
                 //return 0 if the trip does not have any extra activities
-                if (!this.form.activities) {
+                if (!this.shared.tripData.activities) {
                     return 0
                 }
 
                 //calculate the total price
-                return this.form.activities.reduce(function(total, value) {
+                return this.shared.tripData.activities.reduce(function(total, value) {
                     return total + Number(
                         (value.price * value.amountAdults) + (value.priceAfterDiscount * value.amountChildren)
                     )
@@ -636,16 +649,16 @@
             },
 
             /**
-             * Hide the scrollbar of the modal card content
-             * before animating (before running the transition) to the next step in the form.
+             * Hide the scrollbar of the modal card content before animating 
+             * (before running the transition) to the next step in the form.
              */
             beforeEnter(el) {
                 this.$children[0].$refs.modalCardBody.style.overflow = 'hidden'
             },
 
             /**
-             * Show the scrollbar of the modal card content 
-             * after the animation (after running the transition) to the next step in the form. 
+             * Show the scrollbar of the modal card content after the animation 
+             * (after running the transition) to the next step in the form. 
              */
             afterEnter(el) {
                 this.$children[0].$refs.modalCardBody.style.overflow = 'auto'
@@ -706,7 +719,7 @@
              * Remove any amount of rooms for any room type.
              */
             onExtraBedChange(room) {
-                this.$nextTick(function () {
+                this.$nextTick(function () { //todo: do we need $nextTick?
                     room.extraBeds = []
 
                     for (let i = 1; i <= room.numChildBeds; i++) {
@@ -721,7 +734,7 @@
             onSubmit() {
                 this.submitted = true //this starts loading indication
 
-                axios.post('enrollment/store', this.form).then((response) => {
+                axios.post('enrollment/store', [this.form, this.shared.tripData.activities]).then((response) => {
                     this.serverResponse = response.data[1]
                     this.submitted = false
                     this.completed = true //show the completed view, hide form view
@@ -729,33 +742,15 @@
                     this.serverResponse = response.data[1]
                     this.submitted = false
                 })
-            },
-
-            //only return numbers if more than one extra bed is selected,
-            //we don't want a number displayed of there is only one room
-            displayNumOrNot(amount, i) {
-                return amount > 1 ? (i + 1) : ''
             }
         },
 
-
-        /**
-         * Fetch the trip data and assign it to vue props.
-         * Create some additional activities props with the price calculated if there is any discounts.
-         */
         mounted() {
-            this.prices.single = trip.prices.single
-            this.prices.double = trip.prices.double
-            this.prices.twin = trip.prices.twin
-
-            this.form.activities = trip.activities
-
-            //calculate and set initial prices now that activites has been loaded from the server
-            this.form.activities.forEach(function(activity) {
-                Vue.set(activity, 'priceAfterDiscount', activity.price - (activity.discountChildren * activity.price / 100))
-                Vue.set(activity, 'amountAdults', 0)
-                Vue.set(activity, 'amountChildren', 0)
-            })
+            // var self = this
+            // this.shared.tripData.activities.forEach(function(activity) {
+            //     self.form.activtities.push('amountAdults', 0)
+            //     self.form.activtities.push('amountChildren', 0)
+            // })
         }
     }
 </script>

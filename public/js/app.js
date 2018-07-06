@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 78);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -274,11 +274,11 @@ function deepMerge(target, source) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__required__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__whitespace__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__range__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__enum__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pattern__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__whitespace__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__range__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__enum__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pattern__ = __webpack_require__(164);
 
 
 
@@ -303,7 +303,7 @@ function deepMerge(target, source) {
 
 
 var bind = __webpack_require__(49);
-var isBuffer = __webpack_require__(85);
+var isBuffer = __webpack_require__(87);
 
 /*global toString:true*/
 
@@ -11172,7 +11172,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(102).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(104).setImmediate))
 
 /***/ }),
 /* 4 */
@@ -11726,11 +11726,11 @@ exports.f = {}.propertyIsEnumerable;
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(133);
+var _iterator = __webpack_require__(135);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(145);
+var _symbol = __webpack_require__(147);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -11779,7 +11779,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(2);
-var normalizeHeaderName = __webpack_require__(87);
+var normalizeHeaderName = __webpack_require__(89);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -11881,7 +11881,7 @@ module.exports = defaults;
 exports.__esModule = true;
 exports.i18n = exports.use = exports.t = undefined;
 
-var _zhCN = __webpack_require__(105);
+var _zhCN = __webpack_require__(107);
 
 var _zhCN2 = _interopRequireDefault(_zhCN);
 
@@ -11889,11 +11889,11 @@ var _vue = __webpack_require__(3);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _deepmerge = __webpack_require__(106);
+var _deepmerge = __webpack_require__(108);
 
 var _deepmerge2 = _interopRequireDefault(_deepmerge);
 
-var _format = __webpack_require__(107);
+var _format = __webpack_require__(109);
 
 var _format2 = _interopRequireDefault(_format);
 
@@ -12686,7 +12686,7 @@ var _popup = __webpack_require__(57);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PopperJS = _vue2.default.prototype.$isServer ? function () {} : __webpack_require__(109);
+var PopperJS = _vue2.default.prototype.$isServer ? function () {} : __webpack_require__(111);
 var stop = function stop(e) {
   return e.stopPropagation();
 };
@@ -13127,7 +13127,7 @@ var removeResizeListener = exports.removeResizeListener = function removeResizeL
 
 var global = __webpack_require__(5);
 var core = __webpack_require__(16);
-var ctx = __webpack_require__(127);
+var ctx = __webpack_require__(129);
 var hide = __webpack_require__(9);
 var PROTOTYPE = 'prototype';
 
@@ -13420,7 +13420,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(183)
+var listToStyles = __webpack_require__(185)
 
 /*
 type StyleObject = {
@@ -13946,12 +13946,12 @@ process.umask = function() { return 0; };
 
 
 var utils = __webpack_require__(2);
-var settle = __webpack_require__(88);
-var buildURL = __webpack_require__(90);
-var parseHeaders = __webpack_require__(91);
-var isURLSameOrigin = __webpack_require__(92);
+var settle = __webpack_require__(90);
+var buildURL = __webpack_require__(92);
+var parseHeaders = __webpack_require__(93);
+var isURLSameOrigin = __webpack_require__(94);
 var createError = __webpack_require__(52);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(93);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(95);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -14048,7 +14048,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(94);
+      var cookies = __webpack_require__(96);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -14132,7 +14132,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(89);
+var enhanceError = __webpack_require__(91);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -14299,7 +14299,7 @@ var _merge = __webpack_require__(28);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _popupManager = __webpack_require__(108);
+var _popupManager = __webpack_require__(110);
 
 var _popupManager2 = _interopRequireDefault(_popupManager);
 
@@ -15600,7 +15600,7 @@ function scrollIntoView(container, selected) {
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(124);
+var _assign = __webpack_require__(126);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -15648,7 +15648,7 @@ module.exports = function (it) {
 
 var has = __webpack_require__(7);
 var toIObject = __webpack_require__(12);
-var arrayIndexOf = __webpack_require__(130)(false);
+var arrayIndexOf = __webpack_require__(132)(false);
 var IE_PROTO = __webpack_require__(37)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -15711,9 +15711,9 @@ var redefine = __webpack_require__(72);
 var hide = __webpack_require__(9);
 var has = __webpack_require__(7);
 var Iterators = __webpack_require__(42);
-var $iterCreate = __webpack_require__(137);
+var $iterCreate = __webpack_require__(139);
 var setToStringTag = __webpack_require__(43);
-var getPrototypeOf = __webpack_require__(140);
+var getPrototypeOf = __webpack_require__(142);
 var ITERATOR = __webpack_require__(13)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
@@ -15789,7 +15789,7 @@ module.exports = __webpack_require__(9);
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(17);
-var dPs = __webpack_require__(138);
+var dPs = __webpack_require__(140);
 var enumBugKeys = __webpack_require__(39);
 var IE_PROTO = __webpack_require__(37)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -15804,7 +15804,7 @@ var createDict = function () {
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(139).appendChild(iframe);
+  __webpack_require__(141).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -15872,24 +15872,60 @@ function required(rule, value, source, errors, options, type) {
 
 /***/ }),
 /* 76 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__(77);
-module.exports = __webpack_require__(199);
-
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+	tripData: {}
+});
 
 /***/ }),
 /* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+	title: 'Elvecruise på Douro',
+	date: '22 juli 2018',
+	prices: {
+		single: 3000,
+		double: 2000,
+		twin: 2000
+	},
+	activities: [{
+		id: 23,
+		title: 'Ridetur i solskinn i Greve Le Chanti',
+		price: 300,
+		discountChildren: 50
+	}, {
+		id: 2,
+		title: 'Museum med vinsmaking',
+		price: 200,
+		discountChildren: 30
+	}],
+	description: '\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t'
+});
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(79);
+module.exports = __webpack_require__(200);
+
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_element_ui__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_element_ui__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_element_ui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_element_ui__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_locale_lang_en__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_locale_lang_en__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_locale_lang_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_element_ui_lib_locale_lang_en__);
 
-__webpack_require__(78);
+__webpack_require__(80);
 
 window.Vue = __webpack_require__(3);
 
@@ -15901,18 +15937,18 @@ window.Vue = __webpack_require__(3);
  // the default language is chinese
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_element_ui___default.a, { locale: __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_locale_lang_en___default.a });
 
-Vue.component('trip', __webpack_require__(180));
+Vue.component('trip', __webpack_require__(182));
 
 var app = new Vue({
     el: '#app'
 });
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(79);
+window._ = __webpack_require__(81);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -15921,9 +15957,9 @@ window._ = __webpack_require__(79);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(81);
+  window.$ = window.jQuery = __webpack_require__(83);
 
-  __webpack_require__(82);
+  __webpack_require__(84);
 } catch (e) {}
 
 /**
@@ -15932,7 +15968,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(83);
+window.axios = __webpack_require__(85);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -15966,7 +16002,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -33055,10 +33091,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(80)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(82)(module)))
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -33086,7 +33122,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -43346,7 +43382,7 @@ return jQuery;
 
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports) {
 
 /*!
@@ -45729,13 +45765,13 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(84);
+module.exports = __webpack_require__(86);
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45743,7 +45779,7 @@ module.exports = __webpack_require__(84);
 
 var utils = __webpack_require__(2);
 var bind = __webpack_require__(49);
-var Axios = __webpack_require__(86);
+var Axios = __webpack_require__(88);
 var defaults = __webpack_require__(25);
 
 /**
@@ -45778,14 +45814,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(54);
-axios.CancelToken = __webpack_require__(100);
+axios.CancelToken = __webpack_require__(102);
 axios.isCancel = __webpack_require__(53);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(101);
+axios.spread = __webpack_require__(103);
 
 module.exports = axios;
 
@@ -45794,7 +45830,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports) {
 
 /*!
@@ -45821,7 +45857,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45829,10 +45865,10 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(25);
 var utils = __webpack_require__(2);
-var InterceptorManager = __webpack_require__(95);
-var dispatchRequest = __webpack_require__(96);
-var isAbsoluteURL = __webpack_require__(98);
-var combineURLs = __webpack_require__(99);
+var InterceptorManager = __webpack_require__(97);
+var dispatchRequest = __webpack_require__(98);
+var isAbsoluteURL = __webpack_require__(100);
+var combineURLs = __webpack_require__(101);
 
 /**
  * Create a new instance of Axios
@@ -45914,7 +45950,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45933,7 +45969,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45966,7 +46002,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45994,7 +46030,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46069,7 +46105,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46113,7 +46149,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46188,7 +46224,7 @@ module.exports = (
 
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46231,7 +46267,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46291,7 +46327,7 @@ module.exports = (
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46350,14 +46386,14 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(2);
-var transformData = __webpack_require__(97);
+var transformData = __webpack_require__(99);
 var isCancel = __webpack_require__(53);
 var defaults = __webpack_require__(25);
 
@@ -46436,7 +46472,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46463,7 +46499,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46484,7 +46520,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46505,7 +46541,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46569,7 +46605,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46603,7 +46639,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -46656,13 +46692,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(103);
+__webpack_require__(105);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -46855,7 +46891,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(50)))
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -47365,13 +47401,13 @@ module.exports = __webpack_require__(59);
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(110);
+module.exports = __webpack_require__(112);
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(111);
+module.exports = __webpack_require__(113);
 
 /***/ }),
 /* 15 */
@@ -47407,7 +47443,7 @@ module.exports = __webpack_require__(60);
 /* 20 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(112);
+module.exports = __webpack_require__(114);
 
 /***/ }),
 /* 21 */
@@ -47419,7 +47455,7 @@ module.exports = __webpack_require__(61);
 /* 22 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(113);
+module.exports = __webpack_require__(115);
 
 /***/ }),
 /* 23 */
@@ -47962,7 +47998,7 @@ module.exports = __webpack_require__(30);
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(114);
+module.exports = __webpack_require__(116);
 
 /***/ }),
 /* 36 */
@@ -48095,13 +48131,13 @@ var Component = normalizeComponent(
 /* 40 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(115);
+module.exports = __webpack_require__(117);
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(116);
+module.exports = __webpack_require__(118);
 
 /***/ }),
 /* 42 */
@@ -49253,13 +49289,13 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* 50 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(117);
+module.exports = __webpack_require__(119);
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(118);
+module.exports = __webpack_require__(120);
 
 /***/ }),
 /* 52 */
@@ -50434,7 +50470,7 @@ exports.default = {
 /* 66 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(119);
+module.exports = __webpack_require__(121);
 
 /***/ }),
 /* 67 */
@@ -60251,7 +60287,7 @@ exports.default = {
 /* 172 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(120);
+module.exports = __webpack_require__(122);
 
 /***/ }),
 /* 173 */
@@ -64704,7 +64740,7 @@ exports.default = {
 /* 213 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(121);
+module.exports = __webpack_require__(123);
 
 /***/ }),
 /* 214 */
@@ -65520,7 +65556,7 @@ exports.default = {
 /* 230 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(123);
+module.exports = __webpack_require__(125);
 
 /***/ }),
 /* 231 */
@@ -68902,7 +68938,7 @@ exports.default = {
 /* 269 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(177);
+module.exports = __webpack_require__(179);
 
 /***/ }),
 /* 270 */
@@ -74813,7 +74849,7 @@ exports.default = {
 /* 358 */
 /***/ (function(module, exports) {
 
-module.exports = __webpack_require__(178);
+module.exports = __webpack_require__(180);
 
 /***/ }),
 /* 359 */
@@ -77273,7 +77309,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ ]);
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77391,7 +77427,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77495,7 +77531,7 @@ module.exports = deepmerge_1;
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77557,7 +77593,7 @@ var RE_NARGS = /(%|)\{([0-9a-zA-Z_]+)\}/g;
  */
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77754,7 +77790,7 @@ if (!_vue2.default.prototype.$isServer) {
 exports.default = PopupManager;
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79025,7 +79061,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -79503,7 +79539,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports) {
 
 module.exports =
@@ -79857,7 +79893,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79954,7 +79990,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -80344,7 +80380,7 @@ module.exports = __webpack_require__(29);
 /******/ });
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -80667,7 +80703,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports) {
 
 module.exports =
@@ -81075,7 +81111,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports) {
 
 var nestRE = /^(attrs|props|on|nativeOn|class|style|hook)$/
@@ -81131,7 +81167,7 @@ function mergeFn (a, b) {
 
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -82724,7 +82760,7 @@ module.exports = __webpack_require__(29);
 /******/ });
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -83173,7 +83209,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports) {
 
 module.exports =
@@ -83453,7 +83489,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /******/ });
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83805,7 +83841,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;
 })(undefined);
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83815,7 +83851,7 @@ exports.__esModule = true;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _ariaUtils = __webpack_require__(122);
+var _ariaUtils = __webpack_require__(124);
 
 var _ariaUtils2 = _interopRequireDefault(_ariaUtils);
 
@@ -83915,7 +83951,7 @@ aria.Dialog.prototype.trapFocus = function (event) {
 exports.default = aria.Dialog;
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84046,7 +84082,7 @@ aria.Utils.keys = {
 exports.default = aria.Utils;
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84056,8 +84092,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validator___ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__messages__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validator___ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__messages__ = __webpack_require__(178);
 
 
 
@@ -84322,35 +84358,35 @@ Schema.messages = __WEBPACK_IMPORTED_MODULE_4__messages__["a" /* messages */];
 /* harmony default export */ __webpack_exports__["default"] = (Schema);
 
 /***/ }),
-/* 124 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(125), __esModule: true };
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(126);
-module.exports = __webpack_require__(16).Object.assign;
-
-
-/***/ }),
 /* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(33);
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(129) });
-
+module.exports = { "default": __webpack_require__(127), __esModule: true };
 
 /***/ }),
 /* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(128);
+module.exports = __webpack_require__(16).Object.assign;
+
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(33);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(131) });
+
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // optional / simple context binding
-var aFunction = __webpack_require__(128);
+var aFunction = __webpack_require__(130);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -84372,7 +84408,7 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -84382,7 +84418,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84423,14 +84459,14 @@ module.exports = !$assign || __webpack_require__(14)(function () {
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(12);
-var toLength = __webpack_require__(131);
-var toAbsoluteIndex = __webpack_require__(132);
+var toLength = __webpack_require__(133);
+var toAbsoluteIndex = __webpack_require__(134);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -84452,7 +84488,7 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
@@ -84464,7 +84500,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(36);
@@ -84477,27 +84513,27 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(134), __esModule: true };
+module.exports = { "default": __webpack_require__(136), __esModule: true };
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(135);
-__webpack_require__(141);
+__webpack_require__(137);
+__webpack_require__(143);
 module.exports = __webpack_require__(44).f('iterator');
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var $at = __webpack_require__(136)(true);
+var $at = __webpack_require__(138)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(71)(String, 'String', function (iterated) {
@@ -84516,7 +84552,7 @@ __webpack_require__(71)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(36);
@@ -84539,7 +84575,7 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84559,7 +84595,7 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(10);
@@ -84578,7 +84614,7 @@ module.exports = __webpack_require__(11) ? Object.defineProperties : function de
 
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var document = __webpack_require__(5).document;
@@ -84586,7 +84622,7 @@ module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
@@ -84605,10 +84641,10 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(142);
+__webpack_require__(144);
 var global = __webpack_require__(5);
 var hide = __webpack_require__(9);
 var Iterators = __webpack_require__(42);
@@ -84630,13 +84666,13 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(143);
-var step = __webpack_require__(144);
+var addToUnscopables = __webpack_require__(145);
+var step = __webpack_require__(146);
 var Iterators = __webpack_require__(42);
 var toIObject = __webpack_require__(12);
 
@@ -84671,14 +84707,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -84687,24 +84723,24 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(146), __esModule: true };
+module.exports = { "default": __webpack_require__(148), __esModule: true };
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(147);
-__webpack_require__(153);
-__webpack_require__(154);
+__webpack_require__(149);
 __webpack_require__(155);
+__webpack_require__(156);
+__webpack_require__(157);
 module.exports = __webpack_require__(16).Symbol;
 
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84715,7 +84751,7 @@ var has = __webpack_require__(7);
 var DESCRIPTORS = __webpack_require__(11);
 var $export = __webpack_require__(33);
 var redefine = __webpack_require__(72);
-var META = __webpack_require__(148).KEY;
+var META = __webpack_require__(150).KEY;
 var $fails = __webpack_require__(14);
 var shared = __webpack_require__(38);
 var setToStringTag = __webpack_require__(43);
@@ -84723,15 +84759,15 @@ var uid = __webpack_require__(21);
 var wks = __webpack_require__(13);
 var wksExt = __webpack_require__(44);
 var wksDefine = __webpack_require__(45);
-var enumKeys = __webpack_require__(149);
-var isArray = __webpack_require__(150);
+var enumKeys = __webpack_require__(151);
+var isArray = __webpack_require__(152);
 var anObject = __webpack_require__(17);
 var toIObject = __webpack_require__(12);
 var toPrimitive = __webpack_require__(34);
 var createDesc = __webpack_require__(19);
 var _create = __webpack_require__(73);
-var gOPNExt = __webpack_require__(151);
-var $GOPD = __webpack_require__(152);
+var gOPNExt = __webpack_require__(153);
+var $GOPD = __webpack_require__(154);
 var $DP = __webpack_require__(10);
 var $keys = __webpack_require__(20);
 var gOPD = $GOPD.f;
@@ -84945,7 +84981,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META = __webpack_require__(21)('meta');
@@ -85004,7 +85040,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
@@ -85025,7 +85061,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
@@ -85036,7 +85072,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -85061,7 +85097,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE = __webpack_require__(22);
@@ -85083,44 +85119,44 @@ exports.f = __webpack_require__(11) ? gOPD : function getOwnPropertyDescriptor(O
 
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(45)('asyncIterator');
 
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(45)('observable');
 
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__string__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__method__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__number__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__boolean__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__regexp__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__integer__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__float__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__array__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__object__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__enum__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pattern__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__date__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__required__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__type__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__string__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__method__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__number__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__boolean__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__regexp__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__integer__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__float__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__array__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__object__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__enum__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pattern__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__date__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__required__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__type__ = __webpack_require__(177);
 
 
 
@@ -85156,7 +85192,7 @@ __webpack_require__(45)('observable');
 });
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85198,7 +85234,7 @@ function string(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (string);
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85225,7 +85261,7 @@ function whitespace(rule, value, source, errors, options) {
 /* harmony default export */ __webpack_exports__["a"] = (whitespace);
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85323,7 +85359,7 @@ function type(rule, value, source, errors, options) {
 /* harmony default export */ __webpack_exports__["a"] = (type);
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85382,7 +85418,7 @@ function range(rule, value, source, errors, options) {
 /* harmony default export */ __webpack_exports__["a"] = (range);
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85411,7 +85447,7 @@ function enumerable(rule, value, source, errors, options) {
 /* harmony default export */ __webpack_exports__["a"] = (enumerable);
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85451,7 +85487,7 @@ function pattern(rule, value, source, errors, options) {
 /* harmony default export */ __webpack_exports__["a"] = (pattern);
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85488,7 +85524,7 @@ function method(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (method);
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85526,7 +85562,7 @@ function number(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (number);
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85563,7 +85599,7 @@ function boolean(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (boolean);
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85600,7 +85636,7 @@ function regexp(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (regexp);
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85638,7 +85674,7 @@ function integer(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (integer);
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85676,7 +85712,7 @@ function floatFn(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (floatFn);
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85713,7 +85749,7 @@ function array(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (array);
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85750,7 +85786,7 @@ function object(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (object);
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85788,7 +85824,7 @@ function enumerable(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (enumerable);
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85828,7 +85864,7 @@ function pattern(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (pattern);
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85860,7 +85896,7 @@ function date(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (date);
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85880,7 +85916,7 @@ function required(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (required);
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85908,7 +85944,7 @@ function type(rule, value, callback, source, options) {
 /* harmony default export */ __webpack_exports__["a"] = (type);
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85972,7 +86008,7 @@ function newMessages() {
 var messages = newMessages();
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -86578,7 +86614,7 @@ module.exports = __webpack_require__(27);
 /******/ });
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86591,7 +86627,7 @@ function isDef(val) {
 }
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86709,19 +86745,19 @@ exports.default = {
 };
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(181)
+  __webpack_require__(183)
 }
 var normalizeComponent = __webpack_require__(48)
 /* script */
-var __vue_script__ = __webpack_require__(184)
+var __vue_script__ = __webpack_require__(186)
 /* template */
-var __vue_template__ = __webpack_require__(198)
+var __vue_template__ = __webpack_require__(199)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -86761,13 +86797,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(182);
+var content = __webpack_require__(184);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -86787,7 +86823,7 @@ if(false) {
 }
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(46)(undefined);
@@ -86795,13 +86831,13 @@ exports = module.exports = __webpack_require__(46)(undefined);
 
 
 // module
-exports.push([module.i, "\nnav.main[data-v-10c80cc3] {\n\tbackground: #4A5263;\n\tpadding: 10px 20px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n}\n.trip__title[data-v-10c80cc3] {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\tmargin: 10px;\n\tcolor: #fff;\n}\nmain[data-v-10c80cc3] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\theight: 70vh;\n}\n", ""]);
+exports.push([module.i, "\nnav.main[data-v-10c80cc3] {\n\tbackground: #4A5263;\n\tpadding: 10px 20px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: justify;\n\t    -ms-flex-pack: justify;\n\t        justify-content: space-between;\n}\n.trip__title[data-v-10c80cc3] {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\tmargin: 10px;\n\tcolor: #fff;\n}\nmain[data-v-10c80cc3] {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\t/*height: 70vh;*/\n}\n.description[data-v-10c80cc3] {\n\tpadding: 40px;\n\twidth: 500px;\n\tcolor: #fff;\n\tfont-family: 'Roboto';\n\tfont-weight: 300;\n\tfont-size: 15px;\n\tline-height: 1.4em;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports) {
 
 /**
@@ -86834,13 +86870,20 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_EnrolmentForm__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_EnrolmentForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_EnrolmentForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EnrolmentForm__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_EnrolmentForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_EnrolmentForm__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -86854,41 +86897,63 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var Trip = {};
+//shared object, among components that import this file and 
+//place shared prop in they vue instance data object
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
 		return {
-			shared: Trip
+			shared: __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */]
 		};
 	},
 
 
 	components: {
-		'enrolment-form': __WEBPACK_IMPORTED_MODULE_0__components_EnrolmentForm___default.a
+		'enrolment-form': __WEBPACK_IMPORTED_MODULE_2__components_EnrolmentForm___default.a
 	},
 
+	computed: {
+		//used with v-if to prevent rendering sub components before trip data has been loaded
+		isEmpty: function isEmpty() {
+			return _.isEmpty(this.shared.tripData);
+		}
+	},
+
+	/**
+  * Get the trip data from the database. Also calculate some
+  * additional properties.
+  */
 	mounted: function mounted() {
-		//
+		//set data from database
+		this.shared.tripData = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */];
+
+		//calculate and set initial prices now that activites has been loaded from the database
+		this.shared.tripData.activities.forEach(function (activity) {
+			Vue.set(activity, 'priceAfterDiscount', activity.price - activity.discountChildren * activity.price / 100);
+			Vue.set(activity, 'amountAdults', 0);
+			Vue.set(activity, 'amountChildren', 0);
+		});
 	}
 });
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(186)
+  __webpack_require__(188)
 }
 var normalizeComponent = __webpack_require__(48)
 /* script */
-var __vue_script__ = __webpack_require__(188)
+var __vue_script__ = __webpack_require__(190)
 /* template */
-var __vue_template__ = __webpack_require__(197)
+var __vue_template__ = __webpack_require__(198)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -86928,13 +86993,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(187);
+var content = __webpack_require__(189);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -86954,7 +87019,7 @@ if(false) {
 }
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(46)(undefined);
@@ -86968,15 +87033,34 @@ exports.push([module.i, "\n.top__menu[data-v-930adaa8] {\n    position: absolute
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_Form__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_Modal__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__utils_Modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_Form__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Modal__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__utils_Modal__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -87462,6 +87546,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+ //shared data
 
 
 
@@ -87471,15 +87556,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             showModal: false,
 
+            //the trip data from the db
+            shared: __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */],
+
             //current step in the form
             activeStep: 0,
 
-            //trip data from the db
-            title: __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].title,
-            date: __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].date,
-
             //has the form been submitted
             submitted: false,
+
             //has the form been succesfully completed
             completed: false,
 
@@ -87519,20 +87604,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 //whether the travels conditions has been accepted
                 travelConditions: false
-            },
-
-            //prices of different hotel room types
-            prices: {
-                single: 0,
-                double: 0,
-                twin: 0
             }
         };
     },
 
 
     components: {
-        modal: __WEBPACK_IMPORTED_MODULE_2__utils_Modal___default.a
+        modal: __WEBPACK_IMPORTED_MODULE_3__utils_Modal___default.a
     },
 
     computed: {
@@ -87540,10 +87618,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * We may or may not have any alternative activities for a trip.
          */
         totalSteps: function totalSteps() {
-            if (this.form.activities.length == 0) {
-                return 2;
-            }
-            return 3;
+            // if (this.form.activities.length == 0) {
+            //     return 2
+            // }
+            // return 3
         },
 
 
@@ -87559,7 +87637,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * Total price of all rooms.
          */
         roomsPrice: function roomsPrice() {
-            return this.prices.single * this.form.amountSingle + this.prices.double * this.form.amountDouble + this.prices.twin * this.form.amountTwin;
+            return this.shared.tripData.prices.single * this.form.amountSingle + this.shared.tripData.prices.double * this.form.amountDouble + this.shared.tripData.prices.twin * this.form.amountTwin;
         },
 
 
@@ -87568,12 +87646,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          */
         activitiesPrice: function activitiesPrice() {
             //return 0 if the trip does not have any extra activities
-            if (!this.form.activities) {
+            if (!this.shared.tripData.activities) {
                 return 0;
             }
 
             //calculate the total price
-            return this.form.activities.reduce(function (total, value) {
+            return this.shared.tripData.activities.reduce(function (total, value) {
                 return total + Number(value.price * value.amountAdults + value.priceAfterDiscount * value.amountChildren);
             }, 0);
         },
@@ -87616,8 +87694,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
         /**
-         * Hide the scrollbar of the modal card content
-         * before animating (before running the transition) to the next step in the form.
+         * Hide the scrollbar of the modal card content before animating 
+         * (before running the transition) to the next step in the form.
          */
         beforeEnter: function beforeEnter(el) {
             this.$children[0].$refs.modalCardBody.style.overflow = 'hidden';
@@ -87625,8 +87703,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
         /**
-         * Show the scrollbar of the modal card content 
-         * after the animation (after running the transition) to the next step in the form. 
+         * Show the scrollbar of the modal card content after the animation 
+         * (after running the transition) to the next step in the form. 
          */
         afterEnter: function afterEnter(el) {
             this.$children[0].$refs.modalCardBody.style.overflow = 'auto';
@@ -87691,6 +87769,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          */
         onExtraBedChange: function onExtraBedChange(room) {
             this.$nextTick(function () {
+                //todo: do we need $nextTick?
                 room.extraBeds = [];
 
                 for (var i = 1; i <= room.numChildBeds; i++) {
@@ -87708,7 +87787,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.submitted = true; //this starts loading indication
 
-            axios.post('enrollment/store', this.form).then(function (response) {
+            axios.post('enrollment/store', [this.form, this.shared.tripData.activities]).then(function (response) {
                 _this.serverResponse = response.data[1];
                 _this.submitted = false;
                 _this.completed = true; //show the completed view, hide form view
@@ -87716,42 +87795,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.serverResponse = response.data[1];
                 _this.submitted = false;
             });
-        },
-
-
-        //only return numbers if more than one extra bed is selected,
-        //we don't want a number displayed of there is only one room
-        displayNumOrNot: function displayNumOrNot(amount, i) {
-            return amount > 1 ? i + 1 : '';
         }
     },
 
-    /**
-     * Fetch the trip data and assign it to vue props.
-     * Create some additional activities props with the price calculated if there is any discounts.
-     */
     mounted: function mounted() {
-        this.prices.single = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].prices.single;
-        this.prices.double = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].prices.double;
-        this.prices.twin = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].prices.twin;
-
-        this.form.activities = __WEBPACK_IMPORTED_MODULE_1__data__["a" /* default */].activities;
-
-        //calculate and set initial prices now that activites has been loaded from the server
-        this.form.activities.forEach(function (activity) {
-            Vue.set(activity, 'priceAfterDiscount', activity.price - activity.discountChildren * activity.price / 100);
-            Vue.set(activity, 'amountAdults', 0);
-            Vue.set(activity, 'amountChildren', 0);
-        });
+        // var self = this
+        // this.shared.tripData.activities.forEach(function(activity) {
+        //     self.form.activtities.push('amountAdults', 0)
+        //     self.form.activtities.push('amountChildren', 0)
+        // })
     }
 });
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Errors__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Errors__ = __webpack_require__(192);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -87835,7 +87896,7 @@ var Form = function () {
 /* unused harmony default export */ var _unused_webpack_default_export = (Form);
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -87888,45 +87949,19 @@ var Errors = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Errors);
 
 /***/ }),
-/* 191 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-	title: 'Elvecruise på Douro',
-	date: '22 juli 2018',
-	prices: {
-		single: 3000,
-		double: 2000,
-		twin: 2000
-	},
-	activities: [{
-		id: 23,
-		title: 'Ridetur i solskinn i Greve Le Chanti',
-		price: 300,
-		discountChildren: 50
-	}, {
-		id: 2,
-		title: 'Museum med vinsmaking',
-		price: 200,
-		discountChildren: 30
-	}]
-});
-
-/***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(193)
+  __webpack_require__(194)
 }
 var normalizeComponent = __webpack_require__(48)
 /* script */
-var __vue_script__ = __webpack_require__(195)
+var __vue_script__ = __webpack_require__(196)
 /* template */
-var __vue_template__ = __webpack_require__(196)
+var __vue_template__ = __webpack_require__(197)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -87966,13 +88001,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(194);
+var content = __webpack_require__(195);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -87992,7 +88027,7 @@ if(false) {
 }
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(46)(undefined);
@@ -88006,7 +88041,7 @@ exports.push([module.i, "\n.b-modal-background[data-v-af808f9a] {\n\tbottom: 0;\
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88115,7 +88150,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -88211,7 +88246,7 @@ if (false) {
 }
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -88227,9 +88262,9 @@ var render = function() {
         {
           ref: "modal",
           attrs: {
+            title: "Påmelding " + _vm.shared.tripData.title,
+            subtitle: "- " + _vm.shared.tripData.date,
             show: _vm.showModal,
-            title: "Påmelding " + _vm.title,
-            subtitle: "- " + _vm.date,
             loading: _vm.submitted
           },
           on: {
@@ -88365,8 +88400,12 @@ var render = function() {
                                                 { staticClass: "body-text" },
                                                 [
                                                   _vm._v(
-                                                    _vm._s(_vm.prices.single) +
-                                                      ",- per person"
+                                                    "\n                                        " +
+                                                      _vm._s(
+                                                        _vm.shared.tripData
+                                                          .prices.single
+                                                      ) +
+                                                      ",- per person\n                                    "
                                                   )
                                                 ]
                                               ),
@@ -88445,8 +88484,12 @@ var render = function() {
                                                 { staticClass: "body-text" },
                                                 [
                                                   _vm._v(
-                                                    _vm._s(_vm.prices.double) +
-                                                      ",- per person"
+                                                    "\n                                        " +
+                                                      _vm._s(
+                                                        _vm.shared.tripData
+                                                          .prices.double
+                                                      ) +
+                                                      ",- per person\n                                    "
                                                   )
                                                 ]
                                               ),
@@ -88525,8 +88568,12 @@ var render = function() {
                                                 { staticClass: "body-text" },
                                                 [
                                                   _vm._v(
-                                                    _vm._s(_vm.prices.twin) +
-                                                      ",- per person"
+                                                    "\n                                        " +
+                                                      _vm._s(
+                                                        _vm.shared.tripData
+                                                          .prices.twin
+                                                      ) +
+                                                      ",- per person\n                                    "
                                                   )
                                                 ]
                                               ),
@@ -88759,7 +88806,7 @@ var render = function() {
                                                                             },
                                                                             [
                                                                               _vm._v(
-                                                                                "Fullt Navn"
+                                                                                "Navn"
                                                                               )
                                                                             ]
                                                                           ),
@@ -88941,7 +88988,7 @@ var render = function() {
                                                                             },
                                                                             [
                                                                               _vm._v(
-                                                                                "Fullt Navn"
+                                                                                "Navn"
                                                                               )
                                                                             ]
                                                                           ),
@@ -89264,7 +89311,7 @@ var render = function() {
                                                                             },
                                                                             [
                                                                               _vm._v(
-                                                                                "Fullt Navn"
+                                                                                "Navn"
                                                                               )
                                                                             ]
                                                                           ),
@@ -89412,15 +89459,21 @@ var render = function() {
                                                               _vm._v(" "),
                                                               _c("h3", [
                                                                 _vm._v(
-                                                                  "\n                                                Extra barneseng " +
-                                                                    _vm._s(
-                                                                      _vm.displayNumOrNot(
-                                                                        room.numChildBeds,
-                                                                        i
+                                                                  "\n                                                Extra barneseng\n                                                "
+                                                                ),
+                                                                room.numChildBeds >
+                                                                1
+                                                                  ? _c("span", [
+                                                                      _vm._v(
+                                                                        "\n                                                    " +
+                                                                          _vm._s(
+                                                                            i +
+                                                                              1
+                                                                          ) +
+                                                                          "\n                                                "
                                                                       )
-                                                                    ) +
-                                                                    "\n                                            "
-                                                                )
+                                                                    ])
+                                                                  : _vm._e()
                                                               ]),
                                                               _vm._v(" "),
                                                               _c(
@@ -89453,7 +89506,7 @@ var render = function() {
                                                                             },
                                                                             [
                                                                               _vm._v(
-                                                                                "Fullt Navn"
+                                                                                "Navn"
                                                                               )
                                                                             ]
                                                                           ),
@@ -89773,7 +89826,7 @@ var render = function() {
                                                                           },
                                                                           [
                                                                             _vm._v(
-                                                                              "Fullt Navn"
+                                                                              "Navn"
                                                                             )
                                                                           ]
                                                                         ),
@@ -89921,15 +89974,20 @@ var render = function() {
                                                             _vm._v(" "),
                                                             _c("h3", [
                                                               _vm._v(
-                                                                "\n                                                Ekstra barneseng " +
-                                                                  _vm._s(
-                                                                    _vm.displayNumOrNot(
-                                                                      room.numChildBeds,
-                                                                      i
+                                                                "\n                                                Ekstra barneseng\n                                                "
+                                                              ),
+                                                              room.numChildBeds >
+                                                              1
+                                                                ? _c("span", [
+                                                                    _vm._v(
+                                                                      "\n                                                    " +
+                                                                        _vm._s(
+                                                                          i + 1
+                                                                        ) +
+                                                                        "\n                                                "
                                                                     )
-                                                                  ) +
-                                                                  "\n                                            "
-                                                              )
+                                                                  ])
+                                                                : _vm._e()
                                                             ]),
                                                             _vm._v(" "),
                                                             _c(
@@ -89962,7 +90020,7 @@ var render = function() {
                                                                           },
                                                                           [
                                                                             _vm._v(
-                                                                              "Fullt Navn"
+                                                                              "Navn"
                                                                             )
                                                                           ]
                                                                         ),
@@ -90324,302 +90382,304 @@ var render = function() {
                             },
                             [
                               _vm.activeStep == 2 &&
-                              _vm.form.activities.length != 0
+                              _vm.shared.tripData.activities.length != 0
                                 ? _c(
                                     "section",
                                     { staticClass: "step activities" },
-                                    _vm._l(_vm.form.activities, function(
-                                      activity,
-                                      index
-                                    ) {
-                                      return _c(
-                                        "el-row",
-                                        { key: index },
-                                        [
-                                          _c(
-                                            "h2",
-                                            {
-                                              staticClass:
-                                                "activity-title text-align-center"
-                                            },
-                                            [_vm._v(_vm._s(activity.title))]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "el-col",
-                                            {
-                                              staticClass:
-                                                "amount-children__container",
-                                              attrs: { span: 12 }
-                                            },
-                                            [
-                                              _c(
-                                                "el-form-item",
-                                                {
-                                                  staticClass:
-                                                    "text-align-center",
-                                                  attrs: { label: "Voksne" }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex-vertical-center"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "el-select",
-                                                        {
-                                                          staticClass:
-                                                            "amount__select",
-                                                          attrs: {
-                                                            disabled:
-                                                              _vm.numPeople == 0
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              activity.amountChildren,
-                                                            callback: function(
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                activity,
-                                                                "amountChildren",
-                                                                _vm._n($$v)
-                                                              )
+                                    _vm._l(
+                                      _vm.shared.tripData.activities,
+                                      function(activity, index) {
+                                        return _c(
+                                          "el-row",
+                                          { key: index },
+                                          [
+                                            _c(
+                                              "h2",
+                                              {
+                                                staticClass:
+                                                  "activity-title text-align-center"
+                                              },
+                                              [_vm._v(_vm._s(activity.title))]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "el-col",
+                                              {
+                                                staticClass:
+                                                  "amount-children__container",
+                                                attrs: { span: 12 }
+                                              },
+                                              [
+                                                _c(
+                                                  "el-form-item",
+                                                  {
+                                                    staticClass:
+                                                      "text-align-center",
+                                                    attrs: { label: "Voksne" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex-vertical-center"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "el-select",
+                                                          {
+                                                            staticClass:
+                                                              "amount__select",
+                                                            attrs: {
+                                                              disabled:
+                                                                _vm.numPeople ==
+                                                                0
                                                             },
-                                                            expression:
-                                                              "activity.amountChildren"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "el-option",
-                                                            {
-                                                              key: "0",
-                                                              attrs: {
-                                                                value: "0",
-                                                                label: "0"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
-                                                                  staticClass:
-                                                                    "select-value-label"
-                                                                },
-                                                                [_vm._v("0")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("span", {
-                                                                staticClass:
-                                                                  "select-hint-label"
-                                                              })
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _vm._l(
-                                                            _vm.numPeople,
-                                                            function(indx) {
-                                                              return _c(
-                                                                "el-option",
-                                                                {
-                                                                  key: indx,
-                                                                  attrs: {
-                                                                    value: indx,
-                                                                    label: indx
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "span",
-                                                                    {
-                                                                      staticClass:
-                                                                        "select-value-label"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        _vm._s(
-                                                                          indx
-                                                                        )
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "span",
-                                                                    {
-                                                                      staticClass:
-                                                                        "select-hint-label"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        _vm._s(
-                                                                          activity.priceAfterDiscount *
-                                                                            indx
-                                                                        ) +
-                                                                          " kr"
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
+                                                            model: {
+                                                              value:
+                                                                activity.amountChildren,
+                                                              callback: function(
+                                                                $$v
+                                                              ) {
+                                                                _vm.$set(
+                                                                  activity,
+                                                                  "amountChildren",
+                                                                  _vm._n($$v)
+                                                                )
+                                                              },
+                                                              expression:
+                                                                "activity.amountChildren"
                                                             }
-                                                          )
-                                                        ],
-                                                        2
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "el-col",
-                                            {
-                                              staticClass:
-                                                "amount-adults__container",
-                                              attrs: { span: 12 }
-                                            },
-                                            [
-                                              _c(
-                                                "el-form-item",
-                                                {
-                                                  staticClass:
-                                                    "text-align-center",
-                                                  attrs: {
-                                                    label: "Barn (4-12 år)"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex-vertical-center"
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "el-select",
-                                                        {
-                                                          staticClass:
-                                                            "amount__select",
-                                                          attrs: {
-                                                            disabled:
-                                                              _vm.numPeople == 0
                                                           },
-                                                          model: {
-                                                            value:
-                                                              activity.amountAdults,
-                                                            callback: function(
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                activity,
-                                                                "amountAdults",
-                                                                _vm._n($$v)
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "activity.amountAdults"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "el-option",
-                                                            {
-                                                              key: "0",
-                                                              attrs: {
-                                                                value: "0",
-                                                                label: "0"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "span",
-                                                                {
+                                                          [
+                                                            _c(
+                                                              "el-option",
+                                                              {
+                                                                key: "0",
+                                                                attrs: {
+                                                                  value: "0",
+                                                                  label: "0"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "span",
+                                                                  {
+                                                                    staticClass:
+                                                                      "select-value-label"
+                                                                  },
+                                                                  [_vm._v("0")]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c("span", {
                                                                   staticClass:
-                                                                    "select-value-label"
-                                                                },
-                                                                [_vm._v("0")]
-                                                              ),
-                                                              _vm._v(" "),
-                                                              _c("span", {
-                                                                staticClass:
-                                                                  "select-hint-label"
-                                                              })
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _vm._l(
-                                                            _vm.numPeople,
-                                                            function(indx) {
-                                                              return _c(
-                                                                "el-option",
-                                                                {
-                                                                  key: indx,
-                                                                  attrs: {
-                                                                    value: indx,
-                                                                    label: indx
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c(
-                                                                    "span",
-                                                                    {
-                                                                      staticClass:
-                                                                        "select-value-label"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        _vm._s(
-                                                                          indx
-                                                                        )
-                                                                      )
-                                                                    ]
-                                                                  ),
-                                                                  _vm._v(" "),
-                                                                  _c(
-                                                                    "span",
-                                                                    {
-                                                                      staticClass:
-                                                                        "select-hint-label"
-                                                                    },
-                                                                    [
-                                                                      _vm._v(
-                                                                        _vm._s(
-                                                                          activity.price *
+                                                                    "select-hint-label"
+                                                                })
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              _vm.numPeople,
+                                                              function(indx) {
+                                                                return _c(
+                                                                  "el-option",
+                                                                  {
+                                                                    key: indx,
+                                                                    attrs: {
+                                                                      value: indx,
+                                                                      label: indx
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "span",
+                                                                      {
+                                                                        staticClass:
+                                                                          "select-value-label"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          _vm._s(
                                                                             indx
-                                                                        ) +
-                                                                          " kr"
-                                                                      )
-                                                                    ]
-                                                                  )
-                                                                ]
-                                                              )
+                                                                          )
+                                                                        )
+                                                                      ]
+                                                                    ),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "span",
+                                                                      {
+                                                                        staticClass:
+                                                                          "select-hint-label"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          _vm._s(
+                                                                            activity.priceAfterDiscount *
+                                                                              indx
+                                                                          ) +
+                                                                            " kr"
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              }
+                                                            )
+                                                          ],
+                                                          2
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "el-col",
+                                              {
+                                                staticClass:
+                                                  "amount-adults__container",
+                                                attrs: { span: 12 }
+                                              },
+                                              [
+                                                _c(
+                                                  "el-form-item",
+                                                  {
+                                                    staticClass:
+                                                      "text-align-center",
+                                                    attrs: {
+                                                      label: "Barn (4-12 år)"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "flex-vertical-center"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "el-select",
+                                                          {
+                                                            staticClass:
+                                                              "amount__select",
+                                                            attrs: {
+                                                              disabled:
+                                                                _vm.numPeople ==
+                                                                0
+                                                            },
+                                                            model: {
+                                                              value:
+                                                                activity.amountAdults,
+                                                              callback: function(
+                                                                $$v
+                                                              ) {
+                                                                _vm.$set(
+                                                                  activity,
+                                                                  "amountAdults",
+                                                                  _vm._n($$v)
+                                                                )
+                                                              },
+                                                              expression:
+                                                                "activity.amountAdults"
                                                             }
-                                                          )
-                                                        ],
-                                                        2
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    })
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "el-option",
+                                                              {
+                                                                key: "0",
+                                                                attrs: {
+                                                                  value: "0",
+                                                                  label: "0"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "span",
+                                                                  {
+                                                                    staticClass:
+                                                                      "select-value-label"
+                                                                  },
+                                                                  [_vm._v("0")]
+                                                                ),
+                                                                _vm._v(" "),
+                                                                _c("span", {
+                                                                  staticClass:
+                                                                    "select-hint-label"
+                                                                })
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              _vm.numPeople,
+                                                              function(indx) {
+                                                                return _c(
+                                                                  "el-option",
+                                                                  {
+                                                                    key: indx,
+                                                                    attrs: {
+                                                                      value: indx,
+                                                                      label: indx
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "span",
+                                                                      {
+                                                                        staticClass:
+                                                                          "select-value-label"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          _vm._s(
+                                                                            indx
+                                                                          )
+                                                                        )
+                                                                      ]
+                                                                    ),
+                                                                    _vm._v(" "),
+                                                                    _c(
+                                                                      "span",
+                                                                      {
+                                                                        staticClass:
+                                                                          "select-hint-label"
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          _vm._s(
+                                                                            activity.price *
+                                                                              indx
+                                                                          ) +
+                                                                            " kr"
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              }
+                                                            )
+                                                          ],
+                                                          2
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      }
+                                    )
                                   )
                                 : _vm._e()
                             ]
@@ -91017,7 +91077,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n        Meld deg på nå!\n    ")]
+        [_vm._v("\n        Påmelding\n    ")]
       )
     ],
     1
@@ -91034,7 +91094,7 @@ if (false) {
 }
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91042,21 +91102,28 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "nav",
+      { staticClass: "main" },
+      [
+        _c("h1", { staticClass: "trip__title" }, [
+          _vm._v(_vm._s(_vm.shared.tripData.title))
+        ]),
+        _vm._v(" "),
+        _vm.isEmpty == false ? _c("enrolment-form") : _vm._e()
+      ],
+      1
+    ),
     _vm._v(" "),
-    _c("main", [_c("enrolment-form")], 1)
+    _c("main", [
+      _c("section", {
+        staticClass: "description",
+        domProps: { innerHTML: _vm._s(_vm.shared.tripData.description) }
+      })
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "main" }, [
-      _c("h1", { staticClass: "trip__title" }, [_vm._v("Elvecruise på Douro")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -91067,7 +91134,7 @@ if (false) {
 }
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

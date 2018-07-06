@@ -14,18 +14,11 @@ class EnrollmentController extends Controller
 
     	// return $request->rooms["single"][0]["people"][0]["name"];
 
-    	// foreach ($request->rooms as $type) {
-    	// 	foreach ($type as $room) {
-    	// 		foreach ($room as $person) {
-    	// 			# code...
-    	// 		}
-    	// 	}
-    	// }
+        $youOrThey = 'dere';
 
-    	// if () {
-    		$youOrThey = 'dere';
-    	// }
+    	// foreach ($request->rooms as $room_type_array) {
 
+    	// }
 
     	// foreach ($request->activities as $activity) {
     	// 	$activity["amountAdults"];
